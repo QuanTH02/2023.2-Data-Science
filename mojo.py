@@ -129,3 +129,5 @@ def main():
             movie = crawl(release_id)
             out.write(f"{movie.id},{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.domestic},{movie.international},{movie.worldwide}\n")
 
+if __name__ == "__main__":
+    main()
