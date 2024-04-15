@@ -1,0 +1,7 @@
+movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office
+Once I Was a Beehive,8,2015,None,119,['Comedy', 'Drama', 'Family'],PG,32,48409,732655,None,732655
+In the Name of My Daughter,5,2015,None,116,['Crime', 'Drama'],R,50,14294,277528,2260371,2537899
+Kahlil Gibran's The Prophet,8,2015,None,85,['Animation', 'Drama'],PG,37,27435,355343,409155,764498
+A Borrowed Identity,6,2015,None,104,['Drama'],None,22,10308,281540,649418,930958
+Go Away Mr. Tumor,8,2015,None,85,['Comedy', 'Romance'],None,18,50036,286639,80320254,80606893
+Hamari Adhuri Kahani,6,2015,None,129,['Drama', 'Romance'],None,67,131263,235361,263413,498774

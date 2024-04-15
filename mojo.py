@@ -3,8 +3,7 @@ import urllib.request
 import pprint as pp
 
 class Movie:
-    def __init__(self, id, title, month, year, budget, runtime, genres: list, mpaa, screens, domestic, international, worldwide):
-        self.id = id
+    def __init__(self, title, month, year, budget, runtime, genres: list, mpaa, screens, opening, domestic, international, worldwide):
         self.title = title
         self.month = month
         self.year = year
@@ -13,6 +12,7 @@ class Movie:
         self.genres = genres
         self.mpaa = mpaa
         self.screens = screens
+        self.opening = opening
         self.domestic = domestic
         self.international = international
         self.worldwide = worldwide
@@ -49,10 +49,12 @@ def convert_month(month):
 def get_info_table(info_table):
     budget = None
     release_month = None
+    release_year = None
     mpaa = None
     runtime = None
     genres = None
     screens = None
+    opening = None
 
     rows = info_table.find_all('div', {'class': "a-section a-spacing-none"})
     for row in rows:
@@ -61,17 +63,21 @@ def get_info_table(info_table):
 
         elif "Release Date" in row.text:
             release_date = [row.text for row in row.find_all('a')]
-            release_date = [date.replace(",", "").split() for date in release_date]
-            release_month = []
-            release_year = []
-            for date in release_date:
-                if len(date) == 3:
-                    release_month.append(convert_month(date[0]))
-                    release_year.append(int(date[2]))
 
+            if "-" in release_date[0]:
+                release_date_one = release_date[0].split("-")
+                release_month = release_date_one[1]
+                release_year = release_date_one[2]
+            elif "," in release_date[0]:
+                release_date_one = release_date[0].split(",")
+                release_year = release_date_one[1].strip()
+                release_month = release_date_one[0].split(" ")[0].strip()
+                release_month = convert_month(release_month)
+            else:
+                release_year = release_date[0].strip()
 
         elif "MPAA" in row.text:
-            mpaa = row.find_all('span')[1].text.split()
+            mpaa = row.find_all('span')[1].text.split()[0]
 
         elif "Running Time" in row.text:
             runtime = row.find_all('span')[1].text
@@ -83,8 +89,10 @@ def get_info_table(info_table):
         elif "Widest Release" in row.text:
             screens = row.find_all('span')[1].text
             screens = screens.split()[0]
+        elif "Opening" in row.text:
+            opening = row.find('span', {'class': "money"}).text.replace("$", "").replace(",", "")
 
-    return budget, release_month, release_year, mpaa, runtime, genres, screens
+    return budget, release_month, release_year, mpaa, runtime, genres, screens, opening
 
 
 def get_grosses(grosses):
@@ -94,11 +102,11 @@ def get_grosses(grosses):
 
     rows = grosses.find_all('div', {'class': "a-section a-spacing-none"})
     for row in rows:
-        if "Domestic" in row.text:
+        if "Domestic" in row.text and "–" not in row.text:
             domestic = row.find('span', {'class': "money"}).text.replace("$", "").replace(",", "")
-        elif "International" in row.text:
+        elif "International" in row.text and "–" not in row.text:
             international = row.find('span', {'class': "money"}).text.replace("$", "").replace(",", "")
-        elif "Worldwide" in row.text:
+        elif "Worldwide" in row.text and "–" not in row.text:
             worldwide = row.find('span', {'class': "money"}).text.replace("$", "").replace(",", "")
 
     return domestic, international, worldwide
@@ -113,19 +121,21 @@ def crawl(release_id):
     grosses = soup.find('div', {'class': "a-section a-spacing-none mojo-performance-summary-table"})
     info_table = soup.find('div', {'class': "a-section a-spacing-none mojo-summary-values mojo-hidden-from-mobile"})
 
-    budget, release_month, release_year, mpaa, runtime, genres, screens = get_info_table(info_table)
+    budget, release_month, release_year, mpaa, runtime, genres, screens, opening = get_info_table(info_table)
 
     domestic, international, worldwide = get_grosses(grosses)
 
-    return Movie(release_id, title, release_month, release_year, budget, runtime, genres, mpaa, screens, domestic, international, worldwide)
+    return Movie(title, release_month, release_year, budget, runtime, genres, mpaa, screens, opening,domestic, international, worldwide)
     
-
 def main():
-    with open("link_movie.txt", "r") as f:
-        out = open("output.csv", "a")
-        out.write("id,title,month,year,budget,runtime,genres,mpaa,screens,domestic,international,worldwide\n")
+    with open("mojo_quan.txt", "r") as f:
+        out = open("mojo_quan.csv", "a")
+        out.write("movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office\n")
         for line in f:
             release_id = line.strip()
             movie = crawl(release_id)
-            out.write(f"{movie.id},{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.domestic},{movie.international},{movie.worldwide}\n")
+            print("Name: " + movie.title)
+            out.write(f"{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},{movie.international},{movie.worldwide}\n")
 
+if __name__ == "__main__":
+    main()
