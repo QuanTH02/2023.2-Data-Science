@@ -130,12 +130,12 @@ def crawl(release_id):
 def main():
     with open("mojo_quan.txt", "r") as f:
         out = open("mojo_quan.csv", "a")
-        out.write("movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office\n")
+        out.write("movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country\n")
         for line in f:
             release_id = line.strip()
             movie = crawl(release_id)
             print("Name: " + movie.title)
-            out.write(f"{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},{movie.international},{movie.worldwide}\n")
+            out.write(f"{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},{movie.international},{movie.worldwide},""\n")
 
 if __name__ == "__main__":
     main()
