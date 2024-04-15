@@ -3,7 +3,7 @@ import urllib.request
 import pprint as pp
 
 class Movie:
-    def __init__(self, title, month, year, budget, runtime, genres: list, mpaa, screens, opening, domestic, international, worldwide):
+    def __init__(self, title, month, year, budget, runtime, genres, mpaa, screens, opening, domestic, international, worldwide):
         self.title = title
         self.month = month
         self.year = year
@@ -20,14 +20,17 @@ class Movie:
 
 def convert_to_min(runtime):
     if "hr" in runtime:
-        runtime = runtime.replace("hr", "").replace("min", "").split()
-        hours = int(runtime[0])
-        minutes = int(runtime[1])
-        return hours * 60 + minutes
+        runtime_split = runtime.split("hr")
+        if len(runtime_split[1]) == 0:
+            hours = int(runtime_split[0].strip())
+            return hours * 60
+        else:
+            hours = int(runtime_split[0].strip())
+            minutes = int(runtime_split[1].replace("min", "").strip())
+            return hours * 60 + minutes
     else:
-        return int(runtime.split()[0].replace("min", ""))
+        return int(runtime.split()[0])
     
-
 def convert_month(month):
     dict = {
         "Jan": 1,
@@ -84,7 +87,8 @@ def get_info_table(info_table):
             runtime = convert_to_min(runtime)
 
         elif "Genres" in row.text:
-            genres = row.find_all('span')[1].text.split()
+            list_genres = row.find_all('span')[1].text.split()
+            genres = " ".join(list_genres)
 
         elif "Widest Release" in row.text:
             screens = row.find_all('span')[1].text
@@ -129,13 +133,15 @@ def crawl(release_id):
     
 def main():
     with open("mojo_quan.txt", "r") as f:
-        out = open("mojo_quan.csv", "a")
+        out = open("mojo_quan.csv", "w")
         out.write("movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country\n")
+        index = 1
         for line in f:
             release_id = line.strip()
             movie = crawl(release_id)
-            print("Name: " + movie.title)
+            print(str(index) + ". " + movie.title)
             out.write(f"{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},{movie.international},{movie.worldwide},""\n")
+            index += 1
 
 if __name__ == "__main__":
     main()
