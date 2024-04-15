@@ -40,7 +40,7 @@ def month_name_to_num(month_name):
 # worldwide_box_office
 # country
 
-with open("test.txt", "r") as file:
+with open("link_the-numbers/link_movie.txt", "r") as file:
     with open("movie.csv", 'a', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name', 'month', 'year', 'budget', 'runtime', 'mpaa', 'screens', 'opening_week', 'domestic_box_office', 'international_box_office', 'worldwide_box_office', 'country']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
