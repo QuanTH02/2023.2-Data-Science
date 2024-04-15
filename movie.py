@@ -40,7 +40,7 @@ def month_name_to_num(month_name):
 # worldwide_box_office
 # country
 
-with open("quan.txt", "r") as file:
+with open("test.txt", "r") as file:
     with open("movie.csv", 'a', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name', 'month', 'year', 'budget', 'runtime', 'mpaa', 'screens', 'opening_week', 'domestic_box_office', 'international_box_office', 'worldwide_box_office', 'country']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
@@ -68,6 +68,23 @@ with open("quan.txt", "r") as file:
                     if "International Releases" in international_release_element.text:
                         parent_international_release_element = international_release_element.find_element(By.XPATH, "./..").find_element(By.XPATH, "./..")
                         td_elements = parent_international_release_element.find_elements(By.TAG_NAME, "td")
+                        td_content = td_elements[1].text
+                        release_date = td_content.split("\n")[0].split("(")[0]
+                        # year
+                        year = int(release_date.split()[-1])
+
+                        month_name = release_date.split()[0]
+                        # month
+                        month = int(month_name_to_num(month_name))
+
+                        print("Month/Year: " + str(month) + "/" + str(year))
+                        break
+            elif driver.find_elements(By.XPATH, "//*[contains(text(), 'Domestic Releases:')]"):
+                all_domestic_release_element = driver.find_elements(By.XPATH, "//*[contains(text(), 'Domestic Releases:')]")
+                for domestic_release_element in all_domestic_release_element:
+                    if "Domestic Releases:" in domestic_release_element.text:
+                        parent_domestic_release_element = domestic_release_element.find_element(By.XPATH, "./..").find_element(By.XPATH, "./..")
+                        td_elements = parent_domestic_release_element.find_elements(By.TAG_NAME, "td")
                         td_content = td_elements[1].text
                         release_date = td_content.split("\n")[0].split("(")[0]
                         # year
