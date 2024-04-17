@@ -1,19 +1,11 @@
-import pandas as pd
+from googletrans import Translator
 
-df = pd.read_csv("mojo/data/copy_mojo_quan.csv", encoding="latin1")
-movie_name_list = df["movie_name"].tolist()
+# Khởi tạo một đối tượng Translator
+translator = Translator()
 
-# Chuyển đổi tất cả các chuỗi trong danh sách thành chữ thường
-movie_name_list = [movie.lower() for movie in movie_name_list]
+# Dịch một đoạn văn bản từ tiếng Anh sang tiếng Tây Ban Nha
+text = "Spy Kids"
+translated_text = translator.translate(text, src='en', dest='vi')
 
-index = 0
-for movie_name in movie_name_list:
-    for movie in movie_name_list:
-        print(movie + " " + movie_name)
-        # So sánh các chuỗi đã chuyển đổi thành chữ thường
-        if movie_name_list.index(movie) != movie_name_list.index(movie_name) and movie == movie_name:
-            index += 1
-            print("\n" + movie + " " + movie_name)
-            print("YES: " + str(movie_name_list.index(movie)))
-
-print(index)
+# In kết quả dịch
+print(translated_text.text)
