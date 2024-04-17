@@ -36,13 +36,11 @@ def month_name_to_num(month_name):
 # screens
 # opening_week
 # domestic_box_office
-# international_box_office
-# worldwide_box_office
 # country
 
-with open("link_movie.txt", "r") as file:
+with open("link/link_the-numbers.txt", "r") as file:
     with open("movie.csv", 'a', newline='', encoding='utf-8') as csvfile:
-        fields = ['movie_name', 'month', 'year', 'budget', 'runtime', 'mpaa', 'screens', 'opening_week', 'domestic_box_office', 'international_box_office', 'worldwide_box_office', 'country']
+        fields = ['movie_name', 'month', 'year', 'budget', 'runtime', 'mpaa', 'screens', 'opening_week', 'domestic_box_office', 'country']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
 
@@ -62,7 +60,24 @@ with open("link_movie.txt", "r") as file:
             year = int(movie_title.split('(')[-1].strip(')'))
             print("Movie: " + movie_name + " - " + str(year))
 
-            if driver.find_elements(By.XPATH, "//*[contains(text(), 'International Releases')]"):
+            if driver.find_elements(By.XPATH, "//*[contains(text(), 'International Releases')]") and driver.find_elements(By.XPATH, "//*[contains(text(), 'Domestic Releases:')]"):
+                all_domestic_release_element = driver.find_elements(By.XPATH, "//*[contains(text(), 'Domestic Releases:')]")
+                for domestic_release_element in all_domestic_release_element:
+                    if "Domestic Releases:" in domestic_release_element.text:
+                        parent_domestic_release_element = domestic_release_element.find_element(By.XPATH, "./..").find_element(By.XPATH, "./..")
+                        td_elements = parent_domestic_release_element.find_elements(By.TAG_NAME, "td")
+                        td_content = td_elements[1].text
+                        release_date = td_content.split("\n")[0].split("(")[0]
+                        # year
+                        year = int(release_date.split()[-1])
+
+                        month_name = release_date.split()[0]
+                        # month
+                        month = int(month_name_to_num(month_name))
+
+                        print("Month/Year: " + str(month) + "/" + str(year))
+                        break
+            elif driver.find_elements(By.XPATH, "//*[contains(text(), 'International Releases')]"):
                 all_international_release_element = driver.find_elements(By.XPATH, "//*[contains(text(), 'International Releases')]")
                 for international_release_element in all_international_release_element:
                     if "International Releases" in international_release_element.text:
@@ -98,7 +113,7 @@ with open("link_movie.txt", "r") as file:
                         break
             else:
                 month = None
-                print("No International Release")
+                print("No Release")
 
             # Crawl budget
             if driver.find_elements(By.XPATH, "//*[contains(text(), 'Budget:')]"):
@@ -197,46 +212,6 @@ with open("link_movie.txt", "r") as file:
             else:
                 domestic_box_office = None
                 print("No Domestic Box Office")
-            
-            # Crawl international_box_office
-            if driver.find_elements(By.XPATH, "//b[contains(text(), 'International Box Office')]"):
-                all_international_box_office_element = driver.find_elements(By.XPATH, "//b[contains(text(), 'International Box Office')]")
-                for international_box_office_element in all_international_box_office_element:
-                    if "International Box Office" in international_box_office_element.text:
-                        parent_international_box_office_element = international_box_office_element.find_element(By.XPATH, "./..").find_element(By.XPATH, "./..")
-                        td_elements = parent_international_box_office_element.find_elements(By.TAG_NAME, "td")
-                        international_box_office_content = td_elements[1].text
-                        if "n/a" in international_box_office_content:
-                            international_box_office = None
-                            print("No International Box Office")
-                        else:
-                            international_box_office = international_box_office_content.split(" (")[0]
-                            international_box_office = int(international_box_office.replace(",", "").replace("$", ""))
-                            print("International Box Office: " + "$" + str(international_box_office))
-                        break
-            else:
-                international_box_office = None
-                print("No International Box Office")
-            
-            # Crawl worldwide_box_office
-            if driver.find_elements(By.XPATH, "//b[contains(text(), 'Worldwide Box Office')]"):
-                all_worldwide_box_office_element = driver.find_elements(By.XPATH, "//b[contains(text(), 'Worldwide Box Office')]")
-                for worldwide_box_office_element in all_worldwide_box_office_element:
-                    if "Worldwide Box Office" in worldwide_box_office_element.text:
-                        parent_worldwide_box_office_element = worldwide_box_office_element.find_element(By.XPATH, "./..").find_element(By.XPATH, "./..")
-                        td_elements = parent_worldwide_box_office_element.find_elements(By.TAG_NAME, "td")
-                        worldwide_box_office_content = td_elements[1].text
-                        if "n/a" in worldwide_box_office_content:
-                            worldwide_box_office = None
-                            print("No Worldwide Box Office")
-                        else:
-                            worldwide_box_office = worldwide_box_office_content.split(" (")[0]
-                            worldwide_box_office = int(worldwide_box_office.replace(",", "").replace("$", ""))
-                            print("Worldwide Box Office: " + "$" + str(worldwide_box_office))
-                        break
-            else:
-                worldwide_box_office = None
-                print("No Worldwide Box Office")
 
             # Crawl country
             if driver.find_elements(By.XPATH, "//*[contains(text(), 'Countries:')]"):
@@ -262,8 +237,6 @@ with open("link_movie.txt", "r") as file:
             data['screens'] = screens
             data['opening_week'] = opening_week
             data['domestic_box_office'] = domestic_box_office
-            data['international_box_office'] = international_box_office
-            data['worldwide_box_office'] = worldwide_box_office
             data['country'] = country
 
             writer.writerow(data)
