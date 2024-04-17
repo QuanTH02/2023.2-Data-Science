@@ -3,7 +3,8 @@ import urllib.request
 import pprint as pp
 
 class Movie:
-    def __init__(self, title, month, year, budget, runtime, genres, mpaa, screens, opening, domestic, international, worldwide):
+    def __init__(self, url_title, title, month, year, budget, runtime, genres, mpaa, screens, opening, domestic, international, worldwide):
+        self.url_title = url_title
         self.title = title
         self.month = month
         self.year = year
@@ -16,7 +17,6 @@ class Movie:
         self.domestic = domestic
         self.international = international
         self.worldwide = worldwide
-        
 
 def convert_to_min(runtime):
     if "hr" in runtime:
@@ -115,11 +115,21 @@ def get_grosses(grosses):
 
     return domestic, international, worldwide
     
+def get_url_title(url_title):
+    # /title/tt0236493/?ref_=bo_rl_ti
+    return url_title.split('/')[-2]
 
 def crawl(release_id):
     url = f"https://www.boxofficemojo.com/release/{release_id}/"
+    url_title = None
+
     response = urllib.request.urlopen(url)
     soup = BeautifulSoup(response, 'html.parser')
+    
+    url_title_element = soup.find(string=lambda text: 'Title Summary' in text).parent
+    url_title = get_url_title(url_title_element.parent["href"])
+
+    print(url_title)
 
     title = soup.find('h1', {'class': "a-size-extra-large"}).text
     grosses = soup.find('div', {'class': "a-section a-spacing-none mojo-performance-summary-table"})
@@ -129,18 +139,18 @@ def crawl(release_id):
 
     domestic, international, worldwide = get_grosses(grosses)
 
-    return Movie(title, release_month, release_year, budget, runtime, genres, mpaa, screens, opening,domestic, international, worldwide)
+    return Movie(url_title,title, release_month, release_year, budget, runtime, genres, mpaa, screens, opening,domestic, international, worldwide)
     
 def main():
-    with open("mojo_quan.txt", "r") as f:
-        out = open("mojo_quan.csv", "w")
-        out.write("movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country\n")
+    with open("link/link_movie_mojo.txt", "r") as f:
+        out = open("test.csv", "w")
+        out.write("url_title,url_release,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country\n")
         index = 1
         for line in f:
             release_id = line.strip()
             movie = crawl(release_id)
             print(str(index) + ". " + movie.title)
-            out.write(f"{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},{movie.international},{movie.worldwide},""\n")
+            out.write(f"{movie.url_title},{release_id},{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},{movie.international},{movie.worldwide},""\n")
             index += 1
 
 if __name__ == "__main__":
