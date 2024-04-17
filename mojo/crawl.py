@@ -93,8 +93,7 @@ def get_info_table(info_table):
         elif "Widest Release" in row.text:
             screens = row.find_all('span')[1].text
             screens = screens.split()[0]
-            screens = screens.replace(".", "")
-            screens = screens.replace(",", "")
+            screens = screens.replace(".", "").replace(",", "")
         elif "Opening" in row.text:
             opening = row.find('span', {'class': "money"}).text.replace("$", "").replace(",", "")
 
@@ -133,7 +132,7 @@ def crawl(release_id):
 
     # print(url_title)
 
-    title = soup.find('h1', {'class': "a-size-extra-large"}).text
+    title = soup.find('h1', {'class': "a-size-extra-large"}).text.replace(",", "")
     grosses = soup.find('div', {'class': "a-section a-spacing-none mojo-performance-summary-table"})
     info_table = soup.find('div', {'class': "a-section a-spacing-none mojo-summary-values mojo-hidden-from-mobile"})
 

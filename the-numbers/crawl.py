@@ -56,7 +56,7 @@ with open("link/link_the-numbers.txt", "r") as file:
             split_string = movie_title.split(" (")
 
             # Crawl movie_name and year, month
-            movie_name = split_string[0]
+            movie_name = split_string[0].replace(",", "")
             year = int(movie_title.split('(')[-1].strip(')'))
             print("Movie: " + movie_name + " - " + str(year))
 
