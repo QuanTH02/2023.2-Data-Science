@@ -93,6 +93,8 @@ def get_info_table(info_table):
         elif "Widest Release" in row.text:
             screens = row.find_all('span')[1].text
             screens = screens.split()[0]
+            if "," in screens:
+                screens = screens.replace(",", "")
         elif "Opening" in row.text:
             opening = row.find('span', {'class': "money"}).text.replace("$", "").replace(",", "")
 
@@ -122,6 +124,8 @@ def crawl(release_id):
     soup = BeautifulSoup(response, 'html.parser')
 
     title = soup.find('h1', {'class': "a-size-extra-large"}).text
+    if "," in title:
+        title = title.replace(",", "")
     grosses = soup.find('div', {'class': "a-section a-spacing-none mojo-performance-summary-table"})
     info_table = soup.find('div', {'class': "a-section a-spacing-none mojo-summary-values mojo-hidden-from-mobile"})
 
@@ -132,8 +136,8 @@ def crawl(release_id):
     return Movie(title, release_month, release_year, budget, runtime, genres, mpaa, screens, opening,domestic, international, worldwide)
     
 def main():
-    with open("mojo_quan.txt", "r") as f:
-        out = open("mojo_quan.csv", "w")
+    with open("link/link_movie_mojo.txt", "r") as f:
+        out = open("mojo_nam.csv", "w")
         out.write("movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country\n")
         index = 1
         for line in f:
