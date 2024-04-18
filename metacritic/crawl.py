@@ -10,8 +10,6 @@ headers = {"User-Agent": user_agent, "Accept-Language": "en-US,en;q=0.5"}
 
 # critic_vote
 # meta_score
-# critic_vote_quan
-# meta_score_quan
 
 def edit_movie_name(movie_name):
     movie_name = re.sub(r'[^a-zA-Z0-9]+', '-', movie_name).strip('-')
@@ -61,16 +59,10 @@ def crawl_metacritic(soup):
     span_quan_elements = soup.find_all("span", {"class": "c-productScoreInfo_reviewsTotal u-block"})
     div_score_elements = soup.find_all("div", {"class": "c-productScoreInfo_scoreNumber u-float-right"})
 
-    critic_vote_quan = string_to_num(span_quan_elements[0].text)
-    meta_score_quan = string_to_num(span_quan_elements[1].text)
+    critic_vote = string_to_num(span_quan_elements[0].text)
+    meta_score = div_score_elements[0].text.strip()
 
-    critic_vote = div_score_elements[0].text.strip()
-    meta_score = div_score_elements[1].text.strip()
-
-    print("Critic vote quantity: " + critic_vote_quan)
     print("Critic vote: " + critic_vote)
-
-    print("Meta score quantity: " + meta_score_quan)
     print("Meta score: " + meta_score)
    
                 
