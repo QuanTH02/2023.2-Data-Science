@@ -1,4 +1,4 @@
-url_title,url_release,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country
-,rl1903396353,Spy Kids,3,2001,35000000,88,Action Adventure Comedy Family Sci-Fi,PG,3191,26546881,112719001,35215179,147934180,
-tt0236493,rl1516406273,The Mexican,3,2001,57000000,123,Adventure Comedy Drama Romance,R,3162,20108829,66845033,81000000,147845033,
-tt0164334,rl2101577217,Along Came a Spider,4,2001,60000000,104,Drama Thriller,R,2573,16712407,74078174,31100387,105178561,
+url_title,url_release,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,country
+,rl1903396353,Spy Kids,3,2001,35000000,88,Action Adventure Comedy Family Sci-Fi,PG,3191,26546881,112719001,a
+tt0236493,rl1516406273,The Mexican,3,2001,57000000,123,Adventure Comedy Drama Romance,R,3162,20108829,66845033,a
+tt0164334,rl2101577217,Along Came a Spider,4,2001,60000000,104,Drama Thriller,R,2573,16712407,74078174,a
