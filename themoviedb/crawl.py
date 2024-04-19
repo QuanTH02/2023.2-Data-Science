@@ -51,7 +51,6 @@ def page_search(soup_search, movie_title, month_release, year_release):
             response = requests.get(url, headers=headers)
 
             if response.status_code == 200:
-                print("OK")
                 soup = BeautifulSoup(response.content, 'html.parser')
                 crawl(soup)
                 break
@@ -78,14 +77,24 @@ def crawl(soup):
     return sequel
 
 if __name__ == "__main__":
-    df = pd.read_csv("../mojo/data/test.csv")
+    df = pd.read_csv("../mojo/data/test1.csv")
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
-    month_list = [convert_month(month) for month in month_list]
+    # print(month_list)
+    # month_list = [convert_month(int(month)) for month in month_list]
+
+    for i, month in enumerate(month_list):
+        if pd.isnull(month):
+            month_list[i] = ""
+        else:
+            month_list[i] = convert_month(int(month))
+
     year_list = df["year"].tolist()
 
     for movie_name in movie_name_list:
-        url = "https://www.themoviedb.org/search?query=" + movie_name
+        print("Movie Name: ", movie_name)
+        url = "https://www.themoviedb.org/search/movie?query=" + movie_name
+        print(url)
         response = requests.get(url, headers=headers)
 
         if response.status_code == 200:
@@ -94,4 +103,4 @@ if __name__ == "__main__":
         else:
             print("Failed to fetch data:", response.status_code)
 
-        break
+        print("-----------------------------------------------")

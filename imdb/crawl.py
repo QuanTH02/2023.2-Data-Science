@@ -197,19 +197,21 @@ if __name__ == "__main__":
     genres_list = df["genres"].tolist()
     country_list = df["country"].tolist()
 
+    # print(movie_name_list)
     
+    # print(url_title_list)
 
-    for url_title in url_title_list:
-        print("\nMovie: " + movie_name_list[url_title_list.index(url_title)])
+    for movie_name in movie_name_list:
+        print("Movie: " + movie_name_list[movie_name_list.index(movie_name)])
 
         # Crawl imdb selenium
-        if pd.isnull(country_list[url_title_list.index(url_title)]) and pd.isnull(genres_list[url_title_list.index(url_title)]):
+        if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
             check_search_imdb_slenium = True
             print("Not two")
-            if pd.isnull(url_title):
-                search_imdb(movie_name_list[url_title_list.index(url_title)], year_list[url_title_list.index(url_title)])
+            if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
+                search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
             else:
-                url = "https://www.imdb.com/title/" + url_title + "/"
+                url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
                 response = requests.get(url, headers=headers)
 
                 if response.status_code == 200:
@@ -220,13 +222,13 @@ if __name__ == "__main__":
             check_search_imdb_slenium = False
 
         # Crawl imdb requests
-        elif pd.isnull(country_list[url_title_list.index(url_title)]):
+        elif pd.isnull(country_list[movie_name_list.index(movie_name)]):
             check_search_imdb_requests = True
             print("Not country") 
-            if pd.isnull(url_title):
-                search_imdb(movie_name_list[url_title_list.index(url_title)], year_list[url_title_list.index(url_title)])
+            if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
+                search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
             else:
-                url = "https://www.imdb.com/title/" + url_title + "/"
+                url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
                 response = requests.get(url, headers=headers)
 
                 if response.status_code == 200:
@@ -237,17 +239,17 @@ if __name__ == "__main__":
             check_search_imdb_requests = False
 
         # Crawl Mojo
-        elif pd.isnull(genres_list[url_title_list.index(url_title)]):
+        elif pd.isnull(genres_list[movie_name_list.index(movie_name)]):
             print("Not Genres")
-            url = "https://www.boxofficemojo.com/search/?q=" + movie_name_list[url_title_list.index(url_title)] + "/"
+            url = "https://www.boxofficemojo.com/search/?q=" + movie_name_list[movie_name_list.index(movie_name)] + "/"
             response = requests.get(url, headers=headers)
 
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
-                page_search_mojo(soup, movie_name_list[url_title_list.index(url_title)], year_list[url_title_list.index(url_title)])
+                page_search_mojo(soup, movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
             else:
                 print("Failed to fetch data:", response.status_code)
         else:
             print("OK")
 
-        print("\n-----------------------------------------------")
+        print("-----------------------------------------------")
