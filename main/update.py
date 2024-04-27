@@ -12,10 +12,14 @@ if __name__ == "__main__":
         else:
             month_list[month_list.index(month)] = int(month)
 
+    print("-----------------------------------------------")
     for movie_name in movie_name_list:
         print(movie_name)
         print(month_list[movie_name_list.index(movie_name)])
         print(year_list[movie_name_list.index(movie_name)])
         print("-----------------------------------------------")
+
+        if movie_name_list.index(movie_name) == 5:
+            break
 
     
