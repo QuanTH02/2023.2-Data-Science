@@ -6,7 +6,7 @@ import re
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111"
 headers = {"User-Agent": user_agent, "Accept-Language": "en-US,en;q=0.5"}
 
-# CRAWL:
+# CRAWL: 
 
 # critic_vote
 # meta_score
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
     for movie_name in movie_name_list:
         if movie_name:
-            print(str(movie_name_list.index(movie_name) + 2) + ". " + edit_movie_name(movie_name))
+            print(str(movie_name_list.index(movie_name) + 2) + ". " + movie_name)
             url = "https://www.metacritic.com/movie/" + edit_movie_name(movie_name) + "/"
             # print(url)
             response = requests.get(url, headers=headers)
