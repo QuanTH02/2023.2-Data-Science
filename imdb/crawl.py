@@ -140,7 +140,7 @@ def page_search_mojo(soup_search, movie_title, year_release):
  
 # Search movie in imdb
 def page_search_imdb(soup_search, movie_title, year_release):
-    result_element = soup_search.find("ul", {"class": "ipc-metadata-list ipc-metadata-list--dividers-after sc-17bafbdb-3 WTcPP ipc-metadata-list--base"})
+    result_element = soup_search.find("ul", {"class": "ipc-metadata-list--base"})
 
     all_li_results = result_element.find_all("li", recursive=False)
 
@@ -177,9 +177,10 @@ def page_search_imdb(soup_search, movie_title, year_release):
             break
 
 def search_imdb(movie_name, year_release):
-    print("\n" + str(movie_name) + " - " + str(year_release))
+    # print("\n" + str(movie_name) + " - " + str(year_release))
     url = "https://www.imdb.com/find/?q=" + movie_name + "&s=tt&ttype=ft&ref_=fn_ft"
     response = requests.get(url, headers=headers)
+    # print(url)
 
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -250,6 +251,6 @@ if __name__ == "__main__":
             else:
                 print("Failed to fetch data:", response.status_code)
         else:
-            print("OK")
+            print("Full")
 
         print("-----------------------------------------------")

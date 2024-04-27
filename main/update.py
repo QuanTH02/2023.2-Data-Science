@@ -22,4 +22,4 @@ if __name__ == "__main__":
         if movie_name_list.index(movie_name) == 5:
             break
 
-    
+                

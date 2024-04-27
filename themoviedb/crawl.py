@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import csv
 
 # sequel
 
@@ -24,6 +25,23 @@ def convert_month(month):
     }
     return dict[month]
 
+def convert_month_to_int(month):
+    dict = {
+        "January": 1,
+        "February": 2,
+        "March": 3,
+        "April": 4,
+        "May": 5,
+        "June": 6,
+        "July": 7,
+        "August": 8,
+        "September": 9,
+        "October": 10,
+        "November": 11,
+        "December": 12
+    }
+    return dict[month]
+
 def page_search(soup_search, movie_title, month_release, year_release):
     result_element = soup_search.find("div", {"class": "results flex"})
 
@@ -36,26 +54,32 @@ def page_search(soup_search, movie_title, month_release, year_release):
         else:
             movie_name = movie_title_element.text
 
-        release_date = result.find("span", {"class": "release_date"}).text
+        if result.find("span", {"class": "release_date"}):
+            release_date = result.find("span", {"class": "release_date"}).text
+            month = release_date.split(",")[0].strip().split(" ")[0].strip()
+            year = release_date.split(",")[1].strip()
+        else:
+            release_date = ""
+            month = ""
+            year = ""
 
-        month = release_date.split(",")[0].strip().split(" ")[0].strip()
-        year = release_date.split(",")[1].strip()
-
-        # print("\n" + movie_name + " - " + month + "/" + year)
         # print(movie_title + " - " + str(month_release) + "/" + str(year_release))
+        # print("\n" + movie_name + " - " + month + "/" + year)
 
         if str(year) == str(year_release) and str(month) == str(month_release) and str(movie_name) == str(movie_title):
             # url
             url = "https://www.themoviedb.org" + result.find("a")["href"]
-            print(url)
+            # print(url)
             response = requests.get(url, headers=headers)
 
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
-                crawl(soup)
-                break
+                sequel = crawl(soup)
+                return sequel
             else:
                 print("Failed to fetch data:", response.status_code)
+        
+    return 0
 
 
 def crawl(soup):
@@ -91,16 +115,30 @@ if __name__ == "__main__":
 
     year_list = df["year"].tolist()
 
-    for movie_name in movie_name_list:
-        print("Movie Name: ", movie_name)
-        url = "https://www.themoviedb.org/search/movie?query=" + movie_name
-        print(url)
-        response = requests.get(url, headers=headers)
+    with open("data/data.csv", 'w', newline='', encoding='utf-8') as csvfile:
+        fields = ['movie_name', 'month', 'year', 'sequel']
+        writer = csv.DictWriter(csvfile, fieldnames=fields)
+        writer.writeheader()
 
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.content, 'html.parser')
-            page_search(soup, movie_name, month_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
-        else:
-            print("Failed to fetch data:", response.status_code)
+        for movie_name in movie_name_list:
+            print("Movie Name: ", movie_name)
+            url = "https://www.themoviedb.org/search/movie?query=" + movie_name
+            # print(url)
+            response = requests.get(url, headers=headers)
 
-        print("-----------------------------------------------")
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'html.parser')
+                sequel = page_search(soup, movie_name, month_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
+            else:
+                print("Failed to fetch data:", response.status_code)
+
+            print("-----------------------------------------------")
+
+            data = {}
+
+            data['movie_name'] = movie_name
+            data['month'] = convert_month_to_int(month_list[movie_name_list.index(movie_name)])
+            data['year'] = year_list[movie_name_list.index(movie_name)]
+            data['sequel'] = sequel
+
+            writer.writerow(data)

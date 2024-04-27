@@ -145,13 +145,13 @@ def crawl(release_id):
 def main():
     with open("link/link_movie_mojo.txt", "r") as f:
         out = open("test.csv", "w")
-        out.write("url_title,url_release,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,country\n")
+        out.write("tt_id,rl_id,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office\n")
         index = 1
         for line in f:
             release_id = line.strip()
             movie = crawl(release_id)
             print(str(index) + ". " + movie.title)
-            out.write(f"{movie.url_title},{release_id},{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},""\n")
+            out.write(f"{movie.url_title},{release_id},{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic}\n")
             index += 1
 
 if __name__ == "__main__":
