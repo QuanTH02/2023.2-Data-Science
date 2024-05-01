@@ -4,6 +4,12 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from selenium.common.exceptions import StaleElementReferenceException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import csv
+
+
 
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111"
 headers = {"User-Agent": user_agent, "Accept-Language": "en-US,en;q=0.5"}
@@ -18,37 +24,36 @@ headers = {"User-Agent": user_agent, "Accept-Language": "en-US,en;q=0.5"}
 check_search_imdb_slenium = False
 check_search_imdb_requests = False
 
-# Crawl genres MOJO
-def crawl_mojo_request(soup):
-    div_all_element = soup.find('div', {'class': 'a-section a-spacing-none mojo-summary-values mojo-hidden-from-mobile'})
+genres = []
+country = []
+ratings = []
+user_vote = []
 
-    all_div_results = div_all_element.find_all('div', recursive=False)
-
-    for div_result in all_div_results:
-        # print(div_result.text)
-        if "Genres" in div_result.find_all('span')[0].text:
-            genres_content = div_result.find_all('span')[1].text
-            genres_array = genres_content.split('\n')
-            genres = [genre.strip() for genre in genres_array if genre.strip()]
-
-            if len(genres) > 0:
-                print("Genres: " + ' '.join(genres))
-
-            break
+def loop():
+    driver_check = webdriver.Chrome()
+    try:
+        if driver_check.find_element(By.CSS_SELECTOR, "li[data-testid='storyline-genres']"):
+            return
+    except StaleElementReferenceException:
+        pass
+    
+    time.sleep(0.5)
+    loop(driver_check)
 
 # Crawl country IMDB
 def crawl_imdb_request(soup):
-    country = []
     user_vote_and_rating_element = soup.find("div", {"data-testid": "hero-rating-bar__aggregate-rating"})
 
     # ratings
-    ratings = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-2 cdQqzc"}).text.split("/")[0].strip()
+    rate = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-2 cdQqzc"}).text.split("/")[0].strip()
 
     # user_vote
-    user_vote = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-3 gPVQxL"}).text.replace("K", "000").replace("M", "000000")
+    vote = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-3 gPVQxL"}).text.replace("K", "000").replace("M", "000000")
 
-    print("Rating: " + ratings)
-    print("User vote: " + user_vote)
+    ratings.append(rate)
+    user_vote.append(vote)
+    # print("Rating: " + ratings)
+    # print("User vote: " + user_vote)
 
     li_country_element = soup.find("li",{'data-testid': "title-details-origin"})
     ul_element = li_country_element.find("ul")
@@ -58,33 +63,36 @@ def crawl_imdb_request(soup):
     for country_li in all_country_li_element:
         country.append(country_li.text)
 
-    if len(country) > 0:
-        print("Country: " + ' '.join(country))
+    # if len(country) > 0:
+    #     print("Country: " + ' '.join(country))
 
 # Crawl genres and country IMDB
 def crawl_imdb_selenium(url):
-    genres = []
-    country = []
+    # genres = []
+    # country = []
 
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.get(url)
-    driver.execute_script("window.scrollTo(0, 5000);")
     time.sleep(1)
+    driver.execute_script("window.scrollTo(0, 5000);")
+    time.sleep(2)
 
     tag_storyline_element = driver.find_element(By.CSS_SELECTOR, "div[data-testid='storyline-header']").find_element(By.XPATH, "./..")
     driver.execute_script("arguments[0].scrollIntoView();", tag_storyline_element)
-    time.sleep(5)
+    
+    # loop()
 
-    if tag_storyline_element.find_element(By.CSS_SELECTOR, "li[data-testid='storyline-genres']"):
-        li_all_genres_element = driver.find_element(By.CSS_SELECTOR, "li[data-testid='storyline-genres']")
+    li_all_genres_element = WebDriverWait(driver,100).until(EC.presence_of_element_located(
+        (By.CSS_SELECTOR, "li[data-testid='storyline-genres']")))
+    
+    if li_all_genres_element:
         ul_genres_element = li_all_genres_element.find_element(By.TAG_NAME, "ul")
         li_genres_elements = ul_genres_element.find_elements(By.TAG_NAME, "li")
 
         for li_genres in li_genres_elements:
             genres.append(li_genres.text)
 
-    
     tag_detail_element = driver.find_element(By.CSS_SELECTOR, "div[data-testid='title-details-header']").find_element(By.XPATH, "./..")
 
     if tag_detail_element.find_element(By.CSS_SELECTOR, "li[data-testid='title-details-origin']"):
@@ -94,49 +102,24 @@ def crawl_imdb_selenium(url):
 
         for li_country in li_country_elements:
             country.append(li_country.text)
+
+    user_vote_and_rating_element = driver.find_element(By.CSS_SELECTOR, "div[data-testid='hero-rating-bar__aggregate-rating']")
+
+    # ratings
+    rate = user_vote_and_rating_element.find_element(By.CSS_SELECTOR, "div[class='sc-bde20123-2 cdQqzc']").text.split("/")[0].strip()
+
+    # user_vote
+    vote = user_vote_and_rating_element.find_element(By.CSS_SELECTOR, "div[class='sc-bde20123-3 gPVQxL']").text.replace("K", "000").replace("M", "000000").replace(".", "")
+
+    ratings.append(rate)
+    user_vote.append(vote)
     
-    if len(genres) > 0:
-        print("Genres: " + ' '.join(genres))
-    if len(country) > 0:
-        print("Country: " + ' '.join(country))
+    # if len(genres) > 0:
+    #     print("Genres: " + ' '.join(genres))
+    # if len(country) > 0:
+    #     print("Country: " + ' '.join(country))
     
     driver.close()
-    
-# Search movie in mojo
-def page_search_mojo(soup_search, movie_title, year_release):
-    result_element = soup_search.find("div", {"class": "a-section mojo-gutter"})
-
-    all_div_results = result_element.find_all("div", {"class": "a-fixed-left-grid"})
-
-    for result in all_div_results:
-        if result.find("a", {"class": "a-size-medium a-link-normal a-text-bold"}):
-            movie_title_element = result.find("a", {"class": "a-size-medium a-link-normal a-text-bold"})
-        else:
-            continue
-    
-        movie_name = movie_title_element.text
-
-        if movie_title_element.parent.find_all("span", {"class": "a-color-secondary"})[0]:
-            year = movie_title_element.parent.find_all("span", {"class": "a-color-secondary"})[0].text
-            year = year.strip().strip("()")
-        else:
-            continue
-
-        if str(year) == str(year_release) and str(movie_name) == str(movie_title):
-            # url
-            url = "https://www.boxofficemojo.com" + movie_title_element["href"]
-            # print("URL: " + url)
-            response = requests.get(url, headers=headers)
-
-            if response.status_code == 200:
-                soup = BeautifulSoup(response.content, 'html.parser')
-                crawl_mojo_request(soup)
-            else:
-                print("Failed to fetch data:", response.status_code)
-
-            break
-
-
  
 # Search movie in imdb
 def page_search_imdb(soup_search, movie_title, year_release):
@@ -193,64 +176,72 @@ if __name__ == "__main__":
     df = pd.read_csv("../mojo/data/test.csv")
     url_title_list = df["url_title"].tolist()
     movie_name_list = df["movie_name"].tolist()
+    month_list = df["month"].tolist()
     year_list = df["year"].tolist()
 
     genres_list = df["genres"].tolist()
     country_list = df["country"].tolist()
 
     # print(movie_name_list)
-    
     # print(url_title_list)
 
-    for movie_name in movie_name_list:
-        print("Movie: " + movie_name_list[movie_name_list.index(movie_name)])
+    with open("data/data.csv", 'a', newline='', encoding='utf-8') as csvfile:
+        fields = ['movie_name', 'month', 'year', 'ratings', 'user_vote', 'genres', 'country']
+        writer = csv.DictWriter(csvfile, fieldnames=fields)
+        writer.writeheader()
 
-        # Crawl imdb selenium
-        if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-            check_search_imdb_slenium = True
-            print("Not two")
-            if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
-                search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
+        for movie_name in movie_name_list:
+            data = {}
+            print("Movie: " + movie_name_list[movie_name_list.index(movie_name)])
+
+            if not pd.isnull(country_list[movie_name_list.index(movie_name)]) and not pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+                print("Full")
+                continue
             else:
-                url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
-                response = requests.get(url, headers=headers)
+                if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+                    check_search_imdb_slenium = True
+                elif pd.isnull(country_list[movie_name_list.index(movie_name)]):
+                    check_search_imdb_requests = True
+                elif pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+                    check_search_imdb_slenium = True
 
-                if response.status_code == 200:
-                    soup = BeautifulSoup(response.content, 'html.parser')
-                    crawl_imdb_request(soup)
+                if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
+                    search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
                 else:
-                    print("Failed to fetch data:", response.status_code)
-            check_search_imdb_slenium = False
+                    url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
+                    response = requests.get(url, headers=headers)
 
-        # Crawl imdb requests
-        elif pd.isnull(country_list[movie_name_list.index(movie_name)]):
-            check_search_imdb_requests = True
-            print("Not country") 
-            if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
-                search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
-            else:
-                url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
-                response = requests.get(url, headers=headers)
+                    if response.status_code == 200:
+                        soup = BeautifulSoup(response.content, 'html.parser')
+                        crawl_imdb_request(soup)
+                    else:
+                        print("Failed to fetch data:", response.status_code)
 
-                if response.status_code == 200:
-                    soup = BeautifulSoup(response.content, 'html.parser')
-                    crawl_imdb_request(soup)
-                else:
-                    print("Failed to fetch data:", response.status_code)
-            check_search_imdb_requests = False
+                check_search_imdb_slenium = False
+                check_search_imdb_requests = False
 
-        # Crawl Mojo
-        elif pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-            print("Not Genres")
-            url = "https://www.boxofficemojo.com/search/?q=" + movie_name_list[movie_name_list.index(movie_name)] + "/"
-            response = requests.get(url, headers=headers)
+            data['movie_name'] = movie_name
+            data['month'] = month_list[movie_name_list.index(movie_name)]
+            data['year'] = year_list[movie_name_list.index(movie_name)]
 
-            if response.status_code == 200:
-                soup = BeautifulSoup(response.content, 'html.parser')
-                page_search_mojo(soup, movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
-            else:
-                print("Failed to fetch data:", response.status_code)
-        else:
-            print("Full")
+            if len(ratings) > 0:
+                print("Rating: " + ratings[0])
+                data['ratings'] = ratings[0]
+            if len(user_vote) > 0:
+                print("User vote: " + user_vote[0])
+                data['user_vote'] = user_vote[0]
+            if len(genres) > 0:
+                print("Genres: " + ' '.join(genres))
+                data['genres'] = ' '.join(genres)
+            if len(country) > 0:
+                print("Country: " + ' '.join(country))
+                data['country'] = ' '.join(country)
 
-        print("-----------------------------------------------")
+            ratings = []
+            user_vote = []
+            genres = []
+            country = []
+
+            writer.writerow(data)
+
+            print("-----------------------------------------------")
