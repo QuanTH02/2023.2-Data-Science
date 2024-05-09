@@ -144,7 +144,7 @@ def crawl(release_id):
     
 def main():
     with open("link/link_movie_mojo.txt", "r") as f:
-        out = open("test.csv", "w")
+        out = open("data/data.csv", "w")
         out.write("tt_id,rl_id,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office\n")
         index = 1
         for line in f:

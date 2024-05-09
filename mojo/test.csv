@@ -1,5 +1,7 @@
-url_title,url_release,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office
+tt_id,rl_id,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office
 tt0227538,rl1903396353,Spy Kids,3,2001,35000000,88,Action Adventure Comedy Family Sci-Fi,PG,3191,26546881,112719001
 tt0236493,rl1516406273,The Mexican,3,2001,57000000,123,Adventure Comedy Drama Romance,R,3162,20108829,66845033
 tt0164334,rl2101577217,Along Came a Spider,4,2001,60000000,104,Drama Thriller,R,2573,16712407,74078174
 tt0242445,rl1733330433,Exit Wounds,3,2001,50000000,101,Action Crime Thriller,R,2830,18485586,51758599
+tt0215750,rl4082206209,Enemy at the Gates,3,2001,68000000,131,Action Drama War,R,1724,13810266,51401758
+tt0221027,rl893814273,Blow,4,2001,53000000,124,Biography Crime Drama,R,2249,12443461,52990775
