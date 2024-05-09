@@ -127,8 +127,11 @@ def crawl(release_id):
     response = urllib.request.urlopen(url)
     soup = BeautifulSoup(response, 'html.parser')
     
-    url_title_element = soup.find(string=lambda text: 'Title Summary' in text).parent
-    url_title = get_url_title(url_title_element.parent["href"])
+    try:
+        url_title_element = soup.find(string=lambda text: 'Title Summary' in text).parent
+        url_title = get_url_title(url_title_element.parent["href"])
+    except:
+        url_title = ""
 
     # print(url_title)
 
@@ -144,7 +147,7 @@ def crawl(release_id):
     
 def main():
     with open("link/link_movie_mojo.txt", "r") as f:
-        out = open("data/data.csv", "w")
+        out = open("data/data.csv", "a")
         out.write("tt_id,rl_id,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office\n")
         index = 1
         for line in f:
