@@ -1,7 +1,6 @@
 tt_id,rl_id,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office
-tt0227538,rl1903396353,Spy Kids,3,2001,35000000,88,Action Adventure Comedy Family Sci-Fi,PG,3191,26546881,112719001
-tt0236493,rl1516406273,The Mexican,3,2001,57000000,123,Adventure Comedy Drama Romance,R,3162,20108829,66845033
-tt0164334,rl2101577217,Along Came a Spider,4,2001,60000000,104,Drama Thriller,R,2573,16712407,74078174
-tt0242445,rl1733330433,Exit Wounds,3,2001,50000000,101,Action Crime Thriller,R,2830,18485586,51758599
-tt0215750,rl4082206209,Enemy at the Gates,3,2001,68000000,131,Action Drama War,R,1724,13810266,51401758
-tt0221027,rl893814273,Blow,4,2001,53000000,124,Biography Crime Drama,R,2249,12443461,52990775
+tt0385635,rl575440385,Dans une galaxie pr�s de chez vous - Le film,4,2004,None,109,Adventure Comedy Sci-Fi,None,74,None,2259688
+tt0365957,rl2491057665,You Got Served,1,2004,8000000,95,Drama Music,PG-13,1943,16123105,40363810
+tt0286244,rl2255980033,The Triplets of Belleville,11,2003,None,80,Adventure Animation Comedy Drama Music Sport,PG-13,463,108080,7007149
+tt0317910,rl240289281,The Fog of War,12,2003,None,107,Biography Documentary History War,PG-13,261,41449,4198566
+tt0337741,rl1299219969,Something's Gotta Give,12,2003,80000000,128,Comedy Drama Romance,PG-13,2876,16064723,124728738
