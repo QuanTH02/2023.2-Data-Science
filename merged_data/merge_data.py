@@ -67,4 +67,20 @@ merged_df = merged_df.drop(columns=columns_to_drop, axis=1)
 print(merged_df.info())
 merged_df.to_csv("merged.csv", index=False)
 
+merged_df.dropna(
+    subset=[
+        "month",
+        "year",
+        "runtime",
+        "budget",
+        "mpaa",
+        "screens",
+        "opening_week",
+        "domestic_box_office",
+    ],
+    inplace=True,
+)
+print(merged_df.info())
+merged_df.to_csv("filtered_merged_data.csv", index=False)
+
 print("Tổng hợp dữ liệu thành công và lưu vào file 'merged.csv'.")
