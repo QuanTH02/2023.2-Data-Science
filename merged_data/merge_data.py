@@ -59,6 +59,8 @@ for col in cols_to_get_greater:
 # Sử dụng cột country của df_b cho merged_df
 merged_df["country"] = merged_df["country_b"]
 merged_df["genres"] = merged_df["genres_a"]
+merged_df["tt_id"] = merged_df["tt_id_a"]
+merged_df["rl_id"] = merged_df["rl_id_a"]
 
 print(merged_df.info())
 
