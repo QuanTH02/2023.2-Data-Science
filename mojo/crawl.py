@@ -146,8 +146,8 @@ def crawl(release_id):
     return Movie(url_title,title, release_month, release_year, budget, runtime, genres, mpaa, screens, opening,domestic, international, worldwide)
     
 def main():
-    with open("link/link_quan.txt", "r") as f:
-        out = open("data/data_quan.csv", "w")
+    with open("link/link_nam.txt", "r") as f:
+        out = open("data/data_nam.csv", "a")
         out.write("tt_id,rl_id,movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office\n")
         index = 1
         for line in f:
