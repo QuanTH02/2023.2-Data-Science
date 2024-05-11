@@ -1,6 +1,6 @@
 import pandas as pd
 # Đọc dữ liệu từ file CSV
-df_a = pd.read_csv("../mojo/data/mojo_nam.csv")
+df_a = pd.read_csv("../mojo/data/all_movie_mojo.csv")
 df_b = pd.read_csv("../the-numbers/data/all_the-numbers.csv")
 
 # Thêm cột genres cho df_b với giá trị ""
