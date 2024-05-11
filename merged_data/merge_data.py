@@ -1,11 +1,12 @@
 import pandas as pd
 # Đọc dữ liệu từ file CSV
-df_a = pd.read_csv("../mojo/data/all_movie_mojo.csv", dtype={"country": object})
-df_b = pd.read_csv("../the_numbers/data/all_the-numbers.csv")
+df_a = pd.read_csv("../mojo/data/mojo_nam.csv")
+df_b = pd.read_csv("../the-numbers/data/all_the-numbers.csv")
 
 # Thêm cột genres cho df_b với giá trị ""
 df_b["genres"] = ""
-
+df_b.drop("international_box_office", axis=1, inplace=True)
+df_b.drop("worldwide_box_office", axis=1, inplace=True)
 print(df_a.info())
 print(df_b.info())
 # Gộp dữ liệu từ hai DataFrame
@@ -48,19 +49,13 @@ cols_to_get_greater = [
     "screens",
     "opening_week",
     "domestic_box_office",
-    "international_box_office",
-    "worldwide_box_office",
 ]
 for col in cols_to_get_greater:
     merged_df[col] = merged_df.apply(
         lambda row: choose_greater_value(row[f"{col}_a"], row[f"{col}_b"]), axis=1
     )
 
-# Sử dụng cột country của df_b cho merged_df
-merged_df["country"] = merged_df["country_b"]
 merged_df["genres"] = merged_df["genres_a"]
-merged_df["tt_id"] = merged_df["tt_id_a"]
-merged_df["rl_id"] = merged_df["rl_id_a"]
 
 print(merged_df.info())
 
