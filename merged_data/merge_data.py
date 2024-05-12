@@ -7,6 +7,9 @@ df_b = pd.read_csv("../the-numbers/data/all_the-numbers.csv")
 df_b["genres"] = ""
 df_b.drop("international_box_office", axis=1, inplace=True)
 df_b.drop("worldwide_box_office", axis=1, inplace=True)
+
+df_a.drop_duplicates(subset=["movie_name"], inplace=True)
+df_b.drop_duplicates(subset=["movie_name"], inplace=True)
 print(df_a.info())
 print(df_b.info())
 # Gộp dữ liệu từ hai DataFrame
@@ -15,8 +18,6 @@ merged_df = pd.merge(
     df_b,
     on=[
         "movie_name",
-        "month",
-        "year"
     ],
     how="outer",
     suffixes=("_a", "_b"),
@@ -35,7 +36,7 @@ def choose_greater_value(value_a, value_b):
 
 
 # Áp dụng hàm cho các cột cần so sánh
-cols_to_compare = ["mpaa"]
+cols_to_compare = ["month","year","mpaa"]
 for col in cols_to_compare:
     merged_df[col] = merged_df.apply(
         lambda row: (
