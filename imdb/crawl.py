@@ -56,12 +56,15 @@ def crawl_imdb_request(soup):
     # print("User vote: " + user_vote)
 
     li_country_element = soup.find("li",{'data-testid': "title-details-origin"})
-    ul_element = li_country_element.find("ul")
-    all_country_li_element = ul_element.find_all("li")
 
-    # country
-    for country_li in all_country_li_element:
-        country.append(country_li.text)
+    if li_country_element != None:
+        ul_element = li_country_element.find("ul")
+
+        all_country_li_element = ul_element.find_all("li")
+
+        # country
+        for country_li in all_country_li_element:
+            country.append(country_li.text)
 
     # if len(country) > 0:
     #     print("Country: " + ' '.join(country))
@@ -174,7 +177,7 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 if __name__ == "__main__":
-    df = pd.read_csv("../merge_data/test.csv")
+    df = pd.read_csv("../merge_data/quan.csv")
     url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
