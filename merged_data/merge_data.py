@@ -84,6 +84,7 @@ merged_df.dropna(
     inplace=True,
 )
 print(merged_df.info())
+merged_df = merged_df[merged_df["mpaa"] != "Not"]
 merged_df.to_csv("filtered_merged_data.csv", index=False)
 
 print("Tổng hợp dữ liệu thành công và lưu vào file 'merged.csv'.")
