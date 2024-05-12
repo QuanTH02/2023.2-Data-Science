@@ -48,7 +48,7 @@ def crawl_imdb_request(soup):
     rate = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-2 cdQqzc"}).text.split("/")[0].strip()
 
     # user_vote
-    vote = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-3 gPVQxL"}).text.replace("K", "000").replace("M", "000000")
+    vote = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-3 gPVQxL"}).text.replace("K", "000").replace("M", "000000").replace(".", "")
 
     ratings.append(rate)
     user_vote.append(vote)
@@ -125,39 +125,40 @@ def crawl_imdb_selenium(url):
 def page_search_imdb(soup_search, movie_title, year_release):
     result_element = soup_search.find("ul", {"class": "ipc-metadata-list--base"})
 
-    all_li_results = result_element.find_all("li", recursive=False)
+    if result_element != None:
+        all_li_results = result_element.find_all("li", recursive=False)
 
-    for result in all_li_results:
-        # print(result.text)
-        if result.find("a", {"class": "ipc-metadata-list-summary-item__t"}):
-            movie_title_element = result.find("a", {"class": "ipc-metadata-list-summary-item__t"})
-        else:
-            continue
-        
-        movie_name = movie_title_element.text
+        for result in all_li_results:
+            # print(result.text)
+            if result.find("a", {"class": "ipc-metadata-list-summary-item__t"}):
+                movie_title_element = result.find("a", {"class": "ipc-metadata-list-summary-item__t"})
+            else:
+                continue
+            
+            movie_name = movie_title_element.text
 
-        if result.find("span", {"class": "ipc-metadata-list-summary-item__li"}):
-            year = result.find("span", {"class": "ipc-metadata-list-summary-item__li"}).text
-        else:
-            continue
+            if result.find("span", {"class": "ipc-metadata-list-summary-item__li"}):
+                year = result.find("span", {"class": "ipc-metadata-list-summary-item__li"}).text
+            else:
+                continue
 
-        # print("\n" + movie_name + " - " + month + "/" + year)
-        # print(movie_title + " - " + str(month_release) + "/" + str(year_release))
+            # print("\n" + movie_name + " - " + month + "/" + year)
+            # print(movie_title + " - " + str(month_release) + "/" + str(year_release))
 
-        if str(year) == str(year_release) and str(movie_name) == str(movie_title):
-            # url
-            url = "https://www.imdb.com" + movie_title_element["href"]
-            if check_search_imdb_requests:
-                response = requests.get(url, headers=headers)
-                if response.status_code == 200:
-                    soup = BeautifulSoup(response.content, 'html.parser')
-                    crawl_imdb_request(soup)
-                else:
-                    print("Failed to fetch data:", response.status_code)
-            elif check_search_imdb_slenium:
-                crawl_imdb_selenium(url)
+            if str(year) == str(year_release) and str(movie_name) == str(movie_title):
+                # url
+                url = "https://www.imdb.com" + movie_title_element["href"]
+                if check_search_imdb_requests:
+                    response = requests.get(url, headers=headers)
+                    if response.status_code == 200:
+                        soup = BeautifulSoup(response.content, 'html.parser')
+                        crawl_imdb_request(soup)
+                    else:
+                        print("Failed to fetch data:", response.status_code)
+                elif check_search_imdb_slenium:
+                    crawl_imdb_selenium(url)
 
-            break
+                break
 
 def search_imdb(movie_name, year_release):
     # print("\n" + str(movie_name) + " - " + str(year_release))
@@ -173,7 +174,7 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 if __name__ == "__main__":
-    df = pd.read_csv("../merge_data/filtered_merged_data.csv")
+    df = pd.read_csv("../merge_data/test.csv")
     url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
@@ -185,7 +186,7 @@ if __name__ == "__main__":
     # print(movie_name_list)
     # print(url_title_list)
 
-    with open("merge_data/long.csv", 'a', newline='', encoding='utf-8') as csvfile:
+    with open("data/data_quan.csv", 'a', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name', 'month', 'year', 'ratings', 'user_vote', 'genres', 'country']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
