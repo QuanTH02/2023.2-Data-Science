@@ -15,6 +15,8 @@ merged_df = pd.merge(
     df_b,
     on=[
         "movie_name",
+        "month",
+        "year"
     ],
     how="outer",
     suffixes=("_a", "_b"),
@@ -33,7 +35,7 @@ def choose_greater_value(value_a, value_b):
 
 
 # Áp dụng hàm cho các cột cần so sánh
-cols_to_compare = ["month", "year", "mpaa"]
+cols_to_compare = ["mpaa"]
 for col in cols_to_compare:
     merged_df[col] = merged_df.apply(
         lambda row: (
