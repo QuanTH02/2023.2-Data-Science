@@ -20,7 +20,7 @@ page_num = 8001
 # genres
 # gross_revenue
 
-with open("link_movie_them.txt", "w") as file:
+with open("link_the-numbers.txt", "w") as file:
     while page_num < 10001:
         page_main_url = "https://www.the-numbers.com/box-office-records/worldwide/all-movies/cumulative/all-time/" + str(page_num)
         driver.get(page_main_url)

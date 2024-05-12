@@ -3,8 +3,7 @@ import urllib.request
 import pprint as pp
 
 class Movie:
-    def __init__(self, url_title, title, month, year, budget, runtime, genres, mpaa, screens, opening, domestic, international, worldwide):
-        self.url_title = url_title
+    def __init__(self, title, month, year, budget, runtime, genres, mpaa, screens, opening, domestic, international, worldwide):
         self.title = title
         self.month = month
         self.year = year
@@ -17,6 +16,7 @@ class Movie:
         self.domestic = domestic
         self.international = international
         self.worldwide = worldwide
+        
 
 def convert_to_min(runtime):
     if "hr" in runtime:
@@ -93,7 +93,8 @@ def get_info_table(info_table):
         elif "Widest Release" in row.text:
             screens = row.find_all('span')[1].text
             screens = screens.split()[0]
-            screens = screens.replace(".", "").replace(",", "")
+            if "," in screens:
+                screens = screens.replace(",", "")
         elif "Opening" in row.text:
             opening = row.find('span', {'class': "money"}).text.replace("$", "").replace(",", "")
 
@@ -116,26 +117,15 @@ def get_grosses(grosses):
 
     return domestic, international, worldwide
     
-def get_url_title(url_title):
-    # /title/tt0236493/?ref_=bo_rl_ti
-    return url_title.split('/')[-2]
 
 def crawl(release_id):
     url = f"https://www.boxofficemojo.com/release/{release_id}/"
-    url_title = None
-
     response = urllib.request.urlopen(url)
     soup = BeautifulSoup(response, 'html.parser')
-    
-    try:
-        url_title_element = soup.find(string=lambda text: 'Title Summary' in text).parent
-        url_title = get_url_title(url_title_element.parent["href"])
-    except:
-        url_title = ""
 
-    # print(url_title)
-
-    title = soup.find('h1', {'class': "a-size-extra-large"}).text.replace(",", "")
+    title = soup.find('h1', {'class': "a-size-extra-large"}).text
+    if "," in title:
+        title = title.replace(",", "")
     grosses = soup.find('div', {'class': "a-section a-spacing-none mojo-performance-summary-table"})
     info_table = soup.find('div', {'class': "a-section a-spacing-none mojo-summary-values mojo-hidden-from-mobile"})
 
@@ -143,7 +133,7 @@ def crawl(release_id):
 
     domestic, international, worldwide = get_grosses(grosses)
 
-    return Movie(url_title,title, release_month, release_year, budget, runtime, genres, mpaa, screens, opening,domestic, international, worldwide)
+    return Movie(title, release_month, release_year, budget, runtime, genres, mpaa, screens, opening,domestic, international, worldwide)
     
 def main():
     with open("link/link_nam.txt", "r") as f:
@@ -154,7 +144,7 @@ def main():
             release_id = line.strip()
             movie = crawl(release_id)
             print(str(index) + ". " + movie.title)
-            out.write(f"{movie.url_title},{release_id},{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic}\n")
+            out.write(f"{movie.title},{movie.month},{movie.year},{movie.budget},{movie.runtime},{movie.genres},{movie.mpaa},{movie.screens},{movie.opening},{movie.domestic},{movie.international},{movie.worldwide},""\n")
             index += 1
 
 if __name__ == "__main__":

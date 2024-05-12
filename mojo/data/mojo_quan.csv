@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country
+Once I Was a Beehive,8,2015,None,119,Comedy Drama Family,PG,32,48409,732655,None,732655,
+=======
 movie_name,month,year,budget,runtime,genres,mpaa,screens,opening_week,domestic_box_office,international_box_office,worldwide_box_office,country
 Once I Was a Beehive,8,2015,None,119,Comedy Drama Family,PG,32,48409,732655,None,732655,
 In the Name of My Daughter,5,2015,None,116,Crime Drama,R,50,14294,277528,2260371,2537899,
@@ -1049,3 +1053,4 @@ Miss Sharon Jones!,7,2016,None,93,Documentary Music,None,12,10323,120880,None,12
 The Last Princess,9,2016,None,127,Action Biography Drama History,None,1,11607,29259,4105996,4135255,
 Dark Horse,5,2016,None,85,Documentary Drama Sport,PG,74,13838,940715,3346,944061,
 The Best Democracy Money Can Buy,9,2016,None,114,Documentary,None,4,9511,29500,None,29500,
+>>>>>>> main
