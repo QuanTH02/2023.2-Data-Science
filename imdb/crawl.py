@@ -192,7 +192,7 @@ if __name__ == "__main__":
 
         for movie_name in movie_name_list:
             data = {}
-            print("Movie: " + movie_name_list[movie_name_list.index(movie_name)])
+            print(str(movie_name_list.index(movie_name)) + ". Movie: " + movie_name_list[movie_name_list.index(movie_name)])
 
            
             if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
