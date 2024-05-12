@@ -174,7 +174,7 @@ def search_imdb(movie_name, year_release):
 
 if __name__ == "__main__":
     df = pd.read_csv("../merge_data/filtered_merged_data.csv")
-    url_title_list = df["url_title"].tolist()
+    url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
     year_list = df["year"].tolist()
@@ -194,35 +194,36 @@ if __name__ == "__main__":
             data = {}
             print("Movie: " + movie_name_list[movie_name_list.index(movie_name)])
 
-            if not pd.isnull(country_list[movie_name_list.index(movie_name)]) and not pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-                print("Full")
-                continue
+           
+            if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+                check_search_imdb_slenium = True
+            elif pd.isnull(country_list[movie_name_list.index(movie_name)]):
+                check_search_imdb_requests = True
+            elif pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+                check_search_imdb_slenium = True
+
+            if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
+                search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
             else:
-                if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-                    check_search_imdb_slenium = True
-                elif pd.isnull(country_list[movie_name_list.index(movie_name)]):
-                    check_search_imdb_requests = True
-                elif pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-                    check_search_imdb_slenium = True
+                url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
+                response = requests.get(url, headers=headers)
 
-                if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
-                    search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
+                if response.status_code == 200:
+                    soup = BeautifulSoup(response.content, 'html.parser')
+                    crawl_imdb_request(soup)
                 else:
-                    url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
-                    response = requests.get(url, headers=headers)
+                    print("Failed to fetch data:", response.status_code)
 
-                    if response.status_code == 200:
-                        soup = BeautifulSoup(response.content, 'html.parser')
-                        crawl_imdb_request(soup)
-                    else:
-                        print("Failed to fetch data:", response.status_code)
-
-                check_search_imdb_slenium = False
-                check_search_imdb_requests = False
+            check_search_imdb_slenium = False
+            check_search_imdb_requests = False
 
             data['movie_name'] = movie_name
             data['month'] = month_list[movie_name_list.index(movie_name)]
             data['year'] = year_list[movie_name_list.index(movie_name)]
+
+            if not pd.isnull(country_list[movie_name_list.index(movie_name)]) and not pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+                genres = []
+                country = []
 
             if len(ratings) > 0:
                 print("Rating: " + ratings[0])
