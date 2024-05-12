@@ -126,6 +126,7 @@ def crawl_imdb_selenium(url):
  
 # Search movie in imdb
 def page_search_imdb(soup_search, movie_title, year_release):
+    year_release = int(year_release)
     result_element = soup_search.find("ul", {"class": "ipc-metadata-list--base"})
 
     if result_element != None:
@@ -145,8 +146,8 @@ def page_search_imdb(soup_search, movie_title, year_release):
             else:
                 continue
 
-            # print("\n" + movie_name + " - " + month + "/" + year)
-            # print(movie_title + " - " + str(month_release) + "/" + str(year_release))
+            # print("\n" + movie_name + " - "  + year)
+            # print(movie_title + " - " + str(year_release))
 
             if str(year) == str(year_release) and str(movie_name) == str(movie_title):
                 # url
@@ -177,7 +178,7 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 if __name__ == "__main__":
-    df = pd.read_csv("../merge_data/quan.csv")
+    df = pd.read_csv("../merge_data/test.csv")
     url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
@@ -189,7 +190,7 @@ if __name__ == "__main__":
     # print(movie_name_list)
     # print(url_title_list)
 
-    with open("data/data_quan.csv", 'a', newline='', encoding='utf-8') as csvfile:
+    with open("data/test.csv", 'w', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name', 'month', 'year', 'ratings', 'user_vote', 'genres', 'country']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
@@ -225,9 +226,11 @@ if __name__ == "__main__":
             data['month'] = month_list[movie_name_list.index(movie_name)]
             data['year'] = year_list[movie_name_list.index(movie_name)]
 
-            if not pd.isnull(country_list[movie_name_list.index(movie_name)]) and not pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-                genres = []
+            if not pd.isnull(country_list[movie_name_list.index(movie_name)]):
                 country = []
+
+            if not pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+                genres = []
 
             if len(ratings) > 0:
                 print("Rating: " + ratings[0])
