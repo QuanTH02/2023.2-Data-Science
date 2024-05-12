@@ -185,7 +185,7 @@ if __name__ == "__main__":
     # print(movie_name_list)
     # print(url_title_list)
 
-    with open("data/data.csv", 'a', newline='', encoding='utf-8') as csvfile:
+    with open("merge_data/long.csv", 'a', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name', 'month', 'year', 'ratings', 'user_vote', 'genres', 'country']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
