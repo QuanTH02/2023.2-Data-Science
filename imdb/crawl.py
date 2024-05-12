@@ -173,7 +173,7 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 if __name__ == "__main__":
-    df = pd.read_csv("../mojo/data/test.csv")
+    df = pd.read_csv("../merge_data/filtered_merged_data.csv")
     url_title_list = df["url_title"].tolist()
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
