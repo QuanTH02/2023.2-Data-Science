@@ -1,23 +1,20 @@
 function processData3(csvData, backgroundColor) {
-    // Chuyển đổi dữ liệu CSV thành mảng các dòng
     const rows = csvData.split('\n');
 
-    // Khởi tạo mảng lưu trữ số phim theo từng năm
     let revenue = [];
     let budget = [];
 
-    // Lặp qua từng dòng dữ liệu (trừ dòng tiêu đề)
     for (let i = 1; i < rows.length; i++) {
         let year;
         if (rows[i].includes('"')) {
             const row = rows[i].split('"');
             const r = row[2].split(',');
-            budget.push(parseInt(r[4])); // Sử dụng push() thay vì append()
-            revenue.push(parseInt(r[8])); // Sử dụng push() thay vì append()
+            budget.push(parseInt(r[4])); 
+            revenue.push(parseInt(r[8])); 
         } else {
             const row = rows[i].split(',');
-            budget.push(parseInt(row[7])); // Sử dụng push() thay vì append()
-            revenue.push(parseInt(row[11])); // Sử dụng push() thay vì append()
+            budget.push(parseInt(row[7])); 
+            revenue.push(parseInt(row[11])); 
         }
     }
 
@@ -38,7 +35,6 @@ function drawChart3(budgets, revenues, backgroundColor) {
         }]
     };
 
-    // Tùy chọn của biểu đồ
     const options = {
         scales: {
             x: {
@@ -60,7 +56,6 @@ function drawChart3(budgets, revenues, backgroundColor) {
         }
     };
 
-    // Vẽ biểu đồ
     const ctx = document.getElementById('bar3-chart').getContext('2d');
     currentChart3 = new Chart(ctx, {
         type: 'scatter',
