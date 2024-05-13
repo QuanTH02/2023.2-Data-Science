@@ -1,5 +1,6 @@
 import pandas as pd
-# Đọc dữ liệu từ file CSV
+
+'''# Gộp 2 data từ the-numbers và movie-mojo
 df_a = pd.read_csv("../mojo/data/all_movie_mojo.csv")
 df_b = pd.read_csv("../the-numbers/data/all_the-numbers.csv")
 
@@ -7,6 +8,9 @@ df_b = pd.read_csv("../the-numbers/data/all_the-numbers.csv")
 df_b["genres"] = ""
 df_b.drop("international_box_office", axis=1, inplace=True)
 df_b.drop("worldwide_box_office", axis=1, inplace=True)
+
+df_a.drop_duplicates(subset=["movie_name"], inplace=True)
+df_b.drop_duplicates(subset=["movie_name"], inplace=True)
 print(df_a.info())
 print(df_b.info())
 # Gộp dữ liệu từ hai DataFrame
@@ -33,7 +37,7 @@ def choose_greater_value(value_a, value_b):
 
 
 # Áp dụng hàm cho các cột cần so sánh
-cols_to_compare = ["month", "year", "mpaa"]
+cols_to_compare = ["month","year","mpaa"]
 for col in cols_to_compare:
     merged_df[col] = merged_df.apply(
         lambda row: (
@@ -81,6 +85,43 @@ merged_df.dropna(
     inplace=True,
 )
 print(merged_df.info())
+merged_df = merged_df[merged_df["mpaa"] != "Not"]
 merged_df.to_csv("filtered_merged_data.csv", index=False)
 
 print("Tổng hợp dữ liệu thành công và lưu vào file 'merged.csv'.")
+'''
+
+# ==================================================================================
+
+#Gộp dữ liệu từ imdb và filtered_merged_data
+df_a = pd.read_csv("filtered_merged_data.csv")
+df_b = pd.read_csv("../imdb/data/all_data.csv")
+
+print(df_a.info())
+print(df_b.info())
+# Gộp dữ liệu từ hai DataFrame
+merged_df = pd.merge(
+    df_a,
+    df_b,
+    on=[
+        "movie_name",
+    ],
+    how="outer",
+    suffixes=("_a", "_b"),
+)
+
+cols_to_compare = ["country", "genres", "month", "year"]
+for col in cols_to_compare:
+    merged_df[col] = merged_df.apply(
+        lambda row: (
+            row[f"{col}_a"] if not pd.isna(row[f"{col}_a"]) else row[f"{col}_b"]
+        ),
+        axis=1,
+    )
+
+columns_to_drop = [col for col in merged_df.columns if col.endswith(("_a", "_b"))]
+merged_df = merged_df.drop(columns=columns_to_drop, axis=1)
+
+merged_df.dropna(subset=["country", "genres","ratings","user_vote"], inplace=True)
+print(merged_df.info())
+merged_df.to_csv("imdb_merged.csv", index=False)
