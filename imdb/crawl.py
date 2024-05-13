@@ -178,7 +178,7 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 if __name__ == "__main__":
-    df = pd.read_csv("../merge_data/quan.csv")
+    df = pd.read_csv("../merge_data/long.csv")
     url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
@@ -190,7 +190,7 @@ if __name__ == "__main__":
     # print(movie_name_list)
     # print(url_title_list)
 
-    with open("data/data_quan_new.csv", 'w', newline='', encoding='utf-8') as csvfile:
+    with open("data/data_long_new.csv", 'w', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name', 'month', 'year', 'ratings', 'user_vote', 'genres', 'country']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
