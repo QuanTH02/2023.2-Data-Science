@@ -16,7 +16,7 @@ def score(critic_vote_metacritic, meta_score_metacritic, critic_vote_rotten, met
     return critic_vote_sum, "{:.2f}".format((metacritic_sum+rotten_sum)/critic_vote_sum)
 
 if __name__ == "__main__":
-    df = pd.read_csv("../mojo/data/test1.csv")
+    df = pd.read_csv("../merge_data/imdb_merged8.csv")
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
     year_list = df["year"].tolist()
@@ -27,7 +27,13 @@ if __name__ == "__main__":
         else:
             month_list[i] = int(month)
 
-    with open("data/data.csv", 'w', newline='', encoding='utf-8') as csvfile:
+    for i, year in enumerate(year_list):
+        if pd.isnull(year):
+            year_list[i] = ""
+        else:
+            year_list[i] = int(year)
+
+    with open("data/data8.csv", 'w', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name','month','year','critic_vote_metacritic', 'meta_score_metacritic', 'critic_vote_rotten', 'meta_score_rotten', 'critic_vote', 'meta_score']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
@@ -76,6 +82,8 @@ if __name__ == "__main__":
                     critic_vote, meta_score = score(int(critic_vote_metacritic), int(meta_score_metacritic), 0, 0)
                 elif critic_vote_rotten:
                     critic_vote, meta_score = score(0, 0, int(critic_vote_rotten), int(meta_score_rotten))
+                else:
+                    critic_vote, meta_score = 0, 0
 
                 data['movie_name'] = movie_name
                 data['month'] = month_list[movie_name_list.index(movie_name)]

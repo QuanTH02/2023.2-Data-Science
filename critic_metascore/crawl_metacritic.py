@@ -23,6 +23,9 @@ def page_search_metacritic(soup, movie_title, year_release):
 
         div_year_element = div_element.find("div", {"class": "u-flexbox u-flexbox-alignCenter u-flexbox-nowrap g-gap-medium g-text-xxxsmall"})
 
+        if len(div_year_element.find_all("span")) < 2:
+            continue
+
         gen = div_year_element.find_all("span")[0].text.strip()
         year = div_year_element.find_all("span")[1].text.strip()
 
@@ -65,6 +68,9 @@ def string_to_num(quan_str):
 def crawl_metacritic(soup):
     span_quan_elements = soup.find_all("span", {"class": "c-productScoreInfo_reviewsTotal u-block"})
     div_score_elements = soup.find_all("div", {"class": "c-productScoreInfo_scoreNumber u-float-right"})
+
+    if not span_quan_elements:
+        return "", ""
 
     critic_vote = string_to_num(span_quan_elements[0].text)
     meta_score = div_score_elements[0].text.strip()

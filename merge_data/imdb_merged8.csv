@@ -1,0 +1,797 @@
+tt_id,rl_id,movie_name,mpaa,budget,runtime,screens,opening_week,domestic_box_office,ratings,user_vote,country,genres,month,year
+tt1578275,rl2406254081,The Dilemma,PG-13,70000000.0,111.0,2943.0,17816230.0,48475290.0,5.3,57000.0,United States,Comedy Drama,1.0,2011.0
+tt2364897,rl2186249729,The Disappointments Room,R,15000000.0,91.0,1554.0,1402823.0,2423468.0,3.9,10000.0,United States,Drama Horror Thriller,9.0,2016.0
+tt3521126,rl1979942401,The Disaster Artist,R,10000000.0,104.0,1010.0,1211345.0,21120616.0,7.3,164000.0,United States,Biography Comedy Drama,12.0,2017.0
+tt2908446,rl1012565505,The Divergent Series: Insurgent,PG-13,110000000.0,119.0,3875.0,52263680.0,130179072.0,6.2,255000.0,United States,Action Adventure Sci-Fi Thriller,3.0,2015.0
+tt0348593,rl357467649,The Door in the Floor,R,7500000.0,111.0,134.0,456876.0,3854624.0,6.6,16000.0,United States,Comedy Drama,7.0,2004.0
+tt0309987,rl3025044993,The Dreamers,NC-17,15000000.0,115.0,116.0,142632.0,2532228.0,7.1,132000.0,"France, Italy, United Kingdom, United States",Drama Romance,2.0,2004.0
+tt2910904,rl3128722945,The Dressmaker,R,11900000.0,119.0,174.0,185165.0,2022115.0,7.0,66000.0,Australia,Comedy Drama Western,9.0,2016.0
+tt1600196,rl2655946241,The Drop,R,12600000.0,107.0,1192.0,4104552.0,10724389.0,7.0,162000.0,United States,Crime Drama Thriller,9.0,2014.0
+tt0864761,rl4199450113,The Duchess,PG-13,27000000.0,110.0,1207.0,190426.0,13848978.0,6.9,87000.0,"France, Italy, United Kingdom, United States",Biography Drama History Romance Thriller,9.0,2008.0
+tt0377818,rl3947791873,The Dukes of Hazzard,PG-13,53000000.0,105.0,3785.0,30675314.0,80270227.0,5.1,82000.0,United States,Comedy,8.0,2005.0
+tt1034389,rl3410920961,The Eagle,PG-13,25000000.0,114.0,2296.0,8684464.0,19490041.0,6.2,74000.0,"United Kingdom, United States",Action Adventure Drama,2.0,2011.0
+tt1346961,rl407995905,The Eclipse,R,3000000.0,88.0,12.0,13207.0,133411.0,6.0,31000.0,Ireland,Drama Horror Romance,3.0,2010.0
+,,The Edge of Seventeen,R,9000000.0,99.0,1945.0,4754215.0,14431633.0,7.3,140000.0,United States,Comedy Drama,12.0,2016.0
+tt4877122,rl3363603969,The Emoji Movie,PG,50000000.0,86.0,4075.0,24531923.0,86089513.0,3.4,71000.0,United States,Adventure Animation Comedy Family Fantasy Sci-Fi,7.0,2017.0
+tt0283530,rl2807137793,The Emperor's Club,PG-13,12500000.0,109.0,811.0,3846780.0,14118751.0,6.9,18000.0,United States,Drama,11.0,2002.0
+tt0120917,rl2572256769,The Emperor's New Groove,G,100000000.0,78.0,2887.0,9812302.0,89630573.0,7.4,226000.0,United States,Adventure Animation Comedy Family Fantasy,12.0,2000.0
+tt0455944,rl3495003649,The Equalizer,R,55000000.0,132.0,3236.0,34137828.0,101530738.0,7.2,421000.0,United States,Action Crime Thriller,9.0,2014.0
+tt3766354,rl494765569,The Equalizer 2,R,77000000.0,129.0,3388.0,36011640.0,102084362.0,6.7,199000.0,United States,Action Crime Thriller,7.0,2018.0
+tt0404032,rl1548781057,The Exorcism of Emily Rose,PG-13,19000000.0,119.0,3045.0,30054300.0,75072454.0,6.7,140000.0,United States,Drama Horror Thriller,9.0,2005.0
+tt12921446,rl2047378177,The Exorcist: Believer,R,30000000.0,111.0,3684.0,26497600.0,65537395.0,4.8,40000.0,United States,Horror,10.0,2023.0
+tt1320253,rl1464894977,The Expendables,R,82000000.0,103.0,3398.0,34825135.0,103068524.0,6.4,365000.0,United States,Action Adventure Thriller,8.0,2010.0
+tt1764651,rl1431340545,The Expendables 2,R,100000000.0,103.0,3355.0,28591370.0,85028192.0,6.6,323000.0,United States,Action Adventure Thriller,8.0,2012.0
+tt2333784,rl1448117761,The Expendables 3,PG-13,100000000.0,126.0,3221.0,15879645.0,39322544.0,6.1,196000.0,United States,Action Adventure Thriller,8.0,2014.0
+tt0469903,rl1330677249,The Express,PG,40000000.0,130.0,2810.0,4562675.0,9793406.0,7.2,23000.0,United States,Biography Drama Sport,10.0,2008.0
+tt0406759,rl3176171009,The Eye,PG-13,12000000.0,98.0,2470.0,12425776.0,31418697.0,5.4,56000.0,United States,Horror Mystery,2.0,2008.0
+tt2404311,rl4133520897,The Family,R,30000000.0,111.0,3091.0,14034764.0,36918811.0,6.3,123000.0,United States,Comedy Crime Thriller,9.0,2013.0
+tt0218967,rl4132472321,The Family Man,PG-13,60000000.0,125.0,2441.0,15104055.0,75793305.0,6.8,119000.0,United States,Comedy Drama Fantasy Romance,12.0,2000.0
+tt0356680,rl4082140673,The Family Stone,PG-13,18000000.0,104.0,2469.0,12521027.0,60062868.0,6.3,75000.0,United States,Comedy Drama Romance,12.0,2005.0
+tt8637428,rl1091143169,The Farewell,PG,3000000.0,100.0,891.0,355662.0,17700478.0,7.5,71000.0,United Kingdom,Comedy Drama,7.0,2019.0
+tt0232500,rl928220673,The Fast and the Furious,PG-13,38000000.0,107.0,2899.0,40089015.0,144533925.0,6.8,420000.0,United States,Action Crime Thriller,6.0,2001.0
+tt0463985,rl676562433,The Fast and the Furious: Tokyo Drift,PG-13,85000000.0,104.0,3030.0,23973840.0,62615510.0,6.0,300000.0,"Germany, United States",Action Crime Thriller,6.0,2006.0
+tt4630562,rl1767212545,The Fate of the Furious,PG-13,250000000.0,136.0,4329.0,98786705.0,226008385.0,6.6,254000.0,United States,Action Crime Thriller,4.0,2017.0
+tt2582846,rl324240897,The Fault in Our Stars,PG-13,12000000.0,126.0,3340.0,48002523.0,124872350.0,7.7,402000.0,"Canada, United Kingdom, United States",Drama Romance,6.0,2014.0
+tt5083738,rl1325696513,The Favourite,R,15000000.0,119.0,1554.0,422410.0,34366783.0,7.5,234000.0,"Ireland, United Kingdom, United States",Biography Comedy Drama History,11.0,2018.0
+tt1837703,rl1397982721,The Fifth Estate,R,28000000.0,128.0,1769.0,1673351.0,3255008.0,6.2,43000.0,United States,Biography Crime Drama Thriller,10.0,2013.0
+tt0964517,rl1213433345,The Fighter,R,25000000.0,116.0,2534.0,300010.0,93617009.0,7.8,389000.0,United States,Action Biography Drama Sport,12.0,2010.0
+tt0191133,rl1330873857,The Fighting Temptations,PG-13,30000000.0,123.0,2026.0,11758372.0,30250745.0,5.6,76000.0,United States,Comedy Drama Music Romance,9.0,2003.0
+tt1144884,rl2975041025,The Final Destination,R,40000000.0,82.0,3121.0,27408309.0,66477700.0,5.1,115000.0,United States,Horror Thriller,8.0,2009.0
+tt2025690,rl2605942273,The Finest Hours,PG-13,70000000.0,117.0,3143.0,10288932.0,27569558.0,6.7,71000.0,United States,Action Drama History Thriller,1.0,2016.0
+tt6133466,rl1526760961,The First Purge,R,13000000.0,97.0,3038.0,17374280.0,69488745.0,5.2,71000.0,United States,Action Horror Sci-Fi Thriller,7.0,2018.0
+tt1195478,rl3679684097,The Five-Year Engagement,R,30000000.0,124.0,2941.0,10610060.0,28835528.0,6.2,103000.0,United States,Comedy Drama Romance,4.0,2012.0
+tt0439572,rl2225635841,The Flash,PG-13,200000000.0,144.0,4256.0,55043679.0,108167507.0,6.7,211000.0,United States,Action Adventure Fantasy Sci-Fi,6.0,2023.0
+,,The Flintstones in Viva Rock Vegas,PG,58000000.0,90.0,3040.0,10518435.0,35231365.0,3.7,25000.0,United States,Comedy Family Romance Sci-Fi,4.0,2000.0
+tt5649144,rl3003352577,The Florida Project,R,2000000.0,115.0,229.0,157553.0,5904366.0,7.6,129000.0,United States,Drama,10.0,2017.0
+tt0432291,rl223512065,The Fog,PG-13,18000000.0,100.0,2972.0,11752917.0,29550869.0,3.7,39000.0,United States,Horror Mystery,10.0,2005.0
+tt0865556,rl1632798209,The Forbidden Kingdom,PG-13,55000000.0,105.0,3151.0,21401121.0,52075270.0,6.5,110000.0,"China, United States",Action Adventure Fantasy,4.0,2008.0
+tt1615160,rl1358988801,The Foreigner,R,35000000.0,116.0,2515.0,13113024.0,34393507.0,7.0,123000.0,"China, United Kingdom",Action Thriller,10.0,2017.0
+tt3387542,rl1582466561,The Forest,PG-13,10000000.0,93.0,2509.0,12741176.0,26594261.0,4.8,46000.0,United States,Horror Mystery Thriller,1.0,2016.0
+tt0356618,rl1246922241,The Forgotten,PG-13,50000000.0,91.0,3144.0,21022111.0,67133509.0,5.8,68000.0,United States,Drama Mystery Sci-Fi Thriller,9.0,2004.0
+tt0245120,rl3159524865,The Forsaken,R,15000000.0,90.0,1514.0,3020159.0,7288451.0,5.3,92000.0,United States,Action Fantasy Horror Thriller,4.0,2001.0
+tt4276820,rl2840757761,The Founder,PG-13,15000000.0,115.0,1115.0,3404102.0,12786053.0,7.2,178000.0,United States,Biography Drama,1.0,2017.0
+tt0414993,rl2891089409,The Fountain,PG-13,35000000.0,97.0,1472.0,3768702.0,10144010.0,7.2,249000.0,United States,Drama Mystery Romance Sci-Fi,11.0,2006.0
+tt0240510,rl2723317249,The Four Feathers,PG-13,35000000.0,132.0,2187.0,6857879.0,18306166.0,6.5,36000.0,United Kingdom United States,Action Adventure Drama Romance War,9.0,2002.0
+,,The Fourth Kind,PG-13,10000000.0,105.0,2527.0,12231160.0,26218170.0,5.9,82000.0,United States,Horror Mystery Sci-Fi Thriller,11.0,2009.0
+tt1235170,rl1616217601,The Future,R,1000000.0,91.0,31.0,27137.0,568662.0,6.1,91000.0,United States Germany France United Kingdom,Drama Fantasy Romance,7.0,2011.0
+tt2309260,rl593004033,The Gallows,R,100000.0,81.0,2720.0,9808463.0,22764410.0,4.2,22000.0,United States,Horror Mystery Thriller,7.0,2015.0
+tt2039393,rl1381336577,The Gambler,R,25000000.0,111.0,2494.0,9129999.0,33680992.0,6.0,74000.0,United States,Crime Drama Thriller,12.0,2014.0
+tt0492956,rl1247118849,The Game Plan,PG,22000000.0,110.0,3342.0,22950971.0,90648202.0,6.4,100000.0,United States,Comedy Family Sport,9.0,2007.0
+tt0354595,rl1213564417,The Game of Their Lives,PG,20000000.0,101.0,64.0,175336.0,375750.0,6.1,35000.0,United States,Drama History Sport,4.0,2005.0
+,,The Gentlemen,R,22000000.0,113.0,2165.0,10651884.0,36471796.0,7.8,403000.0,"United Kingdom, United States",Action Crime,12.0,2019.0
+tt1139328,rl3277161985,The Ghost Writer,PG-13,45000000.0,129.0,819.0,183009.0,15541549.0,7.2,171000.0,"France, Germany, United Kingdom",Crime Drama Mystery Thriller,2.0,2010.0
+tt0219699,rl945063425,The Gift,R,5000000.0,112.0,2503.0,11854273.0,43787265.0,6.7,75000.0,United States,Drama Fantasy Horror Mystery,12.0,2000.0
+tt0265208,rl273974785,The Girl Next Door,R,25000000.0,109.0,2148.0,6003806.0,14589444.0,6.7,240000.0,United States,Comedy Drama Romance,4.0,2004.0
+tt1183672,rl324306433,The Girl on the Train,R,45000000.0,112.0,3144.0,24536265.0,75395035.0,6.0,17000.0,United States,Drama,1.0,2010.0
+tt1132620,rl89425409,The Girl with the Dragon Tattoo,R,90000000.0,160.0,2914.0,12768604.0,102515793.0,7.8,223000.0,United States,Crime Drama Mystery Thriller,3.0,2010.0
+tt0435651,rl2102691329,The Giver,PG-13,25000000.0,97.0,3003.0,12305016.0,45090374.0,6.4,126000.0,United States,Drama Romance Sci-Fi Thriller,8.0,2014.0
+tt0221218,rl1951696385,The Glass House,PG-13,30000000.0,120.0,1601.0,5738448.0,18150259.0,5.8,40000.0,United States,Crime Drama Mystery Thriller,9.0,2001.0
+tt0385752,rl2572453377,The Golden Compass,PG-13,205000000.0,113.0,3528.0,26125000.0,70107728.0,6.1,197000.0,United Kingdom,Adventure Family Fantasy,12.0,2007.0
+tt3864056,rl621118977,The Goldfinch,R,45000000.0,149.0,2542.0,2679027.0,5332621.0,6.4,27000.0,United States,Crime Drama Mystery,9.0,2019.0
+tt1979388,rl3999827457,The Good Dinosaur,PG,187500000.0,93.0,3749.0,39155217.0,123087120.0,6.7,128000.0,United States,Adventure Animation Comedy Drama Family Fantasy,11.0,2015.0
+tt0452624,rl3780412929,The Good German,R,32000000.0,105.0,66.0,76817.0,1308696.0,6.0,26000.0,United States,Drama Mystery Romance Thriller War,12.0,2006.0
+tt0279113,rl3797190145,The Good Girl,R,8000000.0,93.0,688.0,151642.0,14018296.0,6.4,47000.0,"Germany, Netherlands, United States",Drama Romance,8.0,2002.0
+tt1247662,rl3813967361,The Good Guy,R,10000000.0,102.0,9.0,34712.0,100688.0,5.8,98000.0,United States,Comedy Romance,2.0,2010.0
+,,The Good Liar,R,10000000.0,110.0,2439.0,5605051.0,17156058.0,6.7,47000.0,United States,Crime Drama Mystery Thriller,11.0,2019.0
+tt0343737,rl3360982529,The Good Shepherd,R,80000000.0,167.0,2250.0,10033960.0,59952835.0,6.7,109000.0,United States,Drama History Thriller,12.0,2006.0
+tt0281820,rl3394536961,The Good Thief,R,30000000.0,109.0,222.0,131580.0,3517797.0,6.5,11000.0,Ireland United Kingdom France Canada,Action Crime Drama Romance Thriller,4.0,2003.0
+tt0901487,rl4233397761,The Good the Bad the Weird,R,10000000.0,139.0,15.0,4775.0,128486.0,7.2,38000.0,South Korea,Action Adventure Comedy Western,4.0,2010.0
+tt1092633,rl3612640769,The Goods: Live Hard Sell Hard,R,10000000.0,89.0,1849.0,5642137.0,15122676.0,5.7,23000.0,United States,Comedy,8.0,2009.0
+,,"The Goods: Live Hard, Sell Hard",R,10000000.0,89.0,1838.0,5642137.0,15122676.0,5.7,23000.0,United States,Comedy,8.0,2009.0
+tt0451069,rl1012368897,The Gospel,PG,4000000.0,105.0,983.0,7523571.0,15778152.0,5.1,23000.0,United States,Adventure Drama Family Fantasy Music,10.0,2005.0
+tt0377992,rl1029146113,The Gospel of John,PG-13,10000000.0,180.0,113.0,98363.0,4069090.0,7.8,42000.0,Canada United Kingdom,Biography Drama History,9.0,2003.0
+tt2278388,rl475497985,The Grand Budapest Hotel,R,31000000.0,100.0,1467.0,811166.0,59301324.0,8.1,888000.0,United States,Adventure Comedy Crime,3.0,2014.0
+tt0427309,rl1884784129,The Great Debaters,PG-13,15000000.0,126.0,1290.0,6005180.0,30236407.0,7.5,63000.0,United States,Biography Drama Romance,12.0,2007.0
+tt1343092,rl2706736641,The Great Gatsby,PG-13,190000000.0,143.0,3550.0,50085185.0,144840419.0,7.2,598000.0,United States,Drama Romance,5.0,2013.0
+tt0402230,rl1633125889,The Great New Wonderful,R,500000.0,88.0,8.0,39712.0,150142.0,5.6,16000.0,United States,Comedy Drama Romance,6.0,2006.0
+tt0326905,rl1649903105,The Great Raid,R,80000000.0,132.0,920.0,3376009.0,10167373.0,6.6,24000.0,"Australia, United States",Action Drama War,8.0,2005.0
+tt2034800,rl1515685377,The Great Wall,PG-13,150000000.0,104.0,3328.0,18469620.0,45540830.0,5.9,147000.0,"China, United States",Action Adventure Fantasy Thriller,2.0,2017.0
+tt1226232,rl1968670209,The Greatest,R,6000000.0,99.0,19.0,33616.0,114766.0,6.6,95000.0,United States,Drama Romance,4.0,2010.0
+tt0388980,rl1784120833,The Greatest Game Ever Played,PG,25000000.0,120.0,1810.0,3657322.0,15337393.0,7.4,34000.0,United States,Biography Drama Sport,9.0,2005.0
+tt1743720,rl2573567489,The Greatest Movie Ever Sold,PG-13,1800000.0,90.0,141.0,118294.0,638476.0,6.6,15000.0,United States,Comedy Documentary,4.0,2011.0
+tt1485796,rl1700234753,The Greatest Showman,PG,84000000.0,105.0,3342.0,8805843.0,174340174.0,7.5,312000.0,United States,Biography Drama Musical,12.0,2017.0
+tt0990407,rl1247249921,The Green Hornet,PG-13,120000000.0,119.0,3584.0,33526876.0,98780042.0,5.8,165000.0,United States,Action Comedy Crime,1.0,2011.0
+tt2403021,rl1264027137,The Green Inferno,R,5000000.0,103.0,1543.0,3520626.0,7192291.0,5.3,50000.0,United States,Adventure Horror,9.0,2015.0
+tt1601913,rl3143075329,The Grey,R,25000000.0,117.0,3208.0,19665101.0,51580236.0,6.7,264000.0,United States,Action Adventure Drama Thriller,1.0,2012.0
+tt2709692,rl3075966465,The Grinch,PG,75000000.0,85.0,4141.0,67572855.0,271478510.0,6.4,91000.0,France United States,Animation Comedy Drama Family Fantasy Musical,11.0,2018.0
+tt0391198,rl2639758849,The Grudge,PG-13,10000000.0,92.0,3348.0,39128715.0,110359362.0,5.9,151000.0,United States,Horror Mystery Thriller,10.0,2004.0
+tt0433386,rl2656536065,The Grudge 2,PG-13,20000000.0,102.0,3214.0,20825300.0,39143839.0,5.0,51000.0,United States,Horror Thriller,10.0,2006.0
+tt1540133,rl2488763905,The Guard,R,6000000.0,96.0,203.0,76834.0,5360274.0,7.3,96000.0,Ireland,Comedy Crime Thriller,7.0,2011.0
+tt0406816,rl2287437313,The Guardian,PG-13,70000000.0,139.0,3241.0,18006064.0,55011732.0,6.9,98000.0,United States,Action Adventure Drama,9.0,2006.0
+tt1694020,rl3026552321,The Guilt Trip,PG-13,40000000.0,95.0,2431.0,5290629.0,37134215.0,5.8,40000.0,United States,Comedy Drama,12.0,2012.0
+tt2515034,rl4116153857,The Gunman,R,40000000.0,115.0,2816.0,5028702.0,10664749.0,5.8,43000.0,"France, Spain, United Kingdom, United States",Action Crime Mystery Thriller,3.0,2015.0
+tt0280720,rl3981936129,The Guru,R,11000000.0,94.0,98.0,613485.0,3095506.0,5.4,16000.0,United Kingdom France United States,Comedy Music Romance,1.0,2003.0
+tt1119646,rl643204609,The Hangover,R,35000000.0,100.0,3545.0,44979319.0,277322503.0,7.7,848000.0,United States,Comedy,6.0,2009.0
+tt1411697,rl408323585,The Hangover Part II,R,80000000.0,102.0,3675.0,85946294.0,254464305.0,6.5,535000.0,United States,Comedy,5.0,2011.0
+tt1951261,rl659981825,The Hangover Part III,R,103000000.0,100.0,3565.0,41671198.0,112200072.0,5.8,336000.0,United States,Comedy Crime,5.0,2013.0
+tt0949731,rl257328641,The Happening,R,60000000.0,91.0,2986.0,30517109.0,64506874.0,5.0,217000.0,"France, United States",Adventure Drama Sci-Fi Thriller,6.0,2008.0
+tt1308728,rl2432927233,The Happytime Murders,R,40000000.0,91.0,3256.0,9532425.0,20706452.0,5.5,30000.0,United States,Action Comedy Crime Fantasy Horror Mystery Thriller,8.0,2018.0
+tt5580266,rl4026828289,The Hate U Give,PG-13,23000000.0,133.0,2375.0,512035.0,29719483.0,7.5,40000.0,United States,Crime Drama,10.0,2018.0
+tt3460252,rl1249740289,The Hateful Eight,R,62000000.0,168.0,2938.0,4610676.0,54117416.0,7.8,661000.0,United States,Crime Drama Mystery Thriller Western,12.0,2015.0
+tt0338094,rl2690024961,The Haunted Mansion,PG,90000000.0,99.0,3122.0,24278410.0,75847266.0,5.2,57000.0,United States,Comedy Family Fantasy Horror Mystery,11.0,2003.0
+tt1045655,rl2706802177,The Haunting of Molly Hartley,PG-13,5000000.0,86.0,2652.0,5423315.0,13559812.0,3.9,10000.0,United States,Drama Horror Thriller,10.0,2008.0
+tt2404463,rl2185856513,The Heat,R,43000000.0,117.0,3184.0,39115043.0,159582188.0,6.6,181000.0,United States,Action Comedy Crime,6.0,2013.0
+tt0317640,rl3394668033,The Hebrew Hammer,R,2000000.0,85.0,8.0,19539.0,82157.0,6.1,51000.0,United States,Comedy,12.0,2003.0
+tt1454029,rl626624001,The Help,PG-13,25000000.0,146.0,3014.0,26044590.0,169708112.0,8.1,493000.0,"United Arab Emirates, United States",Drama,8.0,2011.0
+tt0454841,rl3008988673,The Hills Have Eyes,R,17000000.0,107.0,2621.0,15708512.0,41778863.0,6.4,183000.0,United States,Horror Thriller,3.0,2006.0
+tt0800069,rl3059320321,The Hills Have Eyes 2,R,15000000.0,89.0,2465.0,9686362.0,20804166.0,5.1,68000.0,United States Morocco,Horror Thriller,3.0,2007.0
+tt0464049,rl2774107649,The History Boys,R,3700000.0,112.0,165.0,100803.0,2730296.0,6.8,21000.0,United Kingdom,Comedy Drama Romance,11.0,2006.0
+tt0371724,rl2656667137,The Hitchhiker's Guide to the Galaxy,PG,50000000.0,109.0,3133.0,21103203.0,51085416.0,6.7,209000.0,United States,Adventure Comedy Sci-Fi,4.0,2005.0
+tt1959563,rl2407433729,The Hitman's Bodyguard,R,30000000.0,118.0,3377.0,21384504.0,75468583.0,6.9,247000.0,United States Hong Kong Bulgaria Netherlands Canada United Kingdom France,Action Comedy Crime Thriller,8.0,2017.0
+tt0462338,rl2304345601,The Hoax,R,25000000.0,116.0,1069.0,1501000.0,7164995.0,6.7,17000.0,United Kingdom,Biography Comedy Drama History,4.0,2007.0
+tt0903624,rl2321122817,The Hobbit: An Unexpected Journey,PG-13,200000000.0,169.0,4100.0,84617303.0,303003568.0,7.8,874000.0,"New Zealand, United States",Adventure Fantasy,12.0,2012.0
+tt2310332,rl2354677249,The Hobbit: The Battle of the Five Armies,PG-13,250000000.0,144.0,3875.0,54724334.0,255119788.0,7.4,573000.0,"New Zealand, United States",Adventure Fantasy,12.0,2014.0
+tt1170358,rl2337900033,The Hobbit: The Desolation of Smaug,PG-13,250000000.0,201.0,3928.0,73645197.0,258366855.0,7.8,706000.0,"New Zealand, United States",Adventure Drama Fantasy,12.0,2013.0
+tt0457939,rl4200171009,The Holiday,PG-13,85000000.0,136.0,2698.0,12778913.0,63280000.0,6.9,323000.0,United States,Comedy Romance,12.0,2006.0
+tt0377071,rl3243869697,The Home Teachers,PG,425000.0,82.0,20.0,47494.0,203917.0,4.2,384.0,United States,Comedy,1.0,2004.0
+tt2398231,rl3478750721,The Homesman,R,16000000.0,122.0,222.0,45433.0,2429989.0,6.6,36000.0,"France, United States",Drama Western,11.0,2014.0
+tt0373908,rl995657217,The Honeymooners,PG-13,27000000.0,90.0,1912.0,5538835.0,12843849.0,3.4,76000.0,United States,Comedy Family Romance,6.0,2005.0
+tt1517260,rl274236929,The Host,PG-13,50000000.0,125.0,3202.0,10600112.0,26627201.0,5.8,119000.0,United States,Action Adventure Drama Romance Sci-Fi Thriller,3.0,2013.0
+tt0274558,rl1901626881,The Hours,PG-13,25000000.0,110.0,1010.0,338622.0,41675994.0,7.5,139000.0,United States,Drama Romance,12.0,2002.0
+tt4481514,rl2491188737,The House,R,40000000.0,88.0,3134.0,8724795.0,25584504.0,5.6,47000.0,United States,Comedy Crime,6.0,2017.0
+tt0852713,rl190547457,The House Bunny,PG-13,25000000.0,97.0,2763.0,14533702.0,48237389.0,5.5,90000.0,United States,Comedy,8.0,2008.0
+tt0200720,rl1482196481,The House of Mirth,PG,10000000.0,140.0,63.0,48770.0,3043284.0,7.0,81000.0,United Kingdom,Drama Romance,12.0,2000.0
+tt2119543,rl1157793281,The House with a Clock in Its Walls,PG,42000000.0,105.0,3592.0,26608020.0,68549695.0,6.1,55000.0,United States Canada India,Comedy Family Fantasy Mystery Sci-Fi,9.0,2018.0
+tt0308383,rl2253948417,The Human Stain,R,30000000.0,106.0,388.0,1034195.0,5381908.0,6.2,32000.0,United States,Drama Romance Thriller,10.0,2003.0
+tt2980648,rl1044481537,The Hundred-Foot Journey,PG,22000000.0,122.0,2167.0,10979290.0,54240821.0,7.3,88000.0,United States,Comedy Drama,8.0,2014.0
+tt1392170,rl4049110529,The Hunger Games,PG-13,80000000.0,142.0,4137.0,152535747.0,408010692.0,7.2,1000000.0,United States,Action Adventure Sci-Fi Thriller,3.0,2012.0
+tt1951264,rl2638775809,The Hunger Games: Catching Fire,PG-13,130000000.0,146.0,4163.0,158074286.0,424668047.0,7.5,722000.0,United States,Action Adventure Sci-Fi Thriller,11.0,2013.0
+tt1951265,rl4283991553,The Hunger Games: Mockingjay - Part 1,PG-13,125000000.0,123.0,4151.0,121897634.0,337135885.0,6.6,504000.0,United States,Action Adventure Sci-Fi Thriller,11.0,2014.0
+tt1951266,rl4032333313,The Hunger Games: Mockingjay - Part 2,PG-13,160000000.0,137.0,4175.0,102665981.0,281723902.0,6.5,374000.0,United States,Action Adventure Sci-Fi Thriller,11.0,2015.0
+,,The Hunger Games: The Ballad of Songbirds & Snakes,PG-13,100000000.0,157.0,3776.0,44607143.0,166350594.0,6.7,119000.0,United States,Action Adventure Drama Sci-Fi Thriller War,11.0,2023.0
+tt0269347,rl3898115585,The Hunted,R,55000000.0,94.0,2517.0,13482638.0,34244097.0,6.1,51000.0,United States,Action Crime Drama Thriller,3.0,2003.0
+tt0455782,rl3982001665,The Hunting Party,R,40000000.0,101.0,329.0,39609.0,969869.0,6.8,26000.0,"Bosnia and Herzegovina, Croatia, United States",Adventure Comedy Drama Thriller War,9.0,2007.0
+tt2381991,rl3763897857,The Huntsman: Winter's War,PG-13,115000000.0,114.0,3802.0,19445035.0,48390190.0,6.1,120000.0,United States China,Action Adventure Drama Fantasy Romance Sci-Fi War,4.0,2016.0
+tt5360952,rl1510114817,The Hurricane Heist,PG-13,40000000.0,103.0,2402.0,3024399.0,6115825.0,5.1,22000.0,United States,Action Adventure Crime Thriller,3.0,2018.0
+tt0887912,rl3831006721,The Hurt Locker,R,15000000.0,131.0,535.0,145352.0,17017811.0,7.5,474000.0,United States,Drama Thriller War,6.0,2009.0
+tt1298644,rl3271722497,The Hustle,PG-13,21000000.0,94.0,3077.0,13007709.0,35417038.0,5.4,66000.0,United States,Comedy Crime,5.0,2019.0
+tt1124035,rl794527233,The Ides of March,R,23000000.0,101.0,2199.0,10470143.0,40962534.0,7.1,231000.0,United States,Drama Thriller,10.0,2011.0
+tt0443543,rl1885046273,The Illusionist,PG-13,16500000.0,110.0,1438.0,927956.0,39868642.0,7.5,390000.0,United States,Drama Fantasy Mystery Romance Thriller,8.0,2006.0
+tt1054606,rl1868269057,The Imaginarium of Doctor Parnassus,PG-13,30000000.0,123.0,607.0,415233.0,7689607.0,6.8,154000.0,"France, United Kingdom",Adventure Comedy Fantasy Mystery,12.0,2009.0
+tt2084970,rl1415284225,The Imitation Game,PG-13,15000000.0,114.0,2402.0,479352.0,91125683.0,8.0,826000.0,United States,Biography Drama Thriller War,11.0,2014.0
+tt1951181,rl1230734849,The Immigrant,R,16000000.0,120.0,150.0,44064.0,2025328.0,6.6,34000.0,United States,Drama Romance,5.0,2014.0
+tt0278500,rl1113294337,The Importance of Being Earnest,PG,15000000.0,97.0,216.0,500447.0,8384929.0,6.8,25000.0,"United Kingdom, United States",Comedy Drama Romance,5.0,2002.0
+tt1649419,rl1146848769,The Impossible,PG-13,40000000.0,114.0,886.0,143818.0,19019882.0,7.5,244000.0,"Spain, United States",Drama History Thriller,12.0,2012.0
+tt1716772,rl3076228609,The Inbetweeners,R,5700000.0,97.0,10.0,36000.0,35955.0,6.7,87000.0,United Kingdom,Comedy,9.0,2012.0
+tt0790628,rl3930686977,The Incredible Burt Wonderstone,PG-13,32000000.0,100.0,3160.0,10177257.0,22537881.0,5.9,76000.0,United States,Comedy,3.0,2013.0
+tt0800080,rl2791015937,The Incredible Hulk,PG-13,150000000.0,112.0,3508.0,55414050.0,134806913.0,6.6,524000.0,United States,Action Adventure Sci-Fi,6.0,2008.0
+tt0317705,rl2807793153,The Incredibles,PG,92000000.0,115.0,3933.0,70467623.0,261441092.0,8.0,810000.0,United States,Action Adventure Animation Family,11.0,2004.0
+tt1355631,rl2273084929,The Infiltrator,R,47500000.0,127.0,1601.0,5303775.0,15436808.0,7.0,79000.0,United States,Biography Crime Drama Thriller,7.0,2016.0
+tt1130080,rl4166747649,The Informant!,R,22000000.0,108.0,2505.0,10464314.0,33316821.0,6.5,67000.0,United States,Biography Comedy Crime Drama,9.0,2009.0
+tt2361509,rl861570561,The Intern,PG-13,40000000.0,121.0,3320.0,17728313.0,75764672.0,7.1,275000.0,United States,Comedy Drama,9.0,2015.0
+tt0963178,rl895124993,The International,R,50000000.0,118.0,2364.0,9331739.0,25450527.0,6.5,100000.0,United States,Action Crime Drama Mystery Thriller,2.0,2009.0
+tt2234155,rl677021185,The Internship,PG-13,58000000.0,119.0,3399.0,17325307.0,44672764.0,6.3,215000.0,United States,Comedy,6.0,2013.0
+tt0373926,rl693798401,The Interpreter,PG-13,80000000.0,128.0,2814.0,22822455.0,72708161.0,6.4,111000.0,"Austria, Czech Republic, Slovakia",Crime Mystery Thriller,4.0,2005.0
+tt2788710,rl559580673,The Interview,R,44000000.0,112.0,581.0,1794666.0,6105175.0,6.5,355000.0,United States,Action Adventure Comedy,12.0,2014.0
+tt0422491,rl56264193,The Intruder,PG-13,8000000.0,130.0,2222.0,10855054.0,35388976.0,6.7,21000.0,United States,Drama,12.0,2005.0
+tt0427392,rl2893645313,The Invasion,PG-13,80000000.0,99.0,2776.0,5951409.0,15074191.0,5.9,83000.0,United States,Sci-Fi Thriller,8.0,2007.0
+tt1058017,rl1433699841,The Invention of Lying,PG-13,18500000.0,100.0,1743.0,7027472.0,18451251.0,6.4,149000.0,United States,Comedy Fantasy Romance,10.0,2009.0
+,,The Iron Claw,R,15900000.0,132.0,2774.0,4868370.0,35611828.0,7.7,60000.0,"United Kingdom, United States",Biography Drama Sport,12.0,2023.0
+tt1007029,rl1733985793,The Iron Lady,PG-13,14000000.0,105.0,1244.0,220409.0,30017992.0,6.4,114000.0,United Kingdom,Biography Drama,12.0,2011.0
+tt0399201,rl1314555393,The Island,PG-13,126000000.0,136.0,3138.0,12409070.0,35818913.0,6.8,328000.0,United States,Action Sci-Fi Thriller,7.0,2005.0
+tt0317740,rl3210380801,The Italian Job,PG-13,60000000.0,111.0,2877.0,19457944.0,106128601.0,7.0,389000.0,United States,Action Crime Thriller,5.0,2003.0
+tt0366627,rl2220525057,The Jacket,R,28500000.0,103.0,1331.0,2723682.0,6303762.0,7.1,119000.0,United States,Drama Fantasy Mystery Sci-Fi Thriller,3.0,2005.0
+tt1210071,rl3847915009,The Janky Promoters,R,10000000.0,85.0,22.0,5702.0,9069.0,5.1,17000.0,United States,Comedy Crime Music,10.0,2009.0
+tt1285309,rl1583187457,The Joneses,R,10000000.0,96.0,217.0,509689.0,1475746.0,6.4,42000.0,United States,Comedy Drama,4.0,2010.0
+tt1872194,rl3042805249,The Judge,R,50000000.0,141.0,3003.0,13116226.0,47119388.0,7.4,204000.0,United States,Crime Drama Mystery Thriller,10.0,2014.0
+tt3040964,rl2455602689,The Jungle Book,PG,175000000.0,106.0,4144.0,103261464.0,364001123.0,7.4,292000.0,United States,Action Adventure Animation Drama Family Fantasy Musical,4.0,2016.0
+tt0283426,rl2640152065,The Jungle Book 2,G,20000000.0,72.0,2815.0,11441733.0,47901582.0,5.3,18000.0,United States,Adventure Animation Comedy Family Music Musical,2.0,2003.0
+tt1155076,rl3361572353,The Karate Kid,PG,40000000.0,140.0,3740.0,55665805.0,176591618.0,6.2,206000.0,United States,Action Drama Family Sport,6.0,2010.0
+tt4975920,rl1812563457,The Kid,R,65000000.0,104.0,2167.0,12687726.0,69688384.0,5.9,95000.0,United States,Biography Drama Western,3.0,2019.0
+tt6811018,rl3607135745,The Kid Who Would Be King,PG,59000000.0,132.0,3528.0,7173887.0,16790790.0,6.1,19000.0,United Kingdom,Action Adventure Family Fantasy,1.0,2019.0
+tt0842926,rl39618049,The Kids Are All Right,R,4000000.0,106.0,994.0,491971.0,20811365.0,7.0,134000.0,United States,Comedy Drama Romance,7.0,2010.0
+tt0954947,rl1901889025,The Killer Inside Me,R,13000000.0,109.0,17.0,11083.0,217277.0,6.1,36000.0,United States,Crime Drama Mystery Thriller,6.0,2010.0
+tt1504320,rl3025962497,The King's Speech,R,15000000.0,118.0,1011.0,1133162.0,3344306.0,8.0,708000.0,United States United Kingdom,Biography Drama History,4.0,2011.0
+tt0431197,rl1214023169,The Kingdom,R,72500000.0,111.0,2836.0,17135055.0,47536778.0,7.0,132000.0,United States,Action Drama Thriller,9.0,2007.0
+tt5822564,rl956597761,The Kitchen,R,38000000.0,102.0,2745.0,5527410.0,12180032.0,5.6,23000.0,United States,Action Crime Drama,8.0,2019.0
+tt0419887,rl2539423233,The Kite Runner,PG-13,20000000.0,128.0,715.0,471713.0,15800078.0,7.6,83000.0,United States,Drama,12.0,2007.0
+,,The Ladies Man,R,11000000.0,87.0,2022.0,5426390.0,13592872.0,5.2,14000.0,United States,Comedy,10.0,2000.0
+tt3722070,rl610240001,The Lady in the Van,PG-13,6000000.0,104.0,602.0,61566.0,10021175.0,6.7,32000.0,United States,Biography Comedy Drama,12.0,2015.0
+tt0335245,rl778012161,The Ladykillers,R,35000000.0,104.0,1589.0,12634563.0,39799191.0,6.2,109000.0,United States,Comedy Crime Thriller,3.0,2004.0
+tt0410297,rl157255169,The Lake House,PG,40000000.0,99.0,2645.0,13616196.0,52330111.0,6.8,158000.0,United States,Drama Fantasy Romance,6.0,2006.0
+tt0938283,rl1516209665,The Last Airbender,PG,150000000.0,103.0,3203.0,40325019.0,131772187.0,4.0,175000.0,United States,Action Adventure Family Fantasy,7.0,2010.0
+tt0272020,rl1365214721,The Last Castle,R,72000000.0,132.0,2270.0,7088213.0,18244060.0,6.9,85000.0,United States,Action Drama Thriller,10.0,2001.0
+tt1320244,rl1180665345,The Last Exorcism,PG-13,1800000.0,100.0,2874.0,20366613.0,41034350.0,5.7,52000.0,United States,Horror Mystery Thriller,8.0,2010.0
+tt2034139,rl1163888129,The Last Exorcism Part II,PG-13,5000000.0,88.0,2700.0,7728354.0,15179303.0,4.0,17000.0,United States,Horror Thriller,3.0,2013.0
+tt1584131,rl3126822401,The Last Godfather,PG-13,13400000.0,100.0,58.0,101779.0,164247.0,3.5,13000.0,South Korea United States,Comedy Crime Romance,4.0,2011.0
+tt0844708,rl3160376833,The Last House on the Left,R,15000000.0,110.0,2402.0,14118685.0,32752215.0,6.5,101000.0,United States,Horror Thriller,3.0,2009.0
+tt0455590,rl2992604673,The Last King of Scotland,R,6000000.0,123.0,540.0,142899.0,17606684.0,7.6,196000.0,"Germany, United Kingdom",Biography Drama History Thriller,9.0,2006.0
+tt0434139,rl2975827457,The Last Kiss,R,20000000.0,115.0,1359.0,4627989.0,11614790.0,6.4,42000.0,United States,Comedy Drama Romance,9.0,2006.0
+tt0462396,rl2287044097,The Last Legion,PG-13,67000000.0,110.0,2002.0,2746312.0,5933494.0,5.4,37000.0,"France, United Kingdom, United States",Action Adventure History War,8.0,2007.0
+tt0325710,rl2640283137,The Last Samurai,R,140000000.0,154.0,2938.0,24271354.0,111127263.0,7.8,472000.0,United States,Action Drama,12.0,2003.0
+tt0810928,rl2455733761,The Last Sin Eater,PG-13,2200000.0,117.0,429.0,245000.0,388390.0,5.7,2000.0,United States,Drama,2.0,2007.0
+tt1294226,rl2472510977,The Last Song,PG,20000000.0,108.0,2794.0,16007426.0,62950384.0,6.0,93000.0,United States,Drama Music Romance,3.0,2010.0
+tt1549920,rl2489288193,The Last Stand,R,45000000.0,107.0,2913.0,6281433.0,12050299.0,6.3,145000.0,United States,Action Thriller Western,1.0,2013.0
+tt0824758,rl2522842625,The Last Station,R,18000000.0,112.0,354.0,73723.0,6617867.0,6.9,19000.0,Germany,Biography Drama Romance,1.0,2010.0
+tt1001520,rl2382856961,The Last Voyage of the Demeter,R,45000000.0,119.0,2715.0,6504950.0,13637180.0,6.1,50000.0,"Germany, Italy, Malta, United Kingdom, United States",Fantasy Horror,8.0,2023.0
+tt1618442,rl2271184385,The Last Witch Hunter,PG-13,90000000.0,106.0,3082.0,10812861.0,27367660.0,5.9,110000.0,United States,Action Adventure Fantasy,10.0,2015.0
+tt2918436,rl3680470529,The Lazarus Effect,PG-13,5000000.0,83.0,2666.0,10203437.0,25801570.0,5.2,46000.0,United States,Horror Mystery Sci-Fi Thriller,2.0,2015.0
+tt0311429,rl3512698369,The League of Extraordinary Gentlemen,PG-13,78000000.0,110.0,3002.0,23075892.0,66465204.0,5.8,184000.0,United States,Action Adventure Fantasy Sci-Fi,7.0,2003.0
+tt0146984,rl459179521,The Legend of Bagger Vance,PG-13,80000000.0,126.0,2162.0,11516712.0,30919168.0,6.7,60000.0,United States,Drama Fantasy Sport,11.0,2000.0
+tt1043726,rl190416385,The Legend of Hercules,PG-13,70000000.0,99.0,2104.0,8868318.0,18848538.0,4.3,56000.0,United States,Action Adventure Fantasy,1.0,2014.0
+tt0918940,rl2759165441,The Legend of Tarzan,PG-13,180000000.0,110.0,3591.0,38527856.0,126643061.0,6.2,189000.0,United States,Action Adventure Drama Fantasy Romance,7.0,2016.0
+tt0386140,rl696092161,The Legend of Zorro,PG,80000000.0,129.0,3520.0,16328506.0,46464023.0,5.9,108000.0,United States,Action Adventure Romance Thriller Western,10.0,2005.0
+tt4116284,rl660506113,The Lego Batman Movie,PG,80000000.0,106.0,4088.0,53003468.0,175750384.0,7.3,173000.0,United States,Action Adventure Animation Comedy Family Fantasy Sci-Fi,2.0,2017.0
+tt1490017,rl643728897,The Lego Movie,PG,60000000.0,110.0,3890.0,69050279.0,257784718.0,7.7,389000.0,"Australia, United States",Action Adventure Animation Comedy Family Fantasy Sci-Fi,2.0,2014.0
+tt3513498,rl1517848065,The Lego Movie 2: The Second Part,PG,99000000.0,107.0,4303.0,34115335.0,105806508.0,6.5,77000.0,Denmark Norway Australia United States,Action Adventure Animation Comedy Family Fantasy Musical Sci-Fi,2.0,2019.0
+tt3014284,rl1567065601,The Lego Ninjago Movie,PG,70000000.0,101.0,4047.0,20433071.0,59281555.0,6.0,30000.0,"Denmark, United States",Action Adventure Animation Comedy Drama Family Fantasy Sci-Fi Thriller,9.0,2017.0
+tt0375920,rl1197377025,The Libertine,R,22000000.0,114.0,819.0,27804.0,4835065.0,6.2,38000.0,"Australia, United Kingdom",Biography Drama History Romance,11.0,2005.0
+tt0362270,rl3026093569,The Life Aquatic with Steve Zissou,R,50000000.0,119.0,1105.0,113085.0,24020403.0,7.2,211000.0,United States,Action Adventure Comedy Drama Romance,12.0,2004.0
+tt0815178,rl2841544193,The Life Before Her Eyes,R,13000000.0,90.0,48.0,20220.0,303439.0,6.2,15000.0,United States,Drama Fantasy Mystery Thriller,4.0,2008.0
+tt0289992,rl2958984705,The Life of David Gale,R,50000000.0,130.0,2003.0,7117225.0,19955598.0,7.5,126000.0,United States,Crime Drama Mystery Thriller,2.0,2003.0
+tt2547584,rl3766322689,The Light Between Oceans,PG-13,20000000.0,133.0,1500.0,4765838.0,12545979.0,7.2,60000.0,"Australia, India, New Zealand, United Kingdom, United States",Drama Romance,9.0,2016.0
+tt7984734,rl3305670145,The Lighthouse,R,4000000.0,110.0,978.0,427797.0,10867104.0,7.4,256000.0,"Canada, United States",Drama Fantasy Horror Mystery Thriller,10.0,2019.0
+tt1189340,rl3831399937,The Lincoln Lawyer,R,40000000.0,119.0,2707.0,13206453.0,58009200.0,7.3,254000.0,United States,Crime Drama Mystery Thriller,3.0,2011.0
+tt0110357,rl3747513857,The Lion King,G,260000000.0,118.0,4725.0,191770759.0,543638043.0,8.5,11000000.0,United States,Adventure Animation Drama Family Musical,12.0,2002.0
+tt5493944,rl2164557313,The Little Mermaid,PG,250000000.0,135.0,4320.0,95578040.0,298172056.0,4.3,96000.0,United States,Adventure Drama Fantasy Romance,8.0,2018.0
+tt1754656,rl1300071937,The Little Prince,PG,77500000.0,108.0,163.0,116927.0,1339152.0,7.7,67000.0,France,Adventure Animation Drama Family Fantasy Sci-Fi,2.0,2016.0
+,,The Little Vampire,PG,22000000.0,95.0,2009.0,5719627.0,13555988.0,5.7,12000.0,Germany,Adventure Comedy Family Fantasy,10.0,2000.0
+tt0405094,rl274826753,The Lives of Others,R,2000000.0,137.0,259.0,223000.0,11286112.0,8.4,411000.0,Germany France,Drama Mystery Thriller,2.0,2007.0
+tt0306841,rl258049537,The Lizzie McGuire Movie,PG,17000000.0,94.0,2825.0,17338755.0,42734455.0,5.5,42000.0,United States,Adventure Comedy Family Music Romance,5.0,2003.0
+tt3464902,rl1652327937,The Lobster,R,4500000.0,119.0,560.0,190252.0,9196278.0,7.1,297000.0,"France, Greece, Ireland, Netherlands, United Kingdom",Drama Romance Sci-Fi Thriller,5.0,2016.0
+tt1210819,rl1734444545,The Lone Ranger,PG-13,225000000.0,150.0,3904.0,29210849.0,89302115.0,6.4,245000.0,United States,Action Adventure Drama Western,7.0,2013.0
+tt2726560,rl1600226817,The Longest Ride,PG-13,34000000.0,128.0,3371.0,13019686.0,37446117.0,7.0,89000.0,United States,Comedy Drama Romance Western,4.0,2015.0
+tt0398165,rl1298236929,The Longest Yard,PG-13,82000000.0,113.0,3654.0,47606480.0,158119460.0,6.4,195000.0,United States,Comedy Crime Sport,5.0,2005.0
+tt1091751,rl979076609,The Longshots,PG,23000000.0,95.0,2089.0,4080687.0,11537046.0,5.6,45000.0,United States,Biography Comedy Drama Family Sport,8.0,2008.0
+tt0427470,rl3177285121,The Lookout,R,16000000.0,99.0,955.0,2017795.0,4600585.0,7.0,61000.0,United States,Crime Drama Thriller,3.0,2007.0
+tt1482459,rl2858518017,The Lorax,PG,70000000.0,86.0,3769.0,70217070.0,214151550.0,6.4,130000.0,United States France Japan,Adventure Animation Comedy Drama Family Fantasy Musical,3.0,2012.0
+tt0120737,rl4200695297,The Lord of the Rings: The Fellowship of the Ring,PG-13,93000000.0,179.0,3381.0,47211490.0,315544750.0,8.9,2000000.0,"New Zealand, United States",Action Adventure Drama Fantasy,12.0,2001.0
+tt0167260,rl3984687873,The Lord of the Rings: The Return of the King,PG-13,94000000.0,201.0,3703.0,72629713.0,379021990.0,9.0,2000000.0,"New Zealand, United States",Action Adventure Drama Fantasy,4.0,2023.0
+tt0167261,rl4032923137,The Lord of the Rings: The Two Towers,PG-13,94000000.0,179.0,3622.0,62007528.0,342548984.0,8.8,18000000.0,"New Zealand, United States",Action Adventure Drama Fantasy,12.0,2002.0
+tt1731697,rl2707523073,The Lords of Salem,R,1500000.0,101.0,354.0,642942.0,1165882.0,5.2,32000.0,Canada United States United Kingdom,Horror Thriller,4.0,2013.0
+tt0480255,rl2573305345,The Losers,PG-13,25000000.0,97.0,2936.0,9406348.0,23591432.0,6.2,107000.0,United States,Action Adventure Comedy Crime Mystery Thriller,4.0,2010.0
+tt0343996,rl2539750913,The Lost City,R,9600000.0,144.0,56.0,191560.0,2484186.0,6.5,99000.0,United States,Drama Romance,4.0,2006.0
+tt1212428,rl1090618881,The Lost City of Z,PG-13,30000000.0,141.0,866.0,110175.0,8580410.0,6.6,100000.0,United States,Adventure Biography Drama History,4.0,2017.0
+tt0307109,rl2187429377,The Lost Skeleton of Cadavra,PG,40000.0,90.0,13.0,10425.0,143121.0,6.8,51000.0,United States,Comedy Horror Sci-Fi,2.0,2004.0
+tt0811138,rl3579938305,The Love Guru,PG-13,62000000.0,87.0,3012.0,13907130.0,32235793.0,3.8,55000.0,United States,Comedy Romance Sport,6.0,2008.0
+tt0380510,rl3328280065,The Lovely Bones,PG-13,95000000.0,135.0,2638.0,116616.0,44114232.0,6.6,180000.0,"New Zealand, United Kingdom, United States",Drama Fantasy Thriller,12.0,2009.0
+tt1327194,rl2103477761,The Lucky One,PG-13,25000000.0,101.0,3175.0,22518358.0,60457138.0,6.4,114000.0,United States,Drama Mystery Romance War,4.0,2012.0
+tt2350496,rl1767933441,The Lunchbox,PG,1700000.0,104.0,165.0,44542.0,4235151.0,7.8,61000.0,"France, Germany, India",Drama Romance,2.0,2014.0
+tt11040844,rl3287778049,The Machine,R,20000000.0,112.0,2409.0,5000545.0,10458331.0,5.8,16000.0,United States,Action Comedy,5.0,2023.0
+tt0361862,rl1600161281,The Machinist,R,5000000.0,101.0,72.0,64661.0,1082715.0,7.6,416000.0,Spain,Drama Thriller,10.0,2004.0
+tt2404435,rl3128788481,The Magnificent Seven,PG-13,90000000.0,132.0,3696.0,34703397.0,93432655.0,6.9,229000.0,United States,Action Adventure Drama Western,9.0,2016.0
+tt0268995,rl2254472705,The Majestic,PG,72000000.0,152.0,2361.0,4904339.0,27807266.0,6.9,58000.0,United States,Drama Romance,12.0,2001.0
+tt0399327,rl3730867713,The Man,PG-13,20000000.0,83.0,2040.0,4065014.0,8330720.0,5.5,27000.0,United States,Action Comedy Crime,9.0,2005.0
+tt0787524,rl3028256257,The Man Who Knew Infinity,PG-13,10000000.0,108.0,288.0,80325.0,3877922.0,7.2,62000.0,"India, United Kingdom",Biography Drama,4.0,2016.0
+tt1638355,rl2994112001,The Man from U.N.C.L.E.,PG-13,75000000.0,116.0,3673.0,13421036.0,45445109.0,7.2,333000.0,United Kingdom United States,Action Adventure Comedy,8.0,2015.0
+,,The Man with the Iron Fists,R,15000000.0,95.0,1868.0,7910980.0,15634090.0,5.4,64000.0,United States,Action,11.0,2012.0
+tt0368008,rl3412100609,The Manchurian Candidate,R,80000000.0,130.0,2867.0,20018620.0,65955630.0,6.6,117000.0,"Kuwait, United States",Drama Mystery Sci-Fi Thriller,7.0,2004.0
+tt0419946,rl1566803457,The Marine,PG-13,15000000.0,92.0,2545.0,7138774.0,18844784.0,4.7,36000.0,United States,Action Comedy Drama Thriller,10.0,2006.0
+tt3659388,rl3496969729,The Martian,PG-13,108000000.0,144.0,3854.0,54308575.0,228433663.0,8.0,927000.0,United States,Adventure Drama Sci-Fi,10.0,2015.0
+,,The Marvels,PG-13,274800000.0,105.0,4030.0,46110859.0,84500223.0,5.5,126000.0,United States,Action Adventure Fantasy,11.0,2023.0
+tt1560747,rl2422441473,The Master,R,37500000.0,138.0,864.0,736311.0,16377274.0,7.1,186000.0,United States,Drama History,9.0,2012.0
+tt0295427,rl2472773121,The Master of Disguise,PG,16000000.0,80.0,2568.0,12554650.0,40388794.0,3.3,27000.0,United States,Adventure Comedy Family Fantasy,8.0,2002.0
+tt0365485,rl2305000961,The Matador,R,12500000.0,96.0,905.0,69100.0,12594698.0,6.7,46000.0,United States,Comedy Crime Thriller,12.0,2005.0
+tt0234215,rl4167271937,The Matrix Reloaded,R,150000000.0,138.0,3603.0,91774413.0,281576461.0,7.2,631000.0,"Australia, United States",Action Sci-Fi,5.0,2003.0
+tt0242653,rl4234380801,The Matrix Revolutions,R,150000000.0,129.0,3502.0,48475154.0,139313948.0,6.7,544000.0,United States,Action Sci-Fi,11.0,2003.0
+tt1790864,rl3680732673,The Maze Runner,PG-13,34000000.0,113.0,3638.0,32512804.0,102427862.0,6.8,511000.0,United States,Action Mystery Sci-Fi Thriller,9.0,2014.0
+tt0472399,rl3278079489,The Mechanic,R,42500000.0,93.0,2704.0,11422006.0,29121498.0,6.5,172000.0,United States,Action Crime Thriller,1.0,2011.0
+tt0288045,rl3311633921,The Medallion,PG-13,41000000.0,88.0,2652.0,8111324.0,22219192.0,5.2,44000.0,Hong Kong,Action Comedy Fantasy,8.0,2003.0
+tt4501454,rl2977728001,The Meddler,PG-13,3200000.0,103.0,464.0,57022.0,4267219.0,6.3,14000.0,United States,Comedy Drama Romance,4.0,2016.0
+tt4779682,rl2105509377,The Meg,PG-13,178000000.0,113.0,4118.0,45402195.0,145443742.0,5.7,208000.0,United States,Action Horror Sci-Fi Thriller,8.0,2018.0
+tt1234548,rl140674561,The Men Who Stare at Goats,R,25000000.0,94.0,2453.0,12706654.0,32428195.0,6.2,138000.0,United States,Comedy War,11.0,2009.0
+tt0379889,rl73565697,The Merchant of Venice,R,30000000.0,131.0,107.0,69868.0,3765585.0,7.0,38000.0,United States,Drama Romance,12.0,2004.0
+tt0425430,rl2002945537,The Messengers,PG-13,16000000.0,90.0,2529.0,14713321.0,35374833.0,5.3,41000.0,United States,Drama Horror Mystery,2.0,2007.0
+tt0236493,rl1516406273,The Mexican,R,57000000.0,123.0,3162.0,20108829.0,66845033.0,6.1,114000.0,United States,Adventure Comedy Drama Romance,3.0,2001.0
+tt1034324,rl2791474689,The Mighty Macs,G,7000000.0,99.0,975.0,963221.0,1891936.0,6.6,19000.0,United States,Drama Sport,10.0,2011.0
+tt0884328,rl3479340545,The Mist,R,18000000.0,126.0,2423.0,8931973.0,25594957.0,7.1,341000.0,United States,Horror Sci-Fi Thriller,11.0,2007.0
+tt2177771,rl1818592769,The Monuments Men,PG-13,70000000.0,118.0,3083.0,22003433.0,78031620.0,6.1,141000.0,"Germany, United States",Comedy Drama War,2.0,2014.0
+tt1538403,rl1248167425,The Mortal Instruments: City of Bones,PG-13,60000000.0,130.0,3118.0,9336957.0,31165421.0,5.8,139000.0,"Canada, Germany",Action Adventure Fantasy Horror Mystery Romance,8.0,2013.0
+tt0323298,rl2976220673,The Mother,R,2500000.0,112.0,44.0,61913.0,1063163.0,6.7,47000.0,United Kingdom,Drama Romance,5.0,2004.0
+tt0265349,rl2825225729,The Mothman Prophecies,PG-13,42000000.0,119.0,2331.0,11208851.0,35746370.0,6.4,85000.0,United States,Drama Horror Mystery Thriller,1.0,2002.0
+tt2226597,rl2691008001,The Mountain Between Us,PG-13,35000000.0,112.0,3259.0,10551336.0,30348555.0,6.4,81000.0,United States,Drama Thriller,10.0,2017.0
+tt7959026,rl4077356545,The Mule,R,50000000.0,116.0,3329.0,17509431.0,103804407.0,7.0,153000.0,United States,Crime Drama Thriller,12.0,2018.0
+tt2345759,rl3563423233,The Mummy,PG-13,195000000.0,111.0,4035.0,31688375.0,80227895.0,5.4,206000.0,United States,Action Adventure Fantasy Horror Thriller,6.0,2017.0
+tt0209163,rl3580200449,The Mummy Returns,PG-13,98000000.0,130.0,3553.0,68139035.0,202019785.0,6.4,346000.0,United States,Action Adventure Fantasy Thriller,5.0,2001.0
+tt0859163,rl3596977665,The Mummy: Tomb of the Dragon Emperor,PG-13,175000000.0,112.0,3778.0,40457770.0,102491776.0,5.2,171000.0,"Canada, Germany, United States",Action Adventure Fantasy Horror,8.0,2008.0
+tt1204342,rl3445982721,The Muppets,PG,45000000.0,120.0,3440.0,29239026.0,88631237.0,7.1,97000.0,United States,Adventure Comedy Family Musical,11.0,2011.0
+tt0246544,rl610567681,The Musketeer,PG-13,40000000.0,104.0,2500.0,10312740.0,27073640.0,4.7,15000.0,Germany,Action Adventure Romance,9.0,2001.0
+tt0433416,rl2909046273,The Namesake,PG-13,9500000.0,122.0,335.0,248552.0,13610521.0,7.5,22000.0,United States,Drama,3.0,2007.0
+tt0762121,rl2372175361,The Nativity Story,PG,35000000.0,101.0,3083.0,8025000.0,37629831.0,6.8,12000.0,United States,Adventure Drama Family Fantasy History Romance,12.0,2006.0
+tt0241760,rl3596912129,The New Guy,PG-13,13000000.0,88.0,2687.0,9007833.0,29760152.0,5.8,38000.0,United States,Comedy,5.0,2002.0
+tt0402399,rl3345253889,The New World,PG-13,30000000.0,150.0,811.0,30864.0,12712093.0,6.7,90000.0,United States,Biography Drama History Romance,12.0,2005.0
+tt0156841,rl1063749121,The Next Best Thing,PG-13,25000000.0,108.0,2035.0,5870387.0,14990582.0,4.7,12000.0,United States,Comedy Drama Romance,3.0,2000.0
+,,The Next Three Days,PG-13,30000000.0,133.0,2564.0,6542779.0,21148651.0,7.3,207000.0,United States,Action Crime Drama Romance Thriller,11.0,2010.0
+tt3799694,rl795313665,The Nice Guys,R,50000000.0,116.0,2865.0,11203270.0,36261763.0,7.4,375000.0,United States,Action Comedy Crime Thriller,5.0,2016.0
+tt3530002,rl1585088001,The Night Before,R,25000000.0,101.0,2960.0,9880536.0,43047372.0,6.4,83000.0,United States,Comedy Fantasy,11.0,2015.0
+tt0448075,rl57116161,The Night Listener,R,4000000.0,91.0,1370.0,3600000.0,7836393.0,5.9,16000.0,United States,Crime Drama Horror Mystery Thriller,8.0,2006.0
+tt2324384,rl4184311297,The Notebook,R,30000000.0,124.0,2303.0,13464745.0,81001787.0,7.0,32000.0,United States,Drama War,8.0,2014.0
+tt2402157,rl3848766977,The November Man,R,15000000.0,108.0,2776.0,7911597.0,25018119.0,6.3,71000.0,United States,Action Adventure Crime Mystery Thriller,8.0,2014.0
+tt0481369,rl3446113793,The Number 23,R,32000000.0,98.0,2759.0,15107000.0,35193167.0,6.4,213000.0,United States,Crime Mystery Thriller,2.0,2007.0
+tt5814060,rl1493206529,The Nun,R,22000000.0,96.0,3876.0,53807379.0,117450119.0,5.3,171000.0,United States,Horror Mystery Thriller,9.0,2018.0
+tt1821658,rl3345450497,The Nut Job,PG,42000000.0,86.0,3472.0,19423000.0,64251541.0,5.7,30000.0,"Canada, Republic of Korea",Adventure Animation Comedy Crime Family,1.0,2014.0
+tt3486626,rl946243073,The Nut Job 2: Nutty by Nature,PG,40000000.0,91.0,4003.0,8342311.0,28370522.0,5.5,73000.0,"Canada, Republic of Korea, United States",Adventure Animation Comedy Crime Family,8.0,2017.0
+tt5523010,rl3657664001,The Nutcracker and the Four Realms,PG,132900000.0,99.0,3766.0,20352491.0,54858851.0,5.6,37000.0,United States,Adventure Family Fantasy,11.0,2018.0
+tt1462769,rl375817729,The Odd Life of Timothy Green,PG,40000000.0,105.0,2717.0,10822903.0,51854875.0,6.6,49000.0,United States,Comedy Drama Family Fantasy,8.0,2012.0
+tt0422861,rl1936098817,The Oh in Ohio,R,5000000.0,88.0,20.0,61043.0,418689.0,5.5,65000.0,United States,Comedy Drama Romance,7.0,2006.0
+tt0466909,rl1348896257,The Omen,R,25000000.0,110.0,2723.0,16026496.0,54607383.0,5.5,63000.0,United States,Drama Fantasy Horror Mystery Thriller,6.0,2006.0
+tt0304711,rl3597043201,The Order,R,35000000.0,102.0,1975.0,4438899.0,7660806.0,5.1,18000.0,"Germany, United States",Horror Mystery Thriller,9.0,2003.0
+,,The Original Kings of Comedy,R,3000000.0,115.0,847.0,11053832.0,38168022.0,6.8,61000.0,United States,Comedy Documentary,8.0,2000.0
+tt0467200,rl577340929,The Other Boleyn Girl,PG-13,40000000.0,115.0,1212.0,8203061.0,26814957.0,6.7,120000.0,United Kingdom,Biography Drama History Romance,2.0,2008.0
+tt1386588,rl1783858689,The Other Guys,PG-13,100000000.0,107.0,3651.0,35543162.0,119219978.0,6.6,289000.0,United States,Action Comedy Crime Thriller,8.0,2010.0
+tt3702652,rl3715991041,The Other Side of the Door,R,5000000.0,96.0,585.0,1211210.0,3000342.0,5.3,19000.0,"India, United Kingdom",Horror Thriller,3.0,2016.0
+tt2203939,rl543786497,The Other Woman,PG-13,40000000.0,109.0,3306.0,24763752.0,83911193.0,6.0,150000.0,United States,Comedy Romance,4.0,2014.0
+tt0230600,rl711558657,The Others,PG-13,17000000.0,104.0,2843.0,14089952.0,96545842.0,7.6,394000.0,"France, Italy, Spain, United States",Horror Mystery Thriller,8.0,2001.0
+tt0395699,rl1416201729,The Pacifier,PG,56000000.0,95.0,3181.0,30552694.0,113086868.0,5.6,101000.0,"Canada, United States",Action Comedy Drama Family,3.0,2005.0
+tt0446755,rl1114211841,The Painted Veil,PG-13,19400000.0,125.0,287.0,51086.0,8060487.0,7.4,96000.0,United States,Drama Romance,12.0,2006.0
+tt0335345,rl3781789185,The Passion of the Christ,R,30000000.0,127.0,3408.0,83848082.0,370782930.0,7.2,252000.0,United States,Drama,2.0,2004.0
+,,The Patriot,R,110000000.0,164.0,3061.0,22413710.0,113330342.0,7.2,294000.0,United States,Action Drama History War,6.0,2000.0
+tt4364194,rl1309181441,The Peanut Butter Falcon,PG-13,6200000.0,97.0,1490.0,204793.0,20457158.0,7.6,104000.0,United States,Adventure Comedy Drama,8.0,2019.0
+tt2452042,rl778601985,The Peanuts Movie,G,99000000.0,89.0,3902.0,44213073.0,130178411.0,7.0,50000.0,United States,Adventure Animation Comedy Drama Family,11.0,2015.0
+tt3862750,rl2020115969,The Perfect Guy,PG-13,18000000.0,100.0,2230.0,25888154.0,57027435.0,5.6,11000.0,United States,Drama Romance Thriller,9.0,2015.0
+tt0380623,rl2104002049,The Perfect Man,PG,10000000.0,100.0,2090.0,5300980.0,16535005.0,5.4,32000.0,United States,Comedy Family Romance,6.0,2005.0
+tt4871980,rl729777665,The Perfect Match,R,5000000.0,96.0,925.0,4294232.0,9669521.0,4.9,44000.0,United States,Comedy Romance,3.0,2016.0
+,,The Perfect Storm,PG-13,120000000.0,129.0,3407.0,41325042.0,182618434.0,6.5,178000.0,United States,Action Adventure Drama Thriller,6.0,2000.0
+tt1659337,rl1751680513,The Perks of Being a Wallflower,PG-13,13000000.0,103.0,745.0,228359.0,17742948.0,7.9,549000.0,United States,Drama,9.0,2012.0
+tt0293508,rl1214809601,The Phantom of the Opera,PG-13,70000000.0,143.0,1515.0,4001890.0,51268815.0,7.2,131000.0,"United States, United States",Drama Musical Romance Thriller,12.0,2004.0
+tt0253474,rl3043526145,The Pianist,R,35000000.0,150.0,842.0,111261.0,32572577.0,8.5,914000.0,"France, Germany, Poland, United Kingdom",Biography Drama Music War,12.0,2002.0
+tt0383216,rl2355660289,The Pink Panther,PG,80000000.0,93.0,3477.0,20220412.0,82226474.0,5.7,93000.0,United States,Adventure Comedy Crime Mystery,2.0,2006.0
+tt0838232,rl2372437505,The Pink Panther 2,PG,70000000.0,92.0,3245.0,11588150.0,35922978.0,5.6,49000.0,United States,Action Adventure Comedy Crime Mystery,2.0,2009.0
+tt1430626,rl4050159105,The Pirates! Band of Misfits,PG,55000000.0,88.0,3358.0,11137734.0,31051126.0,6.7,51000.0,"United Kingdom, United States",Action Adventure Animation Comedy Family Fantasy History,4.0,2012.0
+tt1817273,rl3664283137,The Place Beyond the Pines,R,15000000.0,140.0,1584.0,279457.0,21403519.0,7.3,291000.0,United States,Crime Drama Thriller,3.0,2013.0
+tt0237572,rl862684673,The Pledge,R,45000000.0,124.0,1410.0,5765347.0,19733089.0,6.8,68000.0,United States,Crime Drama Mystery Thriller,1.0,2001.0
+tt0338348,rl292259329,The Polar Express,G,170000000.0,100.0,3650.0,23325035.0,188042855.0,6.6,242000.0,United States,Adventure Animation Comedy Family Fantasy Musical,11.0,2004.0
+tt0431021,rl3142551041,The Possession,PG-13,14000000.0,93.0,2860.0,17732480.0,49130588.0,5.9,63000.0,United States,Horror Mystery Thriller,8.0,2012.0
+tt5734576,rl3556869633,The Possession of Hannah Grace,R,7700000.0,86.0,2298.0,6401744.0,14837422.0,5.2,26000.0,United States,Horror Mystery Thriller,11.0,2018.0
+tt6294822,rl3590358529,The Post,PG-13,50000000.0,116.0,2851.0,526011.0,81903458.0,7.2,163000.0,United States,Biography Drama History Thriller War,12.0,2017.0
+tt0289408,rl1164674561,The Powerpuff Girls Movie,PG,11000000.0,73.0,2340.0,3583114.0,11412414.0,6.5,11000.0,United States South Korea Canada Mexico,Action Adventure Animation Comedy Family Sci-Fi,7.0,2002.0
+tt3829266,rl1082099201,The Predator,R,88000000.0,107.0,4070.0,24632284.0,51024708.0,5.3,144000.0,United States,Action Adventure Horror Sci-Fi,9.0,2018.0
+tt0482571,rl2573960705,The Prestige,PG-13,40000000.0,130.0,2305.0,14801808.0,53089891.0,8.5,14000000.0,United States,Drama Mystery Sci-Fi Thriller,10.0,2006.0
+tt0337697,rl4117464577,The Prince and Me,PG,22000000.0,111.0,2711.0,9406378.0,28176497.0,5.8,42000.0,United States Czech Republic,Comedy Family Romance,4.0,2004.0
+tt0247638,rl4033578497,The Princess Diaries,G,30000000.0,115.0,2749.0,22862269.0,108248956.0,6.4,164000.0,United States,Comedy Family Romance,8.0,2001.0
+tt0368933,rl4285236737,The Princess Diaries 2: Royal Engagement,G,45000000.0,113.0,3490.0,22956453.0,95170481.0,5.8,89000.0,United States,Comedy Family Romance,8.0,2004.0
+tt0780521,rl3916137985,The Princess and the Frog,G,105000000.0,97.0,3475.0,786190.0,104400899.0,7.2,167000.0,United States,Adventure Animation Comedy Family Fantasy Musical Romance,11.0,2009.0
+tt0406158,rl3446375937,The Prize Winner of Defiance Ohio,PG-13,12000000.0,99.0,41.0,159056.0,627844.0,7.2,82000.0,United States,Biography Drama,9.0,2005.0
+tt4504044,rl789022209,The Prodigy,R,6000000.0,100.0,2530.0,5853061.0,14856291.0,5.9,28000.0,"Hong Kong, United States",Fantasy Horror Mystery Thriller,2.0,2019.0
+tt0395251,rl3328935425,The Producers,PG-13,45000000.0,134.0,978.0,154590.0,19398532.0,6.3,45000.0,United States,Comedy Crime Musical,12.0,2005.0
+tt0417976,rl829064705,The Promise,PG-13,90000000.0,134.0,2251.0,4095718.0,8224288.0,5.6,95000.0,"Spain, United States",Action Drama Fantasy,5.0,2006.0
+tt1041829,rl577406465,The Proposal,PG-13,40000000.0,108.0,3158.0,33627598.0,163958031.0,6.8,361000.0,United States,Comedy Drama Romance,6.0,2009.0
+tt0421238,rl560629249,The Proposition,R,20000000.0,104.0,200.0,32681.0,1903434.0,7.3,55000.0,"Australia, United Kingdom",Crime Drama Western,5.0,2006.0
+tt0330793,rl1768588801,The Punisher,R,33000000.0,124.0,2649.0,14000000.0,33810189.0,6.4,171000.0,United States,Action Crime Drama Thriller,4.0,2004.0
+tt2184339,rl1684702721,The Purge,R,3000000.0,85.0,2591.0,34058360.0,64473115.0,5.7,240000.0,"France, United States",Horror Sci-Fi Thriller,6.0,2013.0
+tt2975578,rl1701479937,The Purge: Anarchy,R,9000000.0,103.0,2856.0,29816675.0,71962800.0,6.4,162000.0,United States,Action Horror Sci-Fi Thriller,7.0,2014.0
+tt4094724,rl1718257153,The Purge: Election Year,R,10000000.0,108.0,2821.0,31515110.0,79213375.0,6.0,110000.0,United States,Action Horror Sci-Fi Thriller,7.0,2016.0
+tt0454921,rl1349158401,The Pursuit of Happyness,PG-13,55000000.0,117.0,3169.0,26541709.0,163566459.0,8.0,562000.0,United States,Biography Drama,12.0,2006.0
+tt0436697,rl1198163457,The Queen,PG-13,15000000.0,103.0,1850.0,122014.0,56441711.0,7.3,116000.0,United Kingdom,Biography Drama,9.0,2006.0
+tt0258068,rl2842330625,The Quiet American,R,30000000.0,101.0,396.0,101663.0,12988801.0,7.0,30000.0,United States,Drama Romance Thriller War,11.0,2002.0
+tt2235779,rl2942993921,The Quiet Ones,PG-13,200000.0,98.0,2027.0,3880053.0,8509867.0,5.1,21000.0,United States,Horror Mystery Thriller,4.0,2014.0
+tt2058107,rl4150953473,The Railway Man,R,18000000.0,116.0,600.0,61845.0,4438438.0,7.1,43000.0,"Australia, United Kingdom",Biography Drama Romance War,4.0,2014.0
+tt1486192,rl896370177,The Raven,R,26000000.0,111.0,2209.0,7289642.0,16008272.0,6.4,88000.0,"Spain, United States",Crime Mystery Thriller,4.0,2012.0
+tt0976051,rl544048641,The Reader,R,32500000.0,124.0,1203.0,168051.0,34194407.0,7.6,260000.0,"Germany, United States",Drama Mystery Romance,12.0,2008.0
+tt0360916,rl644711937,The Real Cancun,R,7500000.0,96.0,2261.0,2300000.0,3825421.0,2.9,39000.0,United States,Documentary,4.0,2003.0
+tt0444682,rl342722049,The Reaping,R,40000000.0,99.0,2603.0,10025203.0,25126214.0,5.6,45000.0,United States,Horror Thriller,4.0,2007.0
+,,The Replacements,PG-13,50000000.0,118.0,2754.0,11039214.0,44737059.0,6.6,70000.0,United States,Comedy Sport,8.0,2000.0
+tt1663202,rl3698165249,The Revenant,R,135000000.0,156.0,3711.0,474560.0,183637894.0,8.0,876000.0,United States,Action Adventure Drama Western,12.0,2015.0
+tt0298130,rl476874241,The Ring,PG-13,48000000.0,115.0,2927.0,15015393.0,129128133.0,7.1,376000.0,United States,Horror Mystery,10.0,2002.0
+tt0377109,rl493651457,The Ring Two,PG-13,50000000.0,110.0,3341.0,35065237.0,76231249.0,5.4,101000.0,United States,Horror Mystery,3.0,2005.0
+tt1161864,rl90998273,The Rite,PG-13,37000000.0,114.0,2985.0,14789393.0,33047633.0,6.0,103000.0,United States,Drama Horror Mystery Thriller,1.0,2011.0
+tt0898367,rl1953269249,The Road,R,25000000.0,111.0,396.0,1502231.0,8117000.0,7.2,254000.0,United States,Drama Thriller,11.0,2009.0
+,,The Road to El Dorado,PG,95000000.0,89.0,3218.0,12846652.0,50802661.0,6.9,108000.0,United States,Animation Adventure Comedy Family Fantasy Musical,3.0,2000.0
+tt1031969,rl1315735041,The Rocker,PG-13,15000000.0,102.0,2784.0,2636048.0,6409528.0,6.2,40000.0,United States,Comedy Music,8.0,2008.0
+tt0265662,rl2204927489,The Rookie,G,22000000.0,127.0,2543.0,16021684.0,75600072.0,6.9,37000.0,United States,Drama Family Sport,3.0,2002.0
+tt1265990,rl4201416193,The Roommate,PG-13,16000000.0,94.0,2534.0,15002635.0,37300107.0,4.8,41000.0,United States,Drama Horror Thriller,2.0,2011.0
+tt2345737,rl4000089601,The Rover,R,12000000.0,103.0,608.0,69302.0,1114423.0,6.4,51000.0,Australia United States,Action Crime Drama Sci-Fi,6.0,2014.0
+tt0265666,rl3865871873,The Royal Tenenbaums,R,28000000.0,110.0,999.0,276981.0,52364010.0,7.6,314000.0,United States,Comedy Drama,12.0,2001.0
+tt0963794,rl3362555393,The Ruins,R,25000000.0,90.0,2814.0,8003421.0,17432844.0,5.9,84000.0,"Australia, United States",Adventure Horror Thriller,4.0,2008.0
+tt0292644,rl3396109825,The Rules of Attraction,R,4000000.0,110.0,1437.0,2532410.0,6532619.0,6.6,53000.0,United States,Comedy Drama Romance,10.0,2002.0
+tt0376136,rl3463218689,The Rum Diary,R,45000000.0,122.0,2292.0,5135369.0,13109815.0,6.1,108000.0,United States,Comedy Drama,10.0,2011.0
+tt1017451,rl3312223745,The Runaways,R,10000000.0,107.0,244.0,805115.0,3573673.0,6.5,51000.0,United States,Biography Drama Music,3.0,2010.0
+tt0327850,rl997164545,The Rundown,PG-13,85000000.0,105.0,3154.0,18553765.0,47726342.0,6.7,143000.0,United States,Action Adventure Comedy Thriller,9.0,2003.0
+tt0304669,rl1097827841,The Santa Clause 2,G,65000000.0,105.0,3352.0,29008696.0,139236327.0,5.7,64000.0,United States,Comedy Family Fantasy,11.0,2002.0
+tt1673697,rl2960098817,The Sapphires,PG-13,9000000.0,103.0,126.0,38372.0,2450867.0,7.0,15000.0,Australia,Biography Comedy Drama Music Romance,3.0,2013.0
+tt0775529,rl2741995009,The Savages,R,9000000.0,114.0,201.0,151859.0,6623082.0,7.1,39000.0,United States,Comedy Drama,11.0,2007.0
+tt0227445,rl3698296321,The Score,R,68000000.0,124.0,2211.0,19018807.0,71107711.0,6.8,134000.0,United States,Action Crime Drama Thriller,7.0,2001.0
+tt0277296,rl3731850753,The Scorpion King,PG-13,60000000.0,94.0,3466.0,36075875.0,91047077.0,5.5,146000.0,"Belgium, Germany, United States",Action Adventure Fantasy,4.0,2002.0
+tt2555736,rl2185528833,The Second Best Exotic Marigold Hotel,PG,10000000.0,122.0,2022.0,8540370.0,33078266.0,6.5,36000.0,"United Kingdom, United States",Comedy Drama Romance,3.0,2015.0
+tt0416212,rl309233153,The Secret Life of Bees,PG-13,11000000.0,114.0,1630.0,10527799.0,37780486.0,7.2,28000.0,United States,Drama,10.0,2008.0
+tt2709768,rl2069595649,The Secret Life of Pets,PG,75000000.0,91.0,4381.0,104352905.0,369094830.0,6.5,218000.0,United States,Adventure Animation Comedy Family,7.0,2016.0
+tt5113040,rl1719436801,The Secret Life of Pets 2,PG,80000000.0,92.0,4564.0,46652680.0,159214420.0,6.4,69000.0,United States,Adventure Animation Comedy Family,6.0,2019.0
+tt0359950,rl3430516225,The Secret Life of Walter Mitty,PG,91000000.0,114.0,2922.0,12765508.0,58236838.0,7.3,341000.0,United States,Adventure Comedy Drama Fantasy Romance,12.0,2013.0
+tt0443632,rl1852737025,The Sentinel,PG-13,60000000.0,108.0,2851.0,14367854.0,36280697.0,6.1,52000.0,United States,Action Crime Thriller,4.0,2006.0
+tt1866249,rl2238809601,The Sessions,R,1000000.0,95.0,516.0,113467.0,6002451.0,7.2,44000.0,United States,Biography Comedy Drama Romance,10.0,2012.0
+tt2872518,rl2642183681,The Shack,PG-13,20000000.0,132.0,2888.0,16172119.0,57386418.0,6.3,39000.0,United States,Drama Fantasy,3.0,2017.0
+tt0393735,rl2356053505,The Shaggy Dog,PG,60000000.0,98.0,3501.0,16310058.0,61123569.0,4.4,20000.0,United States,Comedy Family Fantasy,3.0,2006.0
+tt4052882,rl3145565697,The Shallows,PG-13,17000000.0,87.0,2962.0,16800868.0,55124043.0,6.3,144000.0,United States,Action Drama Horror Thriller,6.0,2016.0
+tt5580390,rl3540026881,The Shape of Water,R,19500000.0,123.0,2341.0,166564.0,63859435.0,7.3,448000.0,United States,Drama Fantasy Romance,12.0,2017.0
+tt0111161,rl3154871809,The Shawshank Redemption,R,25000000.0,142.0,669.0,183128.0,358507.0,9.3,29000000.0,United States,Drama,9.0,2019.0
+tt0120824,rl963741185,The Shipping News,R,38000000.0,111.0,434.0,1205174.0,11434216.0,6.7,34000.0,"Canada, United States",Drama,12.0,2001.0
+tt0462538,rl3195110913,The Simpsons Movie,PG-13,75000000.0,87.0,3926.0,74036787.0,183135014.0,7.3,350000.0,United States,Adventure Animation Comedy,7.0,2007.0
+tt0403508,rl2322695681,The Sisterhood of the Traveling Pants,PG,25000000.0,119.0,2583.0,9833340.0,39053061.0,6.5,65000.0,United States,Comedy Drama Romance,6.0,2005.0
+tt1018785,rl2305918465,The Sisterhood of the Traveling Pants 2,PG-13,27000000.0,119.0,2714.0,10678430.0,44089964.0,6.2,31000.0,United States,Comedy Drama Romance,8.0,2008.0
+tt4971344,rl1376224769,The Sisters Brothers,R,38000000.0,122.0,1141.0,115575.0,3143056.0,6.9,71000.0,"France, Romania, Spain, United States",Drama Western,9.0,2018.0
+tt1366344,rl2373027329,The Sitter,R,25000000.0,81.0,2752.0,9851435.0,30542576.0,5.6,73000.0,United States,Comedy,12.0,2011.0
+tt0397101,rl4218521089,The Skeleton Key,PG-13,43000000.0,104.0,2784.0,16057945.0,47907715.0,6.5,123000.0,United States,Drama Horror Mystery Thriller,8.0,2005.0
+tt1571249,rl4235298305,The Skeleton Twins,R,1000000.0,93.0,461.0,380691.0,5284309.0,6.8,45000.0,United States,Comedy Drama Romance,9.0,2014.0
+tt0472181,rl292587009,The Smurfs,PG,110000000.0,103.0,3427.0,35611637.0,142614158.0,5.4,97000.0,United States,Adventure Animation Comedy Family Fantasy,7.0,2011.0
+tt2017020,rl309364225,The Smurfs 2,PG,110000000.0,105.0,3867.0,17548389.0,71017784.0,5.3,46000.0,United States,Adventure Animation Comedy Family Fantasy,7.0,2013.0
+tt1758810,rl3682371073,The Snowman,R,35000000.0,142.0,1815.0,3372565.0,6700035.0,5.2,72000.0,United Kingdom,Crime Drama Mystery Thriller,10.0,2017.0
+tt1285016,rl1802536449,The Social Network,PG-13,40000000.0,120.0,2921.0,22445653.0,96962694.0,7.8,760000.0,United States,Biography Drama,10.0,2010.0
+tt0821642,rl1366328833,The Soloist,PG-13,60000000.0,117.0,2090.0,9716458.0,31853584.0,6.7,55000.0,United Kingdom,Biography Drama Music,4.0,2009.0
+tt0963966,rl2540733953,The Sorcerer's Apprentice,PG,160000000.0,109.0,3504.0,17619622.0,63150991.0,6.1,170000.0,United States,Action Adventure Family Fantasy,7.0,2010.0
+tt3922818,rl1216120321,The Space Between Us,PG-13,30000000.0,121.0,2812.0,3775596.0,7885294.0,6.4,56000.0,United States,Drama Romance Sci-Fi,2.0,2017.0
+tt1714206,rl3245377025,The Spectacular Now,R,2500000.0,95.0,770.0,197415.0,6854611.0,7.0,162000.0,United States,Drama Romance,8.0,2013.0
+tt0416236,rl728991233,The Spiderwick Chronicles,PG,92500000.0,96.0,3847.0,19004058.0,71195053.0,6.5,103000.0,United States,Action Adventure Drama Family Fantasy Thriller,2.0,2008.0
+tt0831887,rl628327937,The Spirit,PG-13,60000000.0,103.0,2509.0,6463278.0,19806188.0,4.7,63000.0,United States,Action Crime Fantasy Thriller,12.0,2008.0
+tt2279373,rl158565889,The SpongeBob Movie: Sponge Out of Water,PG,74000000.0,93.0,3680.0,55365012.0,162994032.0,6.0,61000.0,United States,Adventure Animation Comedy Family Fantasy,2.0,2015.0
+tt0345950,rl175343105,The SpongeBob SquarePants Movie,PG,30000000.0,87.0,3307.0,32018216.0,85417988.0,7.2,102000.0,United States Australia South Korea,Adventure Animation Comedy Family Fantasy,11.0,2004.0
+tt1273678,rl1970505217,The Spy Next Door,PG,28000000.0,94.0,2924.0,9726056.0,24307106.0,5.4,47000.0,United States,Action Comedy Family,1.0,2010.0
+tt6663582,rl872646145,The Spy Who Dumped Me,R,40000000.0,117.0,3111.0,12103043.0,33562069.0,6.0,83000.0,United States,Action Adventure Comedy,8.0,2018.0
+tt0367089,rl1836287489,The Squid and the Whale,R,1500000.0,81.0,151.0,129844.0,7372734.0,7.3,91000.0,United States,Comedy Drama,10.0,2005.0
+tt4587656,rl1149076993,The Star,PG,20000000.0,86.0,2976.0,9812674.0,40852824.0,6.3,94000.0,United States,Adventure Animation Comedy Family Fantasy,11.0,2017.0
+tt0340376,rl2675148289,The Statement,R,27000000.0,114.0,51.0,37220.0,765637.0,6.2,56000.0,Canada France United Kingdom,Drama Thriller,12.0,2003.0
+tt0340377,rl2574484993,The Station Agent,R,500000.0,90.0,198.0,57785.0,5801558.0,7.6,74000.0,United States,Comedy Drama,10.0,2003.0
+tt0814335,rl3765667329,The Stepfather,PG-13,20000000.0,101.0,2734.0,11581586.0,29062561.0,5.6,39000.0,United States,Mystery Thriller,10.0,2009.0
+tt0327162,rl3782444545,The Stepford Wives,PG-13,100000000.0,93.0,3057.0,21406781.0,59484742.0,5.3,70000.0,United States,Comedy Horror Sci-Fi Thriller,6.0,2004.0
+tt0482606,rl259163649,The Strangers,R,9000000.0,86.0,2477.0,20997985.0,52597610.0,6.1,144000.0,United States,Horror Mystery Thriller,5.0,2008.0
+tt1285009,rl4236019201,The Strangers: Prey at Night,R,5000000.0,85.0,2464.0,10402271.0,24586708.0,5.2,35000.0,United States,Horror,3.0,2018.0
+tt0164184,rl2675082753,The Sum of All Fears,PG-13,68000000.0,124.0,3230.0,31178526.0,118907036.0,6.4,125000.0,United States,Action Drama Thriller War,5.0,2002.0
+tt6718170,rl1930593025,The Super Mario Bros. Movie,PG,100000000.0,92.0,4371.0,146361865.0,574934330.0,7.0,238000.0,"Japan, United States",Adventure Animation Comedy Family Fantasy,4.0,2023.0
+tt0857190,rl3312616961,The Sweeney,R,4500000.0,112.0,11.0,20321.0,26650.0,6.1,20000.0,United Kingdom,Action Crime Drama,3.0,2013.0
+tt0253867,rl712345089,The Sweetest Thing,R,43000000.0,84.0,2670.0,9430667.0,24718164.0,5.2,63000.0,United States,Comedy Romance,4.0,2002.0
+tt0889573,rl3829761537,The Switch,PG-13,19000000.0,101.0,2017.0,8436713.0,27779426.0,6.1,112000.0,United States,Comedy Drama Romance,8.0,2010.0
+tt0236784,rl1953859073,The Tailor of Panama,R,21000000.0,109.0,441.0,1837068.0,13729742.0,6.1,31000.0,United States Ireland,Drama Thriller,3.0,2001.0
+tt1111422,rl1551205889,The Taking of Pelham 123,R,110000000.0,106.0,3077.0,23373102.0,65452312.0,6.4,208000.0,United States,Action Crime Thriller,6.0,2009.0
+tt0420238,rl1366656513,The Tale of Despereaux,G,60000000.0,93.0,3107.0,10103675.0,50877145.0,6.1,40000.0,"United Kingdom, United States",Adventure Animation Comedy Family Fantasy,12.0,2008.0
+tt1274300,rl3967124993,The Tempest,PG-13,20000000.0,110.0,21.0,42436.0,277943.0,5.3,82000.0,United States,Comedy Drama Fantasy Romance,12.0,2010.0
+tt0362227,rl3463808513,The Terminal,PG-13,75000000.0,128.0,2914.0,19053199.0,77872883.0,7.4,496000.0,United States,Comedy Drama Romance,6.0,2004.0
+tt0324216,rl2373289473,The Texas Chainsaw Massacre,R,9500000.0,98.0,3018.0,29100000.0,80571655.0,6.2,153000.0,United States,Horror,10.0,2003.0
+tt0420294,rl2390066689,The Texas Chainsaw Massacre: The Beginning,R,16000000.0,91.0,2820.0,19150000.0,39517763.0,5.8,77000.0,United States,Horror,10.0,2006.0
+tt2980516,rl158631425,The Theory of Everything,PG-13,15000000.0,123.0,1220.0,208763.0,35893537.0,7.7,483000.0,United States,Biography Drama Romance,11.0,2014.0
+tt0905372,rl1987347969,The Thing,R,38000000.0,103.0,2996.0,8493665.0,16999934.0,6.2,146000.0,United States,Horror Mystery Sci-Fi,10.0,2011.0
+tt0419294,rl2789312001,The Three Burials of Melquiades Estrada,R,15000000.0,121.0,356.0,23859.0,5027684.0,7.3,42000.0,France Mexico United States,Adventure Crime Drama Mystery Western,12.0,2005.0
+tt1509767,rl2826208769,The Three Musketeers,PG-13,90000000.0,110.0,3017.0,8674452.0,20377913.0,5.7,112000.0,"France, Germany, United Kingdom, United States",Action Adventure Fantasy Romance Thriller,10.0,2011.0
+tt0383010,rl2876540417,The Three Stooges,PG,30000000.0,92.0,3482.0,17010125.0,44338224.0,5.1,33000.0,United States,Comedy Family,4.0,2012.0
+,,The Tigger Movie,G,20000000.0,77.0,2723.0,9427532.0,45542421.0,6.3,20000.0,United States,Animation Adventure Comedy Drama Family Musical,2.0,2000.0
+tt0268695,rl4000613889,The Time Machine,PG-13,80000000.0,96.0,2958.0,22610437.0,56832494.0,6.0,131000.0,United States,Action Adventure Sci-Fi,3.0,2002.0
+tt0452694,rl3967059457,The Time Traveler's Wife,PG-13,39000000.0,107.0,2988.0,18623171.0,63414846.0,7.1,158000.0,United States,Comedy Drama Fantasy Romance Sci-Fi,8.0,2009.0
+tt1758795,rl3262416385,The To Do List,R,1500000.0,104.0,591.0,1579402.0,3491669.0,5.8,42000.0,United States,Comedy Romance,7.0,2013.0
+tt1243957,rl1819772417,The Tourist,PG-13,100000000.0,103.0,2756.0,16472458.0,67631157.0,6.0,257000.0,"France, United States",Action Thriller,12.0,2010.0
+tt0840361,rl1685554689,The Town,R,37000000.0,125.0,2935.0,23808032.0,92186262.0,7.5,416000.0,United States,Crime Drama Thriller,9.0,2010.0
+tt0293662,rl3078063617,The Transporter,PG-13,21000000.0,92.0,2610.0,9107816.0,25296447.0,6.8,322000.0,"France, United States",Action Crime Thriller,10.0,2002.0
+tt2938956,rl3061286401,The Transporter Refueled,PG-13,22000000.0,96.0,3434.0,7355622.0,16029670.0,5.2,45000.0,"China, France",Action Thriller,9.0,2015.0
+tt0478304,rl2557969921,The Tree of Life,PG-13,35000000.0,139.0,237.0,372920.0,13305665.0,6.8,184000.0,United States,Drama Fantasy,5.0,2011.0
+tt0290095,rl511084033,The Tuxedo,PG-13,60000000.0,98.0,3022.0,15051028.0,50586000.0,5.4,89000.0,United States,Action Comedy Sci-Fi,9.0,2002.0
+tt1324999,rl3292956161,The Twilight Saga: Breaking Dawn - Part 1,PG-13,110000000.0,117.0,4066.0,138122261.0,281287133.0,4.9,255000.0,United States,Adventure Drama Fantasy Romance Thriller,11.0,2011.0
+tt1673434,rl3276178945,The Twilight Saga: Breaking Dawn - Part 2,PG-13,120000000.0,115.0,4070.0,141067634.0,292324737.0,5.5,263000.0,United States,Adventure Drama Fantasy Romance,11.0,2012.0
+tt1325004,rl659654145,The Twilight Saga: Eclipse,PG-13,68000000.0,124.0,4468.0,64832191.0,300531751.0,5.1,261000.0,United States,Action Adventure Drama Fantasy Mystery Romance Thriller,6.0,2010.0
+tt1259571,rl3479471617,The Twilight Saga: New Moon,PG-13,50000000.0,130.0,4124.0,142839137.0,296623634.0,4.8,300000.0,United States,Adventure Drama Fantasy Romance,11.0,2009.0
+tt1142988,rl1299613185,The Ugly Truth,R,38000000.0,96.0,2975.0,27605576.0,88915214.0,6.4,231000.0,United States,Comedy Romance,7.0,2009.0
+tt1139668,rl3161884161,The Unborn,PG-13,16000000.0,88.0,2359.0,19810585.0,42670410.0,4.7,53000.0,United States,Horror Mystery Thriller,1.0,2009.0
+tt1987680,rl3204679169,The Upside,PG-13,37500000.0,126.0,3568.0,20355000.0,108252517.0,7.0,64000.0,United States,Comedy Drama,1.0,2019.0
+tt0365885,rl981042689,The Upside of Anger,R,12000000.0,118.0,1166.0,211559.0,18761993.0,6.8,23000.0,United States,Comedy Drama,3.0,2005.0
+tt1524575,rl2054784513,The Vatican Tapes,PG-13,13000000.0,91.0,427.0,832271.0,1784763.0,4.7,19000.0,United States,Horror Thriller,7.0,2015.0
+tt0368447,rl1132037633,The Village,PG-13,71682975.0,109.0,3733.0,50746142.0,114197520.0,6.6,278000.0,United States,Drama Mystery Thriller,7.0,2004.0
+tt1695994,rl3027863041,The Virginity Hit,R,2000000.0,86.0,700.0,301885.0,636706.0,4.5,4000.0,United States,Comedy Drama,9.0,2010.0
+tt3567288,rl239502849,The Visit,PG-13,5000000.0,107.0,3148.0,25427560.0,65206105.0,6.3,152000.0,United States,Horror Mystery Thriller,9.0,2015.0
+tt0857191,rl2927199745,The Visitor,PG-13,4000000.0,104.0,270.0,86488.0,9427089.0,7.6,45000.0,United States,Drama,4.0,2008.0
+tt1606389,rl2541323777,The Vow,PG-13,30000000.0,104.0,3038.0,41202458.0,125014030.0,6.8,205000.0,United States,Drama Romance,2.0,2012.0
+tt3488710,rl21661185,The Walk,PG,35000000.0,124.0,2509.0,1560299.0,10161183.0,7.3,136000.0,United States,Adventure Biography Drama History,9.0,2015.0
+tt1032751,rl444106241,The Warrior's Way,R,42000000.0,100.0,1622.0,3048665.0,5666340.0,6.2,27000.0,New Zealand,Action Drama Fantasy Western,12.0,2010.0
+tt0290332,rl158893569,The Wash,R,7000000.0,96.0,749.0,2875067.0,10097538.0,4.8,77000.0,United States,Comedy,11.0,2001.0
+tt1298649,rl4049896961,The Watch,R,68000000.0,102.0,3168.0,12750297.0,35353000.0,5.7,133000.0,United States,Comedy Sci-Fi,7.0,2012.0
+tt3007512,rl2105050625,The Water Diviner,R,22500000.0,112.0,385.0,1220335.0,4200117.0,7.0,78000.0,"Australia, Turkey, United States",Drama History War,4.0,2015.0
+tt1023114,rl1836615169,The Way Back,PG-13,30000000.0,133.0,678.0,1218868.0,2719296.0,7.3,122000.0,"United Arab Emirates, United Kingdom",Adventure Drama History,1.0,2011.0
+tt1727388,rl1668843009,The Way Way Back,PG-13,5000000.0,103.0,1001.0,552788.0,21506546.0,7.4,157000.0,United States,Comedy Drama,7.0,2013.0
+,,The Way of the Gun,R,9000000.0,119.0,1515.0,2150979.0,6047856.0,6.6,35000.0,United States,Action Crime Drama Thriller,9.0,2000.0
+tt0384680,rl1433961985,The Weather Man,R,22000000.0,102.0,1510.0,4248465.0,12482775.0,6.6,83000.0,United States,Comedy Drama,10.0,2005.0
+tt0372532,rl1299744257,The Wedding Date,PG-13,15000000.0,90.0,1704.0,11129580.0,31726995.0,6.1,56000.0,United States,Comedy Romance,2.0,2005.0
+tt0209475,rl1131972097,The Wedding Planner,PG-13,35000000.0,103.0,2785.0,13510293.0,60400856.0,5.3,87000.0,United States,Comedy Romance,1.0,2001.0
+tt0884732,rl761038337,The Wedding Ringer,R,23000000.0,101.0,3003.0,20649306.0,64460211.0,6.6,80000.0,United States,Comedy Romance,1.0,2015.0
+tt1149362,rl343639553,The White Ribbon,R,18000000.0,144.0,106.0,59848.0,2222862.0,7.8,78000.0,Germany Austria France Italy Canada,Drama Mystery Thriller,12.0,2009.0
+,,The Whole Nine Yards,R,24000000.0,98.0,2910.0,15915676.0,57262492.0,6.7,129000.0,"Canada, United States",Comedy Crime,2.0,2000.0
+tt0327247,rl2122024449,The Whole Ten Yards,PG-13,40000000.0,98.0,2654.0,6685381.0,16328471.0,5.5,59000.0,United States,Comedy Crime Thriller,4.0,2004.0
+tt0405469,rl1350272513,The Wild,G,80000000.0,95.0,2854.0,9684809.0,37384046.0,5.2,28000.0,United States,Adventure Animation Comedy Family,4.0,2006.0
+tt0282120,rl2977662465,The Wild Thornberrys,PG,25000000.0,85.0,3012.0,6013847.0,40108697.0,5.6,15000.0,United States Hungary,Adventure Animation Comedy Family Fantasy,12.0,2002.0
+tt4263482,rl947684865,The Witch,R,4000000.0,92.0,2204.0,8800230.0,25138705.0,7.0,302000.0,"Brazil, Canada, United Kingdom, United States",Drama Fantasy Horror Mystery Thriller,2.0,2016.0
+tt0032138,rl3850077697,The Wizard of Oz,PG,2777000.0,102.0,318.0,3093998.0,5633202.0,8.1,429000.0,United States,Adventure Family Fantasy Musical,9.0,2013.0
+tt0993846,rl3447424513,The Wolf of Wall Street,R,100000000.0,180.0,2557.0,18410067.0,116949183.0,8.2,16000000.0,United States,Biography Comedy Crime Drama,12.0,2013.0
+tt0780653,rl3413870081,The Wolfman,R,150000000.0,103.0,3223.0,31479235.0,62189884.0,5.8,112000.0,United States,Drama Fantasy Horror Thriller,2.0,2010.0
+tt1430132,rl3246097921,The Wolverine,PG-13,120000000.0,126.0,3924.0,53113752.0,132556852.0,6.7,493000.0,United States,Action Sci-Fi,7.0,2013.0
+tt1596365,rl964331009,The Woman in Black,PG-13,15000000.0,95.0,2856.0,20874072.0,54333290.0,6.4,193000.0,"Canada, Sweden, United Kingdom",Drama Fantasy Horror Thriller,2.0,2012.0
+tt0430770,rl813336065,The Women,PG-13,16000000.0,115.0,2995.0,10155121.0,26902075.0,5.0,23000.0,United States,Comedy Drama,9.0,2008.0
+tt1840417,rl310019585,The Words,PG-13,6000000.0,102.0,2801.0,4750894.0,11494838.0,7.0,81000.0,United States,Drama Mystery Romance Thriller,9.0,2012.0
+tt0410454,rl209356289,The Work and the Glory,PG,7500000.0,118.0,112.0,251145.0,3347647.0,6.5,12000.0,United States,Drama Romance,11.0,2004.0
+tt0457530,rl242910721,The Work and the Glory II: American Zion,PG-13,6500000.0,100.0,206.0,518222.0,2025032.0,6.1,778.0,United States,Drama Western,10.0,2005.0
+tt0460611,rl192579073,The Work and the Glory III: A House Divided,PG,6500000.0,93.0,44.0,200347.0,1325092.0,6.2,491.0,United States,Drama Western,11.0,2006.0
+tt1213663,rl41584129,The World's End,R,20000000.0,109.0,1553.0,8811790.0,26004851.0,6.9,298000.0,"Japan, United Kingdom, United States",Action Comedy Sci-Fi,8.0,2013.0
+tt0412080,rl2054850049,The World's Fastest Indian,PG-13,25000000.0,127.0,251.0,400782.0,5128124.0,7.8,59000.0,"New Zealand, United States",Biography Drama Sport,12.0,2005.0
+tt1125849,rl1954186753,The Wrestler,R,6000000.0,109.0,776.0,202714.0,26238243.0,7.9,320000.0,United States,Drama Sport,12.0,2008.0
+tt0443701,rl1517979137,The X Files: I Want to Believe,PG-13,30000000.0,104.0,3185.0,10021753.0,20982478.0,5.9,94000.0,United States Canada,Crime Drama Horror Mystery Sci-Fi Thriller,7.0,2008.0
+tt0954990,rl3044705793,The Yellow Handkerchief,PG-13,15500000.0,102.0,29.0,37296.0,318623.0,6.7,89000.0,United States,Adventure Drama Romance,2.0,2010.0
+tt1002563,rl2420868609,The Young Messiah,PG-13,16800000.0,111.0,1769.0,3294876.0,6490401.0,5.7,39000.0,United States,Drama Fantasy,3.0,2016.0
+tt0962736,rl4269442561,The Young Victoria,PG,35000000.0,105.0,476.0,260591.0,11001272.0,7.2,66000.0,"United Kingdom, United States",Biography Drama History Romance,12.0,2009.0
+tt1316616,rl208963073,There Be Dragons,PG-13,36000000.0,122.0,259.0,705537.0,1069334.0,5.7,51000.0,Spain United States Argentina,Biography Drama War,5.0,2011.0
+tt0469494,rl41190913,There Will Be Blood,R,25000000.0,158.0,1620.0,190739.0,40222514.0,8.2,642000.0,United States,Drama,12.0,2007.0
+tt0283632,rl125076993,They,PG-13,17000000.0,89.0,1623.0,5144090.0,12840842.0,4.8,14000.0,"Canada, United States",Horror Mystery Thriller,11.0,2002.0
+tt0469623,rl1786021377,Things We Lost in the Fire,R,16000000.0,119.0,1142.0,1561949.0,3287315.0,7.1,30000.0,"United Kingdom, United States",Drama,10.0,2007.0
+tt1621045,rl1853130241,Think Like a Man,PG-13,12000000.0,123.0,2052.0,33636303.0,91547205.0,6.5,50000.0,United States,Comedy Romance,4.0,2012.0
+tt2239832,rl1869907457,Think Like a Man Too,PG-13,24000000.0,106.0,2225.0,29241911.0,65182182.0,5.7,23000.0,United States,Comedy Romance,6.0,2014.0
+tt0245674,rl507610625,Thir13en Ghosts,R,42000000.0,91.0,2781.0,15165355.0,41867960.0,5.6,94000.0,Canada United States,Fantasy Horror,10.0,2001.0
+tt0328538,rl1584694785,Thirteen,R,2000000.0,100.0,243.0,116260.0,4601043.0,6.8,98000.0,"United Kingdom, United States",Drama,8.0,2003.0
+tt0146309,rl490833409,Thirteen Days,PG-13,80000000.0,145.0,2034.0,46668.0,34592089.0,7.3,63000.0,United States,Drama History Thriller,12.0,2000.0
+tt0937375,rl1349813761,This Christmas,PG-13,13000000.0,119.0,1921.0,17958183.0,49121934.0,6.4,10000.0,United States,Comedy Drama Romance,11.0,2007.0
+tt1758830,rl1749190145,This Is 40,R,35000000.0,134.0,2931.0,11579175.0,67544505.0,6.2,151000.0,United States,Comedy Drama Romance,12.0,2012.0
+tt1371150,rl1467254273,This Is Where I Leave You,R,19800000.0,103.0,2868.0,11558149.0,34296320.0,6.6,89000.0,United States,Comedy Drama,9.0,2014.0
+tt1245492,rl2842461697,This Is the End,R,32000000.0,107.0,3055.0,20719162.0,101470202.0,6.6,435000.0,United States,Comedy Fantasy,6.0,2013.0
+tt1596350,rl1249150465,This Means War,PG-13,65000000.0,120.0,3189.0,17405930.0,54760791.0,6.3,194000.0,United States,Action Comedy Romance,2.0,2012.0
+,,Thomas and the Magic Railroad,G,19000000.0,85.0,2106.0,4154932.0,15911332.0,4.2,48000.0,United States,Adventure Comedy Drama Family Fantasy,7.0,2000.0
+tt0800369,rl3094644225,Thor,PG-13,150000000.0,115.0,3963.0,65723338.0,181030624.0,7.0,901000.0,United States,Action Fantasy,5.0,2011.0
+tt3501632,rl2959312385,Thor: Ragnarok,PG-13,180000000.0,130.0,4080.0,122744989.0,315058289.0,7.9,817000.0,United States,Action Adventure Comedy Fantasy Sci-Fi,11.0,2017.0
+tt1981115,rl3111421441,Thor: The Dark World,PG-13,170000000.0,112.0,3841.0,85737841.0,206362140.0,6.8,726000.0,United States,Action Adventure Fantasy,11.0,2013.0
+tt0486028,rl3212084737,Thr3e,PG-13,2400000.0,101.0,458.0,740000.0,1008849.0,4.9,47000.0,Poland United States United Kingdom,Horror Mystery Thriller,1.0,2007.0
+,,"Three Billboards Outside Ebbing, Missouri",R,12000000.0,115.0,4.0,322168.0,54513740.0,8.1,556000.0,United States,Comedy Crime Drama,12.0,2017.0
+tt0167456,rl2591327745,Thunderbirds,PG,57000000.0,95.0,2062.0,2766810.0,6880917.0,4.3,14000.0,United States,Action Adventure Comedy Family Sci-Fi,7.0,2004.0
+tt3409392,rl2272560641,Timbuktu,PG-13,2500000.0,97.0,56.0,50000.0,1076075.0,7.1,18000.0,"France, Mauritania",Drama War,1.0,2015.0
+tt0295725,rl1870628353,Time Changer,PG,825000.0,95.0,5.0,2320.0,20797.0,5.2,29000.0,United States,Drama Fantasy Sci-Fi,2.0,2016.0
+tt0300556,rl4067722753,Timeline,PG-13,80000000.0,116.0,2787.0,8440629.0,19481943.0,5.6,66000.0,United States,Action Adventure Sci-Fi War,11.0,2003.0
+tt1340800,rl3799287297,Tinker Tailor Soldier Spy,R,21000000.0,128.0,886.0,310562.0,24149393.0,7.0,213000.0,"France, Germany, United Kingdom",Drama Mystery Thriller,12.0,2011.0
+tt0120338,rl3167650561,Titanic,PG-13,200000000.0,194.0,2464.0,6714684.0,15033795.0,7.9,13000000.0,United States Mexico,Drama Romance,2.0,2023.0
+tt1859650,rl3966010881,To Rome with Love,R,21500000.0,112.0,806.0,361359.0,16685867.0,6.3,91000.0,"Italy, United States",Comedy Music Romance,6.0,2012.0
+tt1270286,rl209159681,To Save a Life,PG-13,500000.0,120.0,441.0,1581517.0,3777210.0,6.8,59000.0,United States,Drama,1.0,2010.0
+tt3361792,rl554272257,Tolkien,PG-13,20000000.0,112.0,1501.0,2200537.0,4535154.0,6.8,47000.0,United States,Biography Drama Romance War,5.0,2019.0
+tt1365519,rl1179420161,Tomb Raider,PG-13,94000000.0,119.0,3854.0,23633317.0,58250803.0,6.3,227000.0,United States,Action Adventure Fantasy Thriller,3.0,2018.0
+tt0246989,rl880248321,Tomcats,R,11000000.0,95.0,2617.0,6406076.0,13558739.0,5.3,20000.0,United States,Comedy,3.0,2001.0
+tt1964418,rl2051114497,Tomorrowland,PG,190000000.0,130.0,3972.0,33028165.0,93436322.0,6.4,192000.0,United States,Action Adventure Family Fantasy Mystery Sci-Fi,5.0,2015.0
+tt0808510,rl628590081,Tooth Fairy,PG,48000000.0,101.0,3345.0,14010409.0,60022256.0,5.0,50000.0,United States,Comedy Family Fantasy Sport,1.0,2010.0
+tt2784678,rl427263489,Top Five,R,12000000.0,102.0,1426.0,6896593.0,25317471.0,6.4,28000.0,United States,Comedy Romance,12.0,2014.0
+tt0329691,rl376931841,Torque,PG-13,40000000.0,84.0,2463.0,9970557.0,21215059.0,4.1,29000.0,United States,Action Comedy Crime,1.0,2004.0
+tt1386703,rl58164737,Total Recall,PG-13,125000000.0,118.0,3601.0,25577758.0,58877969.0,6.2,267000.0,United States,Action Adventure Sci-Fi Thriller,8.0,2012.0
+tt0379557,rl1937212929,Touching the Void,R,2000000.0,106.0,137.0,96973.0,4593598.0,8.0,38000.0,"United Kingdom, United States",Adventure Documentary Drama Sport,1.0,2004.0
+tt0471042,rl1668777473,Tower Heist,PG-13,85000000.0,104.0,3370.0,24025190.0,78046570.0,6.2,151000.0,United States,Action Comedy Crime,11.0,2011.0
+tt0141907,rl1702331905,Town & Country,R,105000000.0,104.0,2222.0,3029858.0,6719973.0,4.5,53000.0,United States,Comedy Romance,4.0,2001.0
+tt0435761,rl1383564801,Toy Story 3,G,200000000.0,103.0,4028.0,110307189.0,415004880.0,8.3,894000.0,United States,Adventure Animation Comedy Family Fantasy,6.0,2010.0
+tt1979376,rl3798500865,Toy Story 4,G,200000000.0,100.0,4575.0,120908065.0,434038008.0,7.7,281000.0,United States,Adventure Animation Comedy Family Fantasy,6.0,2019.0
+tt0181865,rl1115129345,Traffic,R,48000000.0,148.0,1755.0,184725.0,124115725.0,7.6,220000.0,United States,Crime Drama Thriller,12.0,2000.0
+tt5670152,rl235046401,Traffik,R,4000000.0,96.0,1046.0,3941338.0,9186156.0,5.9,21000.0,United States,Action Thriller,4.0,2018.0
+tt0139654,rl1165460993,Training Day,R,45000000.0,122.0,2712.0,22550788.0,76631907.0,7.7,474000.0,United States,Crime Drama Thriller,10.0,2001.0
+tt3152624,rl3128395265,Trainwreck,R,35000000.0,125.0,3171.0,30097040.0,110212700.0,6.2,143000.0,United States,Comedy Drama Romance,7.0,2015.0
+tt0988047,rl3145172481,Traitor,PG-13,22000000.0,114.0,2108.0,7868465.0,23530831.0,6.9,59000.0,United States,Action Crime Drama Thriller,8.0,2008.0
+tt1924429,rl3161949697,Trance,R,20000000.0,101.0,443.0,131145.0,2328743.0,6.9,118000.0,"France, United Kingdom",Crime Drama Mystery Thriller,4.0,2013.0
+tt0407265,rl3178726913,Transamerica,R,1000000.0,103.0,656.0,46908.0,9015303.0,7.4,42000.0,United States,Adventure Comedy Drama,12.0,2005.0
+tt2209764,rl3195504129,Transcendence,PG-13,100000000.0,119.0,3455.0,10886386.0,23022309.0,6.2,239000.0,United States,Action Drama Sci-Fi Thriller,4.0,2014.0
+tt0418279,rl3010954753,Transformers,PG-13,151000000.0,144.0,4050.0,70502384.0,319246193.0,7.0,676000.0,United States,Action Adventure Sci-Fi,7.0,2007.0
+tt2109248,rl2960623105,Transformers: Age of Extinction,PG-13,210000000.0,165.0,4233.0,100038390.0,245439076.0,5.6,332000.0,United States,Action Adventure Sci-Fi,6.0,2014.0
+tt1399103,rl2977400321,Transformers: Dark of the Moon,PG-13,195000000.0,154.0,4088.0,97852865.0,352390543.0,6.2,432000.0,United States,Action Adventure Sci-Fi,6.0,2011.0
+tt1055369,rl3027731969,Transformers: Revenge of the Fallen,PG-13,210000000.0,149.0,4293.0,108966307.0,402111870.0,6.0,429000.0,United States,Action Adventure Sci-Fi,6.0,2009.0
+tt5090568,rl1606320641,Transformers: Rise of the Beasts,PG-13,195000000.0,127.0,3680.0,61045464.0,157341749.0,6.0,104000.0,United States,Action Adventure Sci-Fi,6.0,2023.0
+tt3371366,rl3313272321,Transformers: The Last Knight,PG-13,217000000.0,154.0,4132.0,44680073.0,130168683.0,5.2,169000.0,United States,Action Adventure Sci-Fi,6.0,2017.0
+tt0388482,rl2910291457,Transporter 2,PG-13,32000000.0,87.0,3320.0,16540720.0,43095856.0,6.3,216000.0,France Germany United States,Action Crime Thriller,9.0,2005.0
+,,Transporter 3,PG-13,40000000.0,103.0,2626.0,12063452.0,31715062.0,6.1,177000.0,United States,Action Adventure Thriller,11.0,2008.0
+tt0800241,rl2843182593,Transsiberian,R,15000000.0,111.0,154.0,34615.0,2206405.0,6.6,55000.0,"Germany, Spain, United Kingdom",Crime Drama Mystery Thriller,7.0,2008.0
+tt5259692,rl3112142337,Trapped,R,30000000.0,101.0,2227.0,3210765.0,6916869.0,7.1,268.0,"Germany, United States",Documentary,3.0,2016.0
+tt1921149,rl1920763393,Trash,R,12000000.0,114.0,17.0,10230.0,17484.0,7.1,23000.0,"Brazil, United Kingdom",Adventure Crime Drama Mystery Thriller,10.0,2015.0
+tt0133240,rl2759296513,Treasure Planet,PG,140000000.0,95.0,3227.0,12083248.0,38176783.0,7.2,133000.0,United States,Adventure Animation Family Fantasy Sci-Fi,11.0,2002.0
+tt1712261,rl2272757249,Triple 9,R,20000000.0,115.0,2205.0,6109085.0,12639297.0,6.3,77000.0,United States,Action Crime Drama Thriller,2.0,2016.0
+tt1679335,rl3967256065,Trolls,PG,125000000.0,93.0,4066.0,46581142.0,153856089.0,6.4,92000.0,United States,Adventure Animation Comedy Family Fantasy Musical Romance,11.0,2016.0
+,,Trolls Band Together,PG,95000000.0,92.0,3870.0,30002525.0,102996915.0,6.0,14000.0,United States,Animation Adventure Comedy Family Fantasy Musical,10.0,2023.0
+tt1104001,rl4000810497,Tron: Legacy,PG,200000000.0,125.0,3451.0,44026211.0,172062763.0,6.8,356000.0,United States,Action Adventure Sci-Fi,12.0,2010.0
+tt0942385,rl3782706689,Tropic Thunder,R,92000000.0,107.0,3473.0,25812796.0,110515313.0,7.1,449000.0,United States,Action Comedy War,8.0,2008.0
+tt2083383,rl3849815553,Trouble with the Curve,PG-13,60000000.0,111.0,3212.0,12162040.0,35763137.0,6.8,69000.0,United States,Drama Romance Sport,9.0,2012.0
+tt0332452,rl3698820609,Troy,R,175000000.0,163.0,3411.0,46865412.0,133378256.0,7.3,571000.0,"Malta, United Kingdom, United States",Adventure Drama,5.0,2004.0
+tt1403865,rl3564602881,True Grit,PG-13,38000000.0,110.0,3464.0,24830443.0,171243005.0,7.6,358000.0,United States,Drama Western,12.0,2010.0
+tt0889671,rl3245835777,Trumbo,PG-13,15000000.0,124.0,6.0,74177.0,7857741.0,7.4,12000.0,United States,Biography Documentary,6.0,2008.0
+tt1529572,rl3312944641,Trust,R,4000000.0,106.0,28.0,58214.0,120016.0,6.9,44000.0,United States,Crime Drama Mystery Thriller,4.0,2011.0
+tt3859076,rl1316849153,Truth,R,9600000.0,125.0,1122.0,66232.0,2541854.0,6.8,21000.0,United States,Biography Drama History Thriller,10.0,2015.0
+tt6772950,rl3355608577,Truth or Dare,PG-13,3500000.0,100.0,3068.0,18667855.0,41411015.0,5.2,63000.0,United States,Horror Thriller,4.0,2018.0
+tt0468565,rl1047954945,Tsotsi,R,3000000.0,95.0,122.0,76324.0,2912606.0,7.2,32000.0,"South Africa, United Kingdom",Crime Drama,2.0,2006.0
+tt0283084,rl829851137,Tuck Everlasting,PG,15000000.0,96.0,1460.0,5268764.0,19161999.0,6.6,25000.0,United States,Drama Family Fantasy Romance,10.0,2002.0
+tt0491203,rl3296691713,Tulip Fever,R,25000000.0,105.0,772.0,1158017.0,2455635.0,6.2,23000.0,"United Kingdom, United States",Drama History Romance,9.0,2017.0
+tt1860353,rl762742273,Turbo,PG,135000000.0,96.0,3809.0,21312625.0,83028130.0,6.4,111000.0,United States,Adventure Animation Comedy Family Sport,7.0,2013.0
+tt0454970,rl544638465,Turistas,R,10000000.0,93.0,1572.0,3582554.0,7027762.0,5.4,41000.0,United States,Horror Mystery Thriller,12.0,2006.0
+tt1407084,rl326534657,Twelve,R,5000000.0,93.0,231.0,110238.0,183920.0,5.6,13000.0,United States France,Action Drama Thriller,8.0,2010.0
+tt1099212,rl58099201,Twilight,PG-13,37000000.0,122.0,3649.0,69637740.0,192769854.0,5.3,488000.0,United States,Drama Fantasy Romance,11.0,2008.0
+tt0315297,rl2138473985,Twisted,R,50000000.0,97.0,2704.0,8904299.0,25198598.0,5.3,23000.0,United States,Crime Drama Mystery Thriller,2.0,2004.0
+tt0338512,rl1953924609,Two Brothers,PG,72000000.0,109.0,2181.0,6144160.0,19176754.0,7.0,16000.0,"France, United Kingdom",Adventure Drama Family,6.0,2004.0
+tt0269341,rl1987479041,Two Can Play That Game,R,13000000.0,90.0,1308.0,7720942.0,22235901.0,6.1,74000.0,United States,Comedy Romance,9.0,2001.0
+tt1103275,rl1651934721,Two Lovers,R,12000000.0,110.0,148.0,94986.0,3149034.0,7.0,44000.0,United States,Drama Romance,2.0,2009.0
+tt0313737,rl1568048641,Two Weeks Notice,PG-13,60000000.0,101.0,2755.0,14328494.0,93354918.0,6.1,126000.0,United States,Comedy Romance,12.0,2002.0
+tt0417217,rl1685489153,Two for the Money,R,35000000.0,122.0,2397.0,8703240.0,22991379.0,6.2,49000.0,United States,Crime Drama Sport,10.0,2005.0
+,,U-571,PG-13,62000000.0,116.0,2583.0,19553310.0,77086030.0,6.6,87000.0,"France, United States",Action War,4.0,2000.0
+tt0892375,rl1215727105,U2 3D,G,15000000.0,85.0,686.0,964315.0,12898847.0,8.4,29000.0,United States,Documentary Music,1.0,2008.0
+tt1946502,rl2315290113,UglyDolls,PG,45000000.0,87.0,3652.0,8603407.0,20150241.0,5.1,78000.0,United States,Adventure Animation Comedy Family Fantasy Musical,5.0,2019.0
+tt0370032,rl1131841025,Ultraviolet,PG-13,30000000.0,88.0,2558.0,9064880.0,18535812.0,4.3,84000.0,United States,Action Sci-Fi,3.0,2006.0
+tt0488658,rl3094775297,Unaccompanied Minors,PG,25000000.0,90.0,2775.0,5815474.0,16655224.0,5.3,12000.0,United States,Adventure Comedy Family Romance,12.0,2006.0
+tt0217869,rl3195438593,Unbreakable,PG-13,75000000.0,107.0,2708.0,30330771.0,95011339.0,7.3,442000.0,United States,Drama Mystery Sci-Fi Thriller,11.0,2000.0
+tt1809398,rl3212215809,Unbroken,PG-13,65000000.0,137.0,3301.0,30621445.0,115637895.0,7.2,183000.0,United States,Action Biography Drama Sport War,12.0,2014.0
+tt7339792,rl4026893825,Unbroken: Path to Redemption,PG-13,6000000.0,98.0,1620.0,2238723.0,6216897.0,5.8,35000.0,United States,Biography Drama History,9.0,2018.0
+tt7334528,rl67274241,Uncle Drew,PG-13,18000000.0,103.0,2742.0,15242781.0,42469946.0,5.8,16000.0,United States,Comedy Drama Sport,6.0,2018.0
+tt1441395,rl4202071553,Under the Skin,R,13300000.0,108.0,176.0,133154.0,2614251.0,6.3,158000.0,United Kingdom,Drama Horror Mystery Sci-Fi Thriller,4.0,2014.0
+tt0328589,rl4168517121,Under the Tuscan Sun,PG-13,18000000.0,113.0,1701.0,9751425.0,43610723.0,6.7,60000.0,"Italy, United States",Comedy Drama Romance,9.0,2003.0
+tt0373416,rl2809562625,Underclassman,PG-13,25000000.0,95.0,1132.0,2646000.0,5655459.0,4.4,6000.0,United States,Action Comedy Crime Drama Thriller,9.0,2005.0
+tt0279493,rl2792785409,Undercover Brother,PG-13,25000000.0,88.0,2169.0,12037685.0,39089928.0,5.9,36000.0,United States,Action Comedy,5.0,2002.0
+tt0320691,rl2188805633,Underworld,R,22000000.0,121.0,2928.0,21753759.0,51970690.0,7.0,285000.0,"Germany, Hungary, United Kingdom, United States",Action Fantasy Thriller,9.0,2003.0
+tt1496025,rl2172028417,Underworld: Awakening,R,70000000.0,89.0,3078.0,25306725.0,62321039.0,6.3,161000.0,United States,Action Fantasy Thriller,1.0,2012.0
+tt3717252,rl3112011265,Underworld: Blood Wars,R,35000000.0,91.0,3070.0,13688751.0,30353973.0,5.7,81000.0,United States,Action Fantasy Thriller,1.0,2017.0
+tt0401855,rl2406909441,Underworld: Evolution,R,45000000.0,106.0,3207.0,26857181.0,62318875.0,6.7,209000.0,United States,Action Fantasy Thriller,1.0,2006.0
+tt0834001,rl2155251201,Underworld: Rise of the Lycans,R,35000000.0,92.0,2942.0,20828511.0,45802315.0,6.5,168000.0,United States New Zealand Australia,Action Fantasy Thriller,1.0,2009.0
+tt0434424,rl3262744065,Undiscovered,PG-13,9000000.0,97.0,1304.0,676048.0,1069318.0,4.2,29000.0,Germany United States,Comedy Music Romance,8.0,2005.0
+tt0281322,rl2222360065,Undisputed,R,20000000.0,96.0,1117.0,4548750.0,12764657.0,6.1,34000.0,United States Germany Japan,Action Crime Drama Sport,8.0,2002.0
+tt0250797,rl4269180417,Unfaithful,R,50000000.0,124.0,2625.0,14065277.0,52775765.0,6.7,99000.0,United States,Drama Romance Thriller,5.0,2002.0
+tt2358925,rl2071561729,Unfinished Business,R,35000000.0,91.0,2777.0,4772613.0,10219501.0,5.4,35000.0,United States,Comedy Drama,3.0,2015.0
+tt3462710,rl2541651457,Unforgettable,R,12000000.0,114.0,2417.0,4785431.0,11368012.0,5.1,17000.0,United States,Drama Thriller,4.0,2017.0
+tt3713166,rl3763176961,Unfriended,R,1000000.0,83.0,2775.0,15845115.0,32789645.0,5.6,82000.0,United States,Horror Mystery Thriller,4.0,2015.0
+tt4761916,rl2432992769,Unfriended: Dark Web,R,1000000.0,92.0,1547.0,3653035.0,8866745.0,6.0,38000.0,United States,Horror Mystery Thriller,7.0,2018.0
+tt0460975,rl3916858881,Unidentified,PG,400000.0,85.0,24.0,15915.0,224099.0,3.3,723.0,United States,Sci-Fi,4.0,2006.0
+tt0475276,rl810714625,United 93,R,18000000.0,111.0,1871.0,11478360.0,31567134.0,7.6,111000.0,United States,Action Drama History Thriller,4.0,2006.0
+tt1401152,rl3631646209,Unknown,PG-13,40000000.0,113.0,3043.0,21856389.0,63686397.0,6.8,269000.0,"Germany, United Kingdom, United States",Action Mystery Thriller,2.0,2011.0
+tt0342258,rl3715532289,Unleashed,R,45000000.0,103.0,1962.0,10600000.0,24537621.0,7.0,108000.0,United Kingdom France United States,Action Crime Thriller,5.0,2005.0
+tt9024106,rl436831745,Unplanned,R,6000000.0,110.0,1516.0,6382298.0,19005109.0,5.5,15000.0,United States,Biography Drama,3.0,2019.0
+tt7153766,rl3456271873,Unsane,R,1500000.0,98.0,2023.0,3762145.0,7732899.0,6.4,50000.0,United States,Drama Horror Mystery Thriller,3.0,2018.0
+tt0477080,rl3581314561,Unstoppable,PG-13,100000000.0,98.0,3261.0,22688457.0,81562942.0,6.8,208000.0,United States,Action Thriller,11.0,2010.0
+tt0880578,rl3463874049,Untraceable,R,35000000.0,101.0,2368.0,11354069.0,28687835.0,6.2,53000.0,United States,Crime Mystery Thriller,1.0,2008.0
+tt1049413,rl3245770241,Up,PG,175000000.0,96.0,3886.0,68108790.0,293004164.0,8.3,11000000.0,United States,Adventure Animation Comedy Drama Family,5.0,2009.0
+tt1193138,rl3346433537,Up in the Air,R,25000000.0,109.0,2218.0,1181450.0,83823381.0,7.4,350000.0,United States,Comedy Drama Romance,12.0,2009.0
+tt6499752,rl1174767105,Upgrade,R,3000000.0,100.0,1458.0,4670905.0,11977130.0,7.5,207000.0,Australia,Action Sci-Fi Thriller,6.0,2018.0
+tt1374992,rl997819905,Upside Down,PG-13,50000000.0,113.0,39.0,28722.0,105095.0,6.3,74000.0,"Canada, France",Drama Romance Sci-Fi Thriller,3.0,2013.0
+tt0263757,rl1031374337,Uptown Girls,PG-13,20000000.0,92.0,2495.0,11277367.0,37182494.0,6.2,43000.0,United States,Comedy Drama Romance,8.0,2003.0
+,,Urban Legends: Final Cut,R,15000000.0,99.0,2539.0,8505513.0,21468807.0,4.4,19000.0,United States Canada,Horror Mystery,9.0,2000.0
+tt6857112,rl1711506945,Us,R,20000000.0,116.0,3743.0,71117625.0,175084580.0,6.8,342000.0,United States,Horror Mystery Thriller,3.0,2019.0
+tt0434409,rl1601799681,V for Vendetta,R,54000000.0,145.0,3365.0,25642640.0,70511035.0,8.2,12000000.0,"Germany, United States",Action Drama Sci-Fi Thriller,3.0,2006.0
+tt0452702,rl544835073,Vacancy,R,19000000.0,85.0,2551.0,7603376.0,19363565.0,6.2,108000.0,United States,Horror Thriller,4.0,2007.0
+tt1524930,rl3445917185,Vacation,R,31000000.0,99.0,3430.0,14681108.0,58884188.0,6.1,122000.0,United States,Adventure Comedy,7.0,2015.0
+tt0242998,rl645498369,Valentine,R,29000000.0,96.0,2310.0,10024648.0,20384136.0,4.9,30000.0,United States,Horror Mystery Thriller,2.0,2001.0
+tt0817230,rl611943937,Valentine's Day,PG-13,52000000.0,125.0,3665.0,56260707.0,110485654.0,5.7,125000.0,United States,Comedy Romance,2.0,2010.0
+tt2239822,rl3044902401,Valerian and the City of a Thousand Planets,PG-13,180000000.0,136.0,3553.0,17007624.0,41189488.0,6.4,197000.0,France,Action Adventure Fantasy Sci-Fi,7.0,2017.0
+tt0361089,rl444171777,Valiant,G,35000000.0,76.0,2016.0,5914722.0,19478106.0,5.5,24000.0,"United Kingdom, United States",Adventure Animation Comedy Family War,8.0,2005.0
+tt0985699,rl460948993,Valkyrie,PG-13,90000000.0,121.0,2838.0,21027007.0,83107829.0,7.1,260000.0,United States,Drama History Thriller War,12.0,2008.0
+tt1666186,rl343508481,Vampires Suck,PG-13,20000000.0,82.0,3233.0,12202831.0,36661504.0,3.4,52000.0,United States,Comedy Horror,8.0,2010.0
+tt0338526,rl175736321,Van Helsing,PG-13,170000000.0,132.0,3580.0,51748040.0,120177084.0,6.1,285000.0,United States,Action Adventure Fantasy Thriller,5.0,2004.0
+tt0259711,rl209290753,Vanilla Sky,R,70000000.0,136.0,2842.0,25015518.0,100618344.0,6.9,286000.0,United States,Fantasy Mystery Romance Sci-Fi Thriller,12.0,2001.0
+tt0241025,rl24741377,Vanity Fair,PG-13,23000000.0,141.0,1054.0,4800000.0,16136476.0,6.2,24000.0,United States United Kingdom India,Drama,9.0,2004.0
+tt0443274,rl41518593,Vantage Point,PG-13,40000000.0,90.0,3163.0,22874936.0,72266306.0,6.6,154000.0,United States,Action Crime Drama Thriller,2.0,2008.0
+tt1270797,rl2734720513,Venom,PG-13,116000000.0,112.0,4250.0,80255756.0,213515506.0,6.6,539000.0,United States,Action Adventure Sci-Fi,10.0,2018.0
+tt0489327,rl1987675649,Venus,R,6000000.0,95.0,168.0,35604.0,3347411.0,7.1,13000.0,United States,Comedy Drama Romance,12.0,2006.0
+tt0383694,rl1836680705,Vera Drake,R,11000000.0,125.0,97.0,13207.0,3775283.0,7.6,27000.0,United Kingdom France United States,Crime Drama,10.0,2004.0
+tt0312549,rl1618576897,Veronica Guerin,R,17000000.0,98.0,472.0,611276.0,1571504.0,6.8,22000.0,"Ireland, United Kingdom, United States",Biography Crime Drama Thriller,10.0,2003.0
+tt2771372,rl1635354113,Veronica Mars,PG-13,6000000.0,107.0,347.0,1988351.0,3322127.0,6.7,55000.0,United States United Kingdom France Germany,Crime Drama Mystery Thriller,3.0,2014.0
+tt0190865,rl1702462977,Vertical Limit,PG-13,75000000.0,124.0,2602.0,15507845.0,69243859.0,5.9,65000.0,United States,Action Adventure Drama Sport Thriller,12.0,2000.0
+tt6266538,rl1409779201,Vice,R,60000000.0,132.0,2534.0,7768371.0,47836282.0,7.2,163000.0,United States,Biography Comedy Drama History,12.0,2018.0
+tt0497465,rl1450804737,Vicky Cristina Barcelona,PG-13,16000000.0,97.0,726.0,3755575.0,23216709.0,7.1,269000.0,"Spain, United States",Comedy Drama Romance,8.0,2008.0
+,,Victor Frankenstein,PG-13,40000000.0,110.0,2797.0,2469341.0,5775076.0,5.9,60000.0,United States,Drama Horror Sci-Fi Thriller,11.0,2015.0
+tt0478829,rl2759427585,Vitus,PG,2500000.0,100.0,16.0,5722.0,187480.0,7.6,52000.0,Switzerland,Drama Music,6.0,2007.0
+tt0441909,rl2490992129,Volver,R,9400000.0,121.0,689.0,202000.0,12899867.0,7.6,108000.0,Spain,Comedy Drama,11.0,2006.0
+tt1175491,rl2373551617,W.,PG-13,25100000.0,129.0,2050.0,10505668.0,25534493.0,6.3,50000.0,United States,Biography Comedy Drama History,10.0,2008.0
+tt1296898,rl4219045377,Waiting for Forever,PG-13,5000000.0,95.0,14.0,8917.0,25517.0,5.9,20000.0,United States,Comedy Drama Romance,2.0,2011.0
+tt0348333,rl4286154241,Waiting...,R,3000000.0,94.0,1652.0,6021106.0,16124543.0,6.7,106000.0,United States,Comedy,10.0,2005.0
+tt0473308,rl4084827649,Waitress,PG-13,1500000.0,108.0,707.0,92034.0,19097550.0,7.0,49000.0,United States,Comedy Drama Romance,5.0,2007.0
+tt0841046,rl3631842817,Walk Hard: The Dewey Cox Story,R,35000000.0,96.0,2650.0,4174383.0,18317151.0,6.8,77000.0,United States,Comedy Music,12.0,2007.0
+tt0358273,rl3665397249,Walk the Line,PG-13,29000000.0,136.0,3160.0,22347341.0,119519402.0,7.8,266000.0,United States,Biography Drama Music Romance,11.0,2005.0
+tt0351977,rl3682174465,Walking Tall,PG-13,56000000.0,86.0,2836.0,15501114.0,46437717.0,6.3,110000.0,United States,Action Crime,4.0,2004.0
+tt1762399,rl3849946625,Walking with Dinosaurs 3D,PG,80000000.0,87.0,3243.0,7091938.0,36076121.0,5.2,12000.0,India United Kingdom Australia United States,Adventure Animation Comedy Family,12.0,2013.0
+tt1027718,rl3363407361,Wall Street: Money Never Sleeps,PG-13,70000000.0,133.0,3597.0,19011188.0,52474616.0,6.2,107000.0,United States,Drama,9.0,2010.0
+tt0312004,rl3782837761,Wallace & Gromit: The Curse of the Were-Rabbit,G,30000000.0,85.0,3656.0,16025987.0,56110897.0,7.5,146000.0,United States,Adventure Animation Comedy Family Fantasy Mystery Sci-Fi,10.0,2005.0
+tt1185616,rl3464070657,Waltz with Bashir,R,2000000.0,90.0,208.0,50021.0,2283849.0,8.0,60000.0,"France, Germany, Israel",Animation Biography Documentary Drama History Mystery War,12.0,2008.0
+tt1655460,rl3229189633,Wanderlust,R,32500000.0,98.0,2002.0,6526650.0,17450535.0,5.6,81000.0,United States,Comedy Romance,2.0,2012.0
+tt0493464,rl3329852929,Wanted,R,75000000.0,147.0,3185.0,50927085.0,134508551.0,6.7,409000.0,India,Action Crime Thriller,6.0,2008.0
+tt2005151,rl3497887233,War Dogs,R,50000000.0,114.0,3258.0,14685305.0,43034523.0,7.1,255000.0,United States,Biography Comedy Crime Drama War,8.0,2016.0
+tt1568911,rl880313857,War Horse,PG-13,70000000.0,146.0,2856.0,7515402.0,79884879.0,7.2,166000.0,"United Kingdom, United States",Action Adventure Drama War,12.0,2011.0
+tt3832914,rl477660673,War Room,PG,3000000.0,120.0,1945.0,11351389.0,67790117.0,6.4,16000.0,United States,Drama,8.0,2015.0
+tt3450958,rl1782744577,War for the Planet of the Apes,PG-13,152000000.0,142.0,4100.0,56262929.0,146880162.0,7.4,287000.0,United States,Action Adventure Drama Sci-Fi Thriller,7.0,2017.0
+tt0407304,rl544769537,War of the Worlds,PG-13,132000000.0,116.0,3910.0,64878725.0,234280354.0,6.5,476000.0,United States,Action Adventure Sci-Fi,6.0,2005.0
+tt0803096,rl1064863233,Warcraft,PG-13,160000000.0,123.0,3406.0,24166110.0,47365290.0,6.7,279000.0,United States,Action Adventure Fantasy,6.0,2016.0
+tt1588173,rl712541697,Warm Bodies,PG-13,35000000.0,98.0,3009.0,20353967.0,66380662.0,6.8,244000.0,United States,Comedy Horror Romance,2.0,2013.0
+tt1291584,rl645432833,Warrior,PG-13,25000000.0,140.0,1883.0,5242107.0,13657115.0,8.1,498000.0,United States,Action Drama Sport,9.0,2011.0
+tt0281364,rl376997377,Wasabi,R,15300000.0,94.0,10.0,17560.0,97220.0,6.6,43000.0,France Japan,Action Comedy Crime Drama Thriller,9.0,2002.0
+tt0409459,rl41453057,Watchmen,R,138000000.0,162.0,3611.0,55214334.0,107509799.0,7.6,583000.0,United States,Action Drama Mystery Sci-Fi,3.0,2009.0
+tt0240200,rl2021164545,Water,PG-13,3000000.0,117.0,91.0,56280.0,5529144.0,7.7,15000.0,"Canada, India",Drama,4.0,2006.0
+tt1067583,rl2121827841,Water for Elephants,PG-13,38000000.0,122.0,2820.0,16842353.0,58709717.0,6.9,120000.0,United States,Drama Romance,4.0,2011.0
+tt0758794,rl1383630337,We Are Marshall,PG,65000000.0,131.0,2606.0,6114264.0,43545364.0,7.0,65000.0,United States,Drama Sport,12.0,2006.0
+tt3787590,rl3178792449,We Are Your Friends,R,2000000.0,96.0,2333.0,1767308.0,3591417.0,6.2,41000.0,United States,Drama Music Romance,8.0,2015.0
+tt1389137,rl2638644737,We Bought a Zoo,PG,50000000.0,124.0,3170.0,9360434.0,75624550.0,7.0,152000.0,United States,Comedy Drama Family,12.0,2011.0
+tt0361309,rl1115194881,We Don't Live Here Anymore,R,3000000.0,101.0,190.0,101295.0,2041014.0,6.3,10000.0,Canada United States,Drama Romance,8.0,2004.0
+tt1242460,rl4268000769,We Need to Talk About Kevin,R,7000000.0,112.0,80.0,24587.0,1738692.0,7.5,168000.0,"United Kingdom, United States",Drama Mystery Thriller,12.0,2011.0
+tt0498399,rl2792916481,We Own the Night,R,28000000.0,118.0,2402.0,10826287.0,28563179.0,6.8,93000.0,United States,Action Crime Drama Thriller,10.0,2007.0
+tt0277434,rl2339931649,We Were Soldiers,R,75000000.0,139.0,3143.0,20212543.0,78122718.0,7.2,151000.0,United States,Action Drama History War,3.0,2002.0
+tt1723121,rl2558035457,We're the Millers,R,37000000.0,110.0,3445.0,26419396.0,150394119.0,7.0,487000.0,United States United Kingdom,Comedy Crime,8.0,2013.0
+tt0396269,rl1282967041,Wedding Crashers,R,40000000.0,119.0,3131.0,33900720.0,209255921.0,7.0,376000.0,United States,Comedy Romance,7.0,2005.0
+tt0494652,rl4148463105,Welcome Home Roscoe Jenkins,PG-13,35000000.0,114.0,2387.0,16207730.0,42436517.0,5.5,16000.0,United States,Comedy Romance,2.0,2008.0
+tt3289724,rl2264958465,Welcome to Marwen,PG-13,45000000.0,116.0,1911.0,2354205.0,10763520.0,6.2,26000.0,United States,Biography Comedy Drama Fantasy Romance,12.0,2018.0
+tt0361925,rl3027797505,Welcome to Mooseport,PG-13,30000000.0,110.0,2868.0,6775132.0,14470947.0,5.3,13000.0,"Germany, United States",Comedy Romance,2.0,2004.0
+tt0298228,rl2155382273,Whale Rider,PG-13,4300000.0,101.0,556.0,137418.0,20779666.0,7.5,44000.0,New Zealand,Drama Family,6.0,2003.0
+tt1033643,rl4252534273,What Happens in Vegas,PG-13,35000000.0,99.0,3255.0,20172474.0,80277646.0,6.1,188000.0,United States,Comedy Romance,5.0,2008.0
+tt1486834,rl4286088705,What If,PG-13,11000000.0,98.0,787.0,133898.0,3493000.0,6.8,82000.0,"Canada, Ireland",Comedy Romance,8.0,2014.0
+tt0161081,rl4084762113,What Lies Beneath,PG-13,100000000.0,130.0,2925.0,29702959.0,155464351.0,6.6,136000.0,United States,Drama Horror Mystery Thriller,7.0,2000.0
+tt7634968,rl3221390849,What Men Want,R,20000000.0,117.0,2912.0,18232087.0,54611903.0,5.4,32000.0,United States,Comedy Fantasy Romance,2.0,2019.0
+,,What Planet Are You From?,R,50000000.0,105.0,2248.0,3008746.0,6291602.0,5.6,99000.0,United States,Comedy Sci-Fi,3.0,2000.0
+tt0207201,rl3849881089,What Women Want,PG-13,70000000.0,127.0,3092.0,33614543.0,182811707.0,6.4,223000.0,United States,Comedy Fantasy Romance,12.0,2000.0
+tt0286788,rl2172159489,What a Girl Wants,PG,25000000.0,105.0,2964.0,11434964.0,36105433.0,5.8,67000.0,United States,Comedy Drama Family Romance,4.0,2003.0
+tt1586265,rl3799549441,What to Expect When You're Expecting,PG-13,40000000.0,110.0,3021.0,10547068.0,41152203.0,5.7,76000.0,United States,Comedy Drama Romance,5.0,2012.0
+tt0770703,rl4000876033,What's Your Number?,R,20000000.0,106.0,3011.0,5421669.0,14011084.0,6.0,88000.0,United States,Comedy Romance,9.0,2011.0
+tt0161083,rl1652196865,What's the Worst That Could Happen?,PG-13,60000000.0,94.0,2675.0,13049114.0,32269834.0,5.4,17000.0,United States,Comedy Crime,6.0,2001.0
+tt1178663,rl4202202625,Whatever Works,PG-13,15000000.0,93.0,353.0,266162.0,5306706.0,7.1,77000.0,United States,Comedy Romance,6.0,2009.0
+tt0455857,rl3615000065,When a Stranger Calls,PG-13,15000000.0,87.0,3004.0,21607203.0,47860214.0,5.1,49000.0,United States,Horror Thriller,2.0,2006.0
+tt1389139,rl3866658305,When the Bough Breaks,PG-13,10000000.0,107.0,2246.0,14202323.0,29747603.0,5.2,78000.0,United States,Drama Thriller,9.0,2016.0
+tt2247476,rl3715663361,When the Game Stands Tall,PG,15000000.0,115.0,2766.0,8381509.0,30127963.0,6.6,17000.0,United States,Biography Drama Family Sport,8.0,2014.0
+tt0373450,rl947619329,Where the Truth Lies,R,25000000.0,107.0,95.0,234461.0,872142.0,6.4,19000.0,Canada United Kingdom,Crime Mystery Thriller,10.0,2005.0
+tt0386117,rl964396545,Where the Wild Things Are,PG,100000000.0,101.0,3735.0,32695407.0,77233467.0,6.7,109000.0,United States,Adventure Drama Family Fantasy,10.0,2009.0
+tt1791682,rl863733249,While We're Young,R,10000000.0,97.0,762.0,227688.0,7587485.0,6.3,54000.0,United States,Comedy Drama Mystery,3.0,2015.0
+tt1172233,rl897287681,Whip It,PG-13,15000000.0,111.0,1738.0,4650812.0,13077184.0,6.9,70000.0,United States,Drama Sport,10.0,2009.0
+tt2582802,rl914064897,Whiplash,R,3300000.0,106.0,567.0,135388.0,13092006.0,8.5,992000.0,United States,Drama Music,10.0,2014.0
+tt3553442,rl2776401409,Whiskey Tango Foxtrot,R,35000000.0,112.0,2413.0,7450275.0,23083334.0,6.6,57000.0,United States,Biography Comedy Drama War,3.0,2016.0
+tt4537896,rl2013300225,White Boy Rick,R,30000000.0,111.0,2504.0,8860431.0,24011188.0,6.5,43000.0,United States,Crime Drama,9.0,2018.0
+tt0381707,rl578520577,White Chicks,PG-13,37000000.0,109.0,2800.0,19676748.0,70831760.0,5.8,164000.0,United States,Comedy Crime,6.0,2004.0
+tt2334879,rl427525633,White House Down,PG-13,150000000.0,131.0,3222.0,24852258.0,73103784.0,6.3,236000.0,United States,Action Drama Thriller,6.0,2013.0
+tt0375210,rl209421825,White Noise,PG-13,10000000.0,101.0,2279.0,24113565.0,56386759.0,5.5,51000.0,"Canada, United Kingdom, United States",Drama Horror Mystery Thriller,1.0,2005.0
+tt0283139,rl293307905,White Oleander,PG-13,16000000.0,109.0,1510.0,5607480.0,16357770.0,7.1,34000.0,United States,Drama,10.0,2002.0
+tt0365929,rl310085121,Whiteout,R,35000000.0,101.0,2745.0,4915104.0,10275638.0,5.5,41000.0,"Canada, France, United States",Action Crime Mystery Thriller,9.0,2009.0
+tt0785077,rl1786480129,Who's Your Caddy?,PG-13,7000000.0,93.0,1019.0,2756661.0,5713425.0,2.3,16000.0,United States,Comedy Sport,7.0,2007.0
+tt1391137,rl1618707969,Why Did I Get Married Too?,PG-13,20000000.0,121.0,2155.0,29289537.0,60095852.0,4.7,10000.0,United States,Comedy Drama Romance,4.0,2010.0
+tt0906108,rl1870366209,Why Did I Get Married?,PG-13,15000000.0,118.0,2034.0,21353789.0,55204525.0,5.9,14000.0,United States,Comedy Drama Romance,10.0,2007.0
+tt4501244,rl3732768257,Why Him?,R,38000000.0,111.0,3008.0,11002986.0,60323786.0,6.2,124000.0,United States,Comedy,12.0,2016.0
+tt0324554,rl1501267457,Wicker Park,PG-13,30000000.0,114.0,2598.0,5467281.0,13001257.0,6.9,59000.0,United States,Drama Mystery Romance Thriller,9.0,2004.0
+tt4218572,rl3355477505,Widows,R,42000000.0,129.0,2803.0,12361307.0,42402632.0,6.8,104000.0,"United Kingdom, United States",Crime Drama Thriller,11.0,2018.0
+tt0329767,rl1601930753,Wilbur Wants to Kill Himself,R,4000000.0,111.0,16.0,13747.0,235294.0,6.8,81000.0,Denmark United Kingdom Sweden France,Comedy Drama Romance,3.0,2004.0
+tt2305051,rl1367049729,Wild,R,15000000.0,119.0,1361.0,606810.0,37880356.0,7.1,139000.0,United States,Adventure Biography Drama,12.0,2014.0
+tt0486946,rl1098614273,Wild Hogs,PG-13,60000000.0,100.0,3401.0,39699023.0,168273550.0,5.8,123000.0,United States,Action Adventure Comedy,3.0,2007.0
+tt1235189,rl3212543489,Wild Target,PG-13,8000000.0,98.0,13.0,23174.0,109338.0,6.7,41000.0,"France, United Kingdom",Action Comedy Crime,10.0,2010.0
+tt0310357,rl3061548545,Willard,PG-13,20000000.0,100.0,1762.0,4010593.0,6886089.0,6.1,20000.0,"Canada, United States",Drama Horror Thriller,3.0,2003.0
+tt0360201,rl2944108033,Wimbledon,PG-13,35000000.0,98.0,2039.0,7118985.0,17001133.0,6.3,67000.0,United States,Comedy Romance Sport,9.0,2004.0
+tt1606392,rl4235953665,Win Win,R,5000000.0,106.0,388.0,150362.0,10179275.0,7.1,55000.0,United States,Comedy Drama Sport,3.0,2011.0
+tt0335559,rl2709227009,Win a Date with Tad Hamilton!,PG-13,24000000.0,96.0,2808.0,7320066.0,17071962.0,5.6,29000.0,United States,Comedy Romance,1.0,2004.0
+tt1072748,rl117671425,Winchester,PG-13,3500000.0,99.0,2480.0,9307626.0,25091816.0,5.4,37000.0,United States,Biography Drama Fantasy History Horror Mystery Thriller,2.0,2018.0
+tt5362988,rl2801829377,Wind River,R,11000000.0,107.0,2890.0,161558.0,33800859.0,7.7,281000.0,United States,Crime Drama Mystery Thriller Western,8.0,2017.0
+tt0245562,rl2608563713,Windtalkers,R,115000000.0,134.0,2898.0,14520412.0,40914068.0,6.1,74000.0,United States,Action Drama War,6.0,2002.0
+tt0301727,rl2675672577,Winged Migration,G,28000000.0,98.0,202.0,33128.0,11689053.0,7.9,12000.0,"France, Germany, Italy, Switzerland",Documentary,4.0,2003.0
+tt1449283,rl2373682689,Winnie the Pooh,G,30000000.0,69.0,2405.0,7857076.0,26692846.0,7.1,28000.0,United States,Adventure Animation Comedy Drama Family Fantasy Musical,7.0,2011.0
+tt0795441,rl4168844801,Winter in Wartime,R,5800000.0,103.0,26.0,14937.0,543100.0,7.0,14000.0,"Belgium, Netherlands",Drama History War,3.0,2011.0
+tt1399683,rl2222687745,Winter's Bone,R,2000000.0,100.0,141.0,84797.0,6531503.0,7.1,151000.0,United States,Crime Drama Mystery,6.0,2010.0
+tt1837709,rl2273019393,Winter's Tale,PG-13,60000000.0,118.0,2965.0,7297694.0,12600231.0,6.1,57000.0,United States,Drama Fantasy Mystery Romance,2.0,2014.0
+,,Wish,PG,200000000.0,92.0,3900.0,19698228.0,63973821.0,5.6,36000.0,United States,Animation Adventure Comedy Family Fantasy Musical,11.0,2023.0
+tt2870708,rl4084958721,Wish I Was Here,R,6000000.0,113.0,753.0,484401.0,3591299.0,6.6,39000.0,United States,Comedy Drama,7.0,2014.0
+tt5322012,rl604014081,Wish Upon,PG-13,12000000.0,90.0,2250.0,5467084.0,14301505.0,5.1,23000.0,United States,Drama Fantasy Horror Mystery Thriller,7.0,2017.0
+tt0364751,rl3984295425,Without a Paddle,PG-13,30000000.0,99.0,2756.0,13528946.0,58169327.0,5.8,51000.0,United States,Adventure Comedy Mystery,8.0,2004.0
+tt0416315,rl3363538433,Wolf Creek,R,1100000.0,99.0,1761.0,2805754.0,16188180.0,6.2,78000.0,Australia,Horror Thriller,12.0,2005.0
+tt0399901,rl695895553,Woman Thou Art Loosed,R,3000000.0,94.0,521.0,2500000.0,6879730.0,6.6,1000.0,United States,Drama,10.0,2004.0
+tt2404425,rl981108225,Woman in Gold,PG-13,11000000.0,109.0,2011.0,2091551.0,33307793.0,7.3,63000.0,"United Kingdom, United States",Biography Drama History,4.0,2015.0
+tt1870529,rl3395257857,Won't Back Down,PG,19000000.0,121.0,2517.0,2603370.0,5310554.0,6.4,69000.0,United States,Drama,9.0,2012.0
+tt2543472,rl1719567873,Wonder,PG,20000000.0,113.0,3519.0,27547866.0,132422809.0,7.9,179000.0,United States,Drama Family,11.0,2017.0
+tt0185014,rl796558849,Wonder Boys,R,55000000.0,112.0,1509.0,5808919.0,19393557.0,7.2,67000.0,United States,Comedy Drama,2.0,2000.0
+tt6428676,rl2575074817,Wonder Park,PG,100000000.0,93.0,3838.0,15853646.0,45216793.0,5.8,13000.0,"Spain, United States",Adventure Animation Comedy Drama Family Fantasy,3.0,2019.0
+tt0451279,rl578455041,Wonder Woman,PG-13,150000000.0,141.0,4165.0,103251471.0,412563408.0,7.3,700000.0,United States,Action Adventure Fantasy Sci-Fi War,6.0,2017.0
+,,Wonka,PG,125000000.0,116.0,4203.0,39005800.0,218402312.0,7.0,143000.0,"United Kingdom, United States",Adventure Comedy Family Fantasy Musical,12.0,2023.0
+tt4183692,rl2742912513,Woodlawn,PG,13000000.0,123.0,1553.0,4002226.0,14394097.0,6.4,79000.0,United States,Biography Drama History Sport,10.0,2015.0
+tt0469641,rl125470209,World Trade Center,PG-13,65000000.0,129.0,3021.0,18730762.0,70278893.0,6.0,88000.0,United States,Drama History Thriller,8.0,2006.0
+tt0262911,rl108692993,World Traveler,R,2000000.0,103.0,19.0,16072.0,103863.0,5.3,13000.0,Canada United States,Drama,4.0,2002.0
+tt0816711,rl2038072833,World War Z,PG-13,190000000.0,116.0,3607.0,66411834.0,202706711.0,7.0,721000.0,United States,Action Adventure Horror Sci-Fi,6.0,2013.0
+tt1646987,rl977962497,Wrath of the Titans,PG-13,150000000.0,99.0,3545.0,33457188.0,83670083.0,5.7,196000.0,"United Kingdom, United States",Action Adventure Fantasy,3.0,2012.0
+tt1772341,rl242058753,Wreck-It Ralph,PG,165000000.0,101.0,3752.0,49038712.0,189422889.0,7.7,459000.0,United States,Adventure Animation Comedy Family Fantasy Sci-Fi Sport,11.0,2012.0
+tt0295700,rl1618642433,Wrong Turn,R,12600000.0,84.0,1615.0,5161498.0,15418790.0,6.1,132000.0,United States,Horror Thriller,5.0,2003.0
+,,X-Men,PG-13,75000000.0,104.0,3025.0,54471475.0,157299717.0,7.3,647000.0,United States,Action Adventure Sci-Fi,7.0,2000.0
+tt0290334,rl1736082945,X-Men 2,PG-13,125000000.0,135.0,3749.0,85558731.0,214949694.0,7.4,577000.0,United States,Action Sci-Fi Thriller,5.0,2003.0
+tt0458525,rl3262875137,X-Men Origins: Wolverine,PG-13,150000000.0,107.0,4102.0,85058003.0,179883157.0,6.5,531000.0,United States,Action Sci-Fi,5.0,2009.0
+tt3385516,rl1417315841,X-Men: Apocalypse,PG-13,178000000.0,144.0,4153.0,65769562.0,155442489.0,6.9,462000.0,United States,Action Adventure Sci-Fi,5.0,2016.0
+tt6565702,rl4211181057,X-Men: Dark Phoenix,PG-13,200000000.0,113.0,3721.0,32828348.0,65845974.0,5.7,205000.0,United States Canada,Action Adventure Sci-Fi,6.0,2019.0
+tt1877832,rl1400538625,X-Men: Days of Future Past,PG-13,200000000.0,132.0,4001.0,90823660.0,233921534.0,7.9,746000.0,United States,Action Adventure Sci-Fi Thriller,5.0,2014.0
+tt1270798,rl1434093057,X-Men: First Class,PG-13,160000000.0,132.0,3692.0,55101604.0,146408305.0,7.7,725000.0,"United Kingdom, United States",Action Sci-Fi,6.0,2011.0
+tt0376994,rl1484424705,X-Men: The Last Stand,PG-13,210000000.0,104.0,3714.0,102750665.0,234362462.0,6.6,541000.0,United States,Action Adventure Sci-Fi,5.0,2006.0
+tt1045778,rl3178923521,Year One,PG-13,60000000.0,97.0,3024.0,19610304.0,43337279.0,4.9,104000.0,United States,Comedy,6.0,2009.0
+tt1068680,rl2860156417,Yes Man,PG-13,70000000.0,104.0,3434.0,18262471.0,97690976.0,6.8,384000.0,United States,Comedy Romance,12.0,2008.0
+tt8079248,rl1392805377,Yesterday,PG-13,26000000.0,116.0,2755.0,17010050.0,73286650.0,6.8,168000.0,United Kingdom,Comedy Fantasy Music Romance,6.0,2019.0
+tt1302067,rl2793047553,Yogi Bear,PG,80000000.0,81.0,3515.0,16411322.0,100246011.0,4.6,23000.0,United States,Adventure Animation Comedy Family,12.0,2010.0
+tt1414382,rl2642052609,You Again,PG,20000000.0,105.0,2548.0,8407513.0,25702053.0,5.7,55000.0,United States,Comedy Romance,9.0,2010.0
+tt0203230,rl2102035969,You Can Count on Me,R,1200000.0,111.0,150.0,118170.0,9416804.0,7.5,31000.0,United States,Drama,11.0,2000.0
+tt0960144,rl2457503233,You Don't Mess with the Zohan,PG-13,90000000.0,113.0,3466.0,38531374.0,100018837.0,5.6,214000.0,United States,Action Comedy,6.0,2008.0
+tt0365957,rl2491057665,You Got Served,PG-13,8000000.0,95.0,1943.0,16123105.0,40363810.0,3.9,29000.0,United States,Drama Music,1.0,2004.0
+tt0463034,rl2323285505,You Me and Dupree,PG-13,54000000.0,110.0,3137.0,21525560.0,75628110.0,5.6,84000.0,United States,Comedy Romance,7.0,2006.0
+tt1182350,rl1198884353,You Will Meet a Tall Dark Stranger,R,22000000.0,98.0,402.0,160103.0,3248246.0,6.3,48000.0,"Spain, United Kingdom, United States",Comedy Drama Romance,9.0,2010.0
+tt1853739,rl4101670401,You're Next,R,1000000.0,95.0,2437.0,7020196.0,18494006.0,6.6,110000.0,United States,Drama Horror Thriller,8.0,2013.0
+,,"You, Me and Dupree",PG-13,54000000.0,109.0,3131.0,21525560.0,75802010.0,5.6,84000.0,United States,Comedy Romance,7.0,2006.0
+tt0289635,rl2340062721,Young Adam,NC-17,6400000.0,98.0,41.0,50278.0,767373.0,6.3,15000.0,United Kingdom France,Crime Drama,4.0,2004.0
+tt1625346,rl2356839937,Young Adult,R,12000000.0,94.0,987.0,310263.0,16311571.0,6.3,88000.0,United States,Comedy Drama,12.0,2011.0
+tt1240982,rl4152002049,Your Highness,R,50000000.0,102.0,2772.0,9360020.0,21596445.0,5.5,104000.0,United States,Action Adventure Comedy Fantasy Romance,4.0,2011.0
+tt0443295,rl3933898241,Yours Mine & Ours,PG,45000000.0,88.0,3210.0,17461108.0,53412862.0,5.5,30000.0,United States,Comedy Family Romance,11.0,2005.0
+tt3312830,rl142444033,Youth,R,13000000.0,124.0,149.0,78085.0,2703296.0,7.3,83000.0,"France, Italy, Switzerland, United Kingdom",Comedy Drama Music Romance,12.0,2015.0
+tt0403702,rl3984229889,Youth in Revolt,R,18000000.0,90.0,1873.0,6888334.0,15285588.0,6.4,76000.0,United States,Comedy Drama Romance,1.0,2010.0
+tt1007028,rl3665462785,Zack and Miri Make a Porno,R,24000000.0,101.0,2735.0,10065630.0,31457946.0,6.5,182000.0,United States,Comedy Romance,10.0,2008.0
+tt1790885,rl1447527937,Zero Dark Thirty,R,52500000.0,157.0,2946.0,417150.0,95720716.0,7.4,319000.0,United States,Drama History Thriller,12.0,2012.0
+tt0443706,rl1031636481,Zodiac,R,85000000.0,158.0,2379.0,13395610.0,33080084.0,7.7,599000.0,United States,Crime Drama Mystery Thriller,3.0,2007.0
+tt1156398,rl847087105,Zombieland,R,23600000.0,88.0,3171.0,24733155.0,75590286.0,7.5,622000.0,United States,Action Comedy Horror,10.0,2009.0
+tt1560220,rl201819649,Zombieland: Double Tap,R,48000000.0,99.0,3468.0,26803104.0,73123082.0,6.7,203000.0,United States,Action Comedy Horror,10.0,2019.0
+tt1222817,rl880641537,Zookeeper,PG,80000000.0,102.0,3482.0,20065617.0,80360866.0,5.2,65000.0,United States,Comedy Family Fantasy Romance,7.0,2011.0
+tt0196229,rl897418753,Zoolander,PG-13,28000000.0,90.0,2522.0,15525043.0,45172250.0,6.5,292000.0,United States,Comedy,9.0,2001.0
+tt1608290,rl914195969,Zoolander 2,PG-13,50000000.0,102.0,3418.0,13841146.0,28848693.0,4.7,76000.0,United States,Action Adventure Comedy Mystery Romance,2.0,2016.0
+tt0383060,rl930973185,Zoom,PG,35000000.0,93.0,2501.0,4510408.0,11989328.0,4.4,23000.0,United States,Action Adventure Comedy Family Fantasy Sci-Fi,8.0,2006.0
+tt2948356,rl4031743489,Zootopia,PG,150000000.0,108.0,3959.0,75063401.0,341268248.0,8.0,547000.0,United States,Action Adventure Animation Comedy Crime Family Mystery,3.0,2016.0
+tt0295701,rl1450870273,xXx,PG-13,70000000.0,124.0,3536.0,44506103.0,142109382.0,5.8,187000.0,United States,Action Adventure Thriller,8.0,2002.0
+tt1293847,rl1904182785,xXx: Return of Xander Cage,PG-13,85000000.0,110.0,3651.0,20130142.0,44898413.0,5.2,97000.0,United States,Action Adventure Thriller,1.0,2017.0
+tt0402022,rl1212188161,�on Flux,PG-13,62000000.0,93.0,2608.0,12661112.0,25874337.0,5.4,133000.0,United States Germany Brazil Italy,Action Adventure Sci-Fi Thriller,12.0,2005.0

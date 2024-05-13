@@ -22,6 +22,9 @@ def string_to_num(quan_str):
 def page_search_rottentomatoes(soup, movie_title, year_release):
     search_results_element = soup.find("search-page-result", {"type": "movie"})
 
+    if search_results_element is None:
+        return "", ""
+
     all_results_elements = search_results_element.find_all("search-page-media-row")
 
     for results_element in all_results_elements:
