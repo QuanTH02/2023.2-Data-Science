@@ -45,6 +45,9 @@ def convert_month_to_int(month):
 def page_search(soup_search, movie_title, month_release, year_release):
     result_element = soup_search.find("div", {"class": "results flex"})
 
+    if result_element is None:
+        return 0
+
     all_div_results = result_element.find_all("div", {"class": "card v4 tight"})
 
     for result in all_div_results:
@@ -66,10 +69,9 @@ def page_search(soup_search, movie_title, month_release, year_release):
         # print(movie_title + " - " + str(month_release) + "/" + str(year_release))
         # print("\n" + movie_name + " - " + month + "/" + year)
 
-        if str(year) == str(year_release) and str(month) == str(month_release) and str(movie_name) == str(movie_title):
+        if str(year) == str(year_release) and str(movie_name) == str(movie_title):
             # url
             url = "https://www.themoviedb.org" + result.find("a")["href"]
-            # print(url)
             response = requests.get(url, headers=headers)
 
             if response.status_code == 200:
@@ -84,7 +86,15 @@ def page_search(soup_search, movie_title, month_release, year_release):
 
 def crawl(soup):
     section_keywords_element = soup.find("section", {"class": "keywords right_column"})
+
+    if section_keywords_element is None:
+        return 0
+    
     ul_keywords_element = section_keywords_element.find("ul")
+
+    if ul_keywords_element is None:
+        return 0
+    
     li_keyword_elements = ul_keywords_element.find_all("li")
 
     sequel = 0
@@ -101,11 +111,11 @@ def crawl(soup):
     return sequel
 
 if __name__ == "__main__":
-    df = pd.read_csv("../mojo/data/test1.csv")
+    df = pd.read_csv("../merge_data/critic_merged1.csv")
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
     # print(month_list)
-    # month_list = [convert_month(int(month)) for month in month_list]
+    # month_list = [convert_month(int(month)) for month in month_list]   
 
     for i, month in enumerate(month_list):
         if pd.isnull(month):
@@ -115,13 +125,19 @@ if __name__ == "__main__":
 
     year_list = df["year"].tolist()
 
-    with open("data/data.csv", 'w', newline='', encoding='utf-8') as csvfile:
+    for i, year in enumerate(year_list):
+        if pd.isnull(year):
+            year_list[i] = ""
+        else:
+            year_list[i] = int(year)
+
+    with open("data/data1.csv", 'w', newline='', encoding='utf-8') as csvfile:
         fields = ['movie_name', 'month', 'year', 'sequel']
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
 
         for movie_name in movie_name_list:
-            print("Movie Name: ", movie_name)
+            print(str(movie_name_list.index(movie_name)) + ". Movie Name: ", movie_name)
             url = "https://www.themoviedb.org/search/movie?query=" + movie_name
             # print(url)
             response = requests.get(url, headers=headers)
