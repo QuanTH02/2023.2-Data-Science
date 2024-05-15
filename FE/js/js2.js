@@ -1,32 +1,30 @@
-function processData2(csvData, backgroundColor) {
-    const rows = csvData.split('\n');
+function processData2(csvData, backgroundColor, genre) {
+    Papa.parse(csvData, {
+        header: true,
+        dynamicTyping: true,
+        complete: function (results) {
+            const data = results.data;
+            const movieCountsByRating = {};
 
-    const movieCountsByRating = {};
+            data.forEach(row => {
+                if (row.genres && row.genres.includes(genre)) {
+                    let rating = row.ratings;
 
-    for (let i = 1; i < rows.length; i++) {
-        let rating;
-        if (rows[i].includes('"')) {
-            const row = rows[i].split('"');
-            const r = row[2].split(',');
-            rating = (r[3]);
-        } else {
-            const row = rows[i].split(',');
-            rating = (row[3]);
+                    if (rating in movieCountsByRating) {
+                        movieCountsByRating[rating]++;
+                    } else {
+                        movieCountsByRating[rating] = 1;
+                    }
+                }
+            });
+
+            const years = Object.keys(movieCountsByRating);
+            const movieCounts = years.map(year => movieCountsByRating[year]);
+
+            drawChart2(years, movieCounts, backgroundColor);
+
         }
-
-        if (!rating) continue;
-
-        if (rating in movieCountsByRating) {
-            movieCountsByRating[rating]++;
-        } else {
-            movieCountsByRating[rating] = 1;
-        }
-    }
-
-    const years = Object.keys(movieCountsByRating);
-    const movieCounts = years.map(year => movieCountsByRating[year]);
-
-    drawChart2(years, movieCounts, backgroundColor);
+    });
 }
 
 function drawChart2(ratings, movieCounts, backgroundColor) {

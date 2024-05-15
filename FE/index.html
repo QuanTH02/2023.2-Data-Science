@@ -23,7 +23,7 @@
                 <button class="btn-genre" id="btn-genre-drama">Drama</button>
                 <button class="btn-genre" id="btn-genre-comedy">Comedy</button>
                 <button class="btn-genre" id="btn-genre-documentary">Documentary</button>
-                <button class="btn-genre" id="btn-genre-adult">Adult</button>
+                <!-- <button class="btn-genre" id="btn-genre-adult">Adult</button> -->
                 <button class="btn-genre" id="btn-genre-thriller">Thriller</button>
                 <button class="btn-genre" id="btn-genre-romance">Romance</button>
                 <button class="btn-genre" id="btn-genre-animation">Animation</button>
@@ -40,8 +40,8 @@
                 <button class="btn-genre" id="btn-genre-musical">Musical</button>
                 <button class="btn-genre" id="btn-genre-war">War</button>
                 <button class="btn-genre" id="btn-genre-western">Western</button>
-                <button class="btn-genre" id="btn-genre-film_noir">Film Noir</button>
-                <button class="btn-clear-genre">Clear</button>
+                <!-- <button class="btn-genre" id="btn-genre-film_noir">Film Noir</button> -->
+                <button class="btn-clear-genre" id="btn-clear-genre">Clear</button>
             </div>
 
 
@@ -65,6 +65,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="js/js1.js"></script>
     <script src="js/js2.js"></script>
     <script src="js/js3.js"></script>
@@ -75,68 +76,42 @@
         document.addEventListener('DOMContentLoaded', function () {
 
             // Tạo HTTP request để tải dữ liệu từ file data.csv
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        const csvData = xhr.responseText;
-                        processData(csvData, "blue");
-                        processData3(csvData, "green");
-                    } else {
-                        console.error('Failed to load data.csv');
-                    }
-                }
-            };
-            xhr.open('GET', '../merge_data/filtered_merged_data.csv');
-            xhr.send();
-
-            const xhr2 = new XMLHttpRequest();
-            xhr2.onreadystatechange = function () {
-                if (xhr2.readyState === XMLHttpRequest.DONE) {
-                    if (xhr2.status === 200) {
-                        const csvData = xhr2.responseText;
-                        processData2(csvData, "red");
-                    } else {
-                        console.error('Failed to load data.csv');
-                    }
-                }
-            };
-            xhr2.open('GET', '../imdb/data/data_quan_new.csv');
-            xhr2.send();
+            fetch('../merge_data/final_merged.csv')
+                .then(response => response.text())
+                .then(csvData => {
+                    processData(csvData, "blue", "");
+                    processData2(csvData, "red", "");
+                    processData3(csvData, "green", "");
+                })
+                .catch(error => console.error('Failed to load data.csv', error));
         });
 
         Array.from(document.getElementsByClassName('btn-genre')).forEach(function (btn) {
             btn.addEventListener('click', function () {
                 const backgroundColor = getComputedStyle(btn).backgroundColor;
-                const xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === XMLHttpRequest.DONE) {
-                        if (xhr.status === 200) {
-                            const csvData = xhr.responseText;
-                            processData(csvData, backgroundColor);
-                            processData3(csvData, backgroundColor);
-                        } else {
-                            console.error('Failed to load data.csv');
-                        }
-                    }
-                };
-                xhr.open('GET', '../merge_data/filtered_merged_data.csv');
-                xhr.send();
-
-                const xhr2 = new XMLHttpRequest();
-                xhr2.onreadystatechange = function () {
-                    if (xhr2.readyState === XMLHttpRequest.DONE) {
-                        if (xhr2.status === 200) {
-                            const csvData = xhr2.responseText;
-                            processData2(csvData, backgroundColor);
-                        } else {
-                            console.error('Failed to load data.csv');
-                        }
-                    }
-                };
-                xhr2.open('GET', '../imdb/data/data_quan_new.csv');
-                xhr2.send();
+                const genre = btn.textContent;
+                // Tạo HTTP request để tải dữ liệu từ file data.csv
+                fetch('../merge_data/final_merged.csv')
+                    .then(response => response.text())
+                    .then(csvData => {
+                        processData(csvData, backgroundColor, genre);
+                        processData2(csvData, backgroundColor, genre);
+                        processData3(csvData, backgroundColor, genre);
+                    })
+                    .catch(error => console.error('Failed to load data.csv', error));
             });
+        });
+
+        document.getElementById("btn-clear-genre").addEventListener("click", function () {
+            // Tạo HTTP request để tải dữ liệu từ file data.csv
+            fetch('../merge_data/final_merged.csv')
+                .then(response => response.text())
+                .then(csvData => {
+                    processData(csvData, "blue", "");
+                    processData2(csvData, "red", "");
+                    processData3(csvData, "green", "");
+                })
+                .catch(error => console.error('Failed to load data.csv', error));
         });
     </script>
 

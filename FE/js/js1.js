@@ -1,33 +1,30 @@
-function processData(csvData, backgroundColor) {
-    const rows = csvData.split('\n');
+function processData(csvData, backgroundColor, genre) {
+    Papa.parse(csvData, {
+        header: true,
+        dynamicTyping: true,
+        complete: function (results) {
+            const data = results.data;
+            const movieCountsByYear = {};
 
-    const movieCountsByYear = {};
+            data.forEach(row => {
+                if (row.genres && row.genres.includes(genre)) {
+                    
+                    const year = row.year;
 
-    for (let i = 1; i < rows.length; i++) {
-        let year;
-        if (rows[i].includes('"')) {
-            const row = rows[i].split('"');
-            const r = row[2].split(',');
-            year = parseInt(r[2]);
-        } else {
-            const row = rows[i].split(',');
-            year = parseInt(row[5]);
+                    if (year in movieCountsByYear) {
+                        movieCountsByYear[year]++;
+                    } else {
+                        movieCountsByYear[year] = 1;
+                    }
+                }
+            });
+
+            const years = Object.keys(movieCountsByYear);
+            const movieCounts = years.map(year => movieCountsByYear[year]);
+
+            drawChart(years, movieCounts, backgroundColor);
         }
-
-        if (year < 1900) continue;
-        if (!year) continue;
-
-        if (year in movieCountsByYear) {
-            movieCountsByYear[year]++;
-        } else {
-            movieCountsByYear[year] = 1;
-        }
-    }
-
-    const years = Object.keys(movieCountsByYear);
-    const movieCounts = years.map(year => movieCountsByYear[year]);
-
-    drawChart(years, movieCounts, backgroundColor);
+    });
 }
 
 function drawChart(years, movieCounts, backgroundColor) {
