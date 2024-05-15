@@ -130,6 +130,7 @@ merged_df.to_csv("imdb_merged.csv", index=False)
 '''
 
 # Gộp dữ liệu từ critic_data.csv và imdb_merged.csv
+'''
 df_a = pd.read_csv("imdb_merged.csv")
 df_b = pd.read_csv("critic_data.csv")
 print(df_b.info())
@@ -153,3 +154,26 @@ merged_df.drop(columns = ["critic_vote_rotten","critic_vote_metacritic","meta_sc
 merged_df = merged_df.dropna(subset = ["critic_vote","meta_score"], how = "all")
 print(merged_df.info())
 merged_df.to_csv("critic_merged.csv", index=False)
+'''
+
+# Gộp dữ liệu từ critic_merged.csv và themoviedb.csv
+
+df_a = pd.read_csv("critic_merged.csv")
+df_b = pd.read_csv("themoviedb.csv")
+merged_df = pd.merge(
+    df_a,
+    df_b,
+    on=[
+        "movie_name",
+    ],
+    how="outer",
+    suffixes=("_a", "_b"),
+)
+print(merged_df.info())
+merged_df["month"] = merged_df["month_a"]
+merged_df["year"] = merged_df["year_a"]
+columns_to_drop = [col for col in merged_df.columns if col.endswith(("_a", "_b"))]
+merged_df = merged_df.drop(columns=columns_to_drop, axis=1)
+
+print(merged_df.info())
+merged_df.to_csv("final_merged.csv", index=False)
