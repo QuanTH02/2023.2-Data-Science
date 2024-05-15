@@ -1,24 +1,27 @@
-function processData3(csvData, backgroundColor) {
-    const rows = csvData.split('\n');
+function processData3(csvData, backgroundColor, genre) {
+    Papa.parse(csvData, {
+        header: true,
+        dynamicTyping: true,
+        complete: function (results) {
+            const data = results.data;
+            let revenue = [];
+            let budget = [];
 
-    let revenue = [];
-    let budget = [];
+            data.forEach(row => {
+                if (row.genres && row.genres.includes(genre)) {
+                    const bud = row.budget;
+                    const rev = row.domestic_box_office;
+                    
+                    budget.push(bud);
+                    revenue.push(rev);
+                }
+            });
 
-    for (let i = 1; i < rows.length; i++) {
-        let year;
-        if (rows[i].includes('"')) {
-            const row = rows[i].split('"');
-            const r = row[2].split(',');
-            budget.push(parseInt(r[4])); 
-            revenue.push(parseInt(r[8])); 
-        } else {
-            const row = rows[i].split(',');
-            budget.push(parseInt(row[7])); 
-            revenue.push(parseInt(row[11])); 
+            drawChart3(budget, revenue, backgroundColor);
         }
-    }
+    });
 
-    drawChart3(budget, revenue, backgroundColor);
+    
 }
 
 
