@@ -1,0 +1,148 @@
+button:hover {
+    opacity: 0.8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: black;
+}
+
+.con-1,
+.con-2 {
+    display: flex;
+}
+
+.div-chart {
+    width: 44%;
+    margin: auto;
+}
+
+.list-genres {
+    width: 600px;
+}
+
+.btn-genre,
+.btn-clear-genre {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-clear-genre {
+    background-color: #ff1100;
+}
+
+#btn-genre-action {
+    background-color: #228fdd;
+}
+
+#btn-genre-drama {
+    background-color: #de6f0e;
+}
+
+#btn-genre-comedy {
+    background-color: #27e527;
+}
+
+#btn-genre-documentary {
+    background-color: #f76a6a;
+}
+
+#btn-genre-adult {
+    background-color: #bd77fe;
+}
+
+#btn-genre-thriller {
+    background-color: #bd867c;
+}
+
+#btn-genre-romance {
+    background-color: #f389d3;
+}
+
+#btn-genre-animation {
+    background-color: #a09f9f;
+}
+
+#btn-genre-family {
+    background-color: #e4e46c;
+}
+
+#btn-genre-horror {
+    background-color: #00e5ff;
+}
+
+#btn-genre-crime {
+    background-color: #1f77b4;
+}
+
+#btn-genre-adventure {
+    background-color: #ff7f0e;
+}
+
+#btn-genre-fantasy {
+    background-color: #2ca02c;
+}
+
+#btn-genre-sci_Fi {
+    background-color: #d62728;
+}
+
+#btn-genre-mystery {
+    background-color: #9467bd;
+}
+
+#btn-genre-biography {
+    background-color: #8c564b;
+}
+
+#btn-genre-history {
+    background-color: #e377c2;
+}
+
+#btn-genre-sport {
+    background-color: #7f7f7f;
+}
+
+#btn-genre-musical {
+    background-color: #bcbd22;
+}
+
+#btn-genre-war {
+    background-color: #17becf;
+}
+
+#btn-genre-western {
+    background-color: #1f77b4;
+}
+
+#btn-genre-film_noir {
+    background-color: #ff7f0e;
+}
+
+#btn-predict {
+    margin-top: 10px;
+    background-color: rgb(212, 212, 212);
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 550;
+    margin-right: 32px;
+    text-decoration: none;
+}
+
+#btn-predict:hover {
+    background-color: rgb(192, 192, 192);
+    cursor: pointer;
+    text-decoration: none;
+}
