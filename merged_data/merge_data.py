@@ -176,4 +176,21 @@ columns_to_drop = [col for col in merged_df.columns if col.endswith(("_a", "_b")
 merged_df = merged_df.drop(columns=columns_to_drop, axis=1)
 
 print(merged_df.info())
+
+
+
+# Hàm sửa đổi cột "genres"
+def fix_genres(genres_str):
+    genres = genres_str.split()
+    if "Music" in genres and "Musical" in genres:
+        genres.remove("Music")
+    else:
+        genres = [genre.replace("Music", "Musical") for genre in genres]
+    return " ".join(genres)
+
+
+# Áp dụng hàm sửa đổi cho cột "genres"
+merged_df["genres"] = merged_df["genres"].apply(fix_genres)
+
+
 merged_df.to_csv("final_merged.csv", index=False)

@@ -1,7 +1,6 @@
 import pickle
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
 
 
 import pickle
@@ -29,9 +28,12 @@ new_data = pd.DataFrame(
     }
 )
 
-label_encoder = LabelEncoder()
-new_data["mpaa"] = label_encoder.fit_transform(new_data["mpaa"])
-new_data["country"] = label_encoder.fit_transform(new_data["country"])
+with open("model/mpaa_label_encoder.pkl", "rb") as file:
+    mpaa_label_encoder = pickle.load(file)
+with open("model/country_label_encoder.pkl", "rb") as file:
+    country_label_encoder = pickle.load(file)
+new_data["mpaa"] = mpaa_label_encoder.transform(new_data["mpaa"])
+new_data["country"] = country_label_encoder.transform(new_data["country"])
 
 predicted_box_office = loaded_model.predict(new_data)
 print(f"Predicted Domestic Box Office: {np.expm1(predicted_box_office[0])}")
