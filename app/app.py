@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from predict import *
 
 app = Flask(__name__, template_folder="templates")
 
@@ -12,13 +13,15 @@ def render_predict():
 
 @app.route('/predict', methods=['POST'])
 def process_prediction():
-    # Xử lý dữ liệu được gửi từ phương thức POST
     data = request.json
-    print(data)
+    print(data['screens'])
+
+    if data.get('openingWeek'):
+        prediction_result = predict_opening_week(data['month'], data['year'], data['mpaa'], data['budget'], data['runtime'], data['screens'], data['openingWeek'], data['userVote'], data['ratings'], data['criticVote'], data['metaScore'], data['country'])
+    else:
+        prediction_result = predict_no_opening_week(data['month'], data['year'], data['mpaa'], data['budget'], data['runtime'], data['screens'], data['criticVote'], data['metaScore'], data['country'])
     
-    # Thực hiện dự đoán dựa trên dữ liệu và trả về kết quả
-    prediction_result = "This is a prediction result"
-    return jsonify({'prediction': data})
+    return jsonify({'prediction': prediction_result})
 
 if __name__ == '__main__':
     app.run(debug=True)

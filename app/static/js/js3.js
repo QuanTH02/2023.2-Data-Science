@@ -20,8 +20,6 @@ function processData3(csvData, backgroundColor, genre) {
             drawChart3(budget, revenue, backgroundColor);
         }
     });
-
-    
 }
 
 

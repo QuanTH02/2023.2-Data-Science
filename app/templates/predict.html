@@ -69,7 +69,7 @@ opening_week
             <!-- Loop through years from 1900 to 2024 -->
             <!-- This part will be dynamically generated in the backend -->
             <script>
-              for (let year = 1900; year <= 2024; year++) {
+              for (let year = 2000; year <= 2024; year++) {
                 document.write(`<option value="${year}">${year}</option>`);
               }
             </script>
@@ -120,10 +120,18 @@ opening_week
         <input type="text" id="input-screens" name="input-screens">
       </div>
       <div class="input-group">
+        <label for="input-critic-vote" class="label">Critic Vote:</label>
+        <input type="text" id="input-critic-vote" name="input-critic-vote">
+      </div>
+      <div class="input-group">
         <label for="input-meta_score" class="label">Meta score:</label>
         <input type="text" id="input-meta_score" name="input-meta_score">
       </div>
-      <div class="input-group">
+      <div class="input-group" id="div-inp-user-vote">
+        <label for="input-user-vote" class="label">User Vote:</label>
+        <input type="text" id="input-user-vote" name="input-user-vote">
+      </div>
+      <div class="input-group" id="div-inp-ratings">
         <label for="input-ratings" class="label">Ratings:</label>
         <input type="text" id="input-ratings" name="input-ratings">
       </div>
@@ -146,12 +154,32 @@ opening_week
       </div>
 
       <div class="input-group btn-submit">
-        <button type="submit" class="submit-button">Submit</button>
+        <button type="submit" class="submit-button" id="submit-button">Submit</button>
       </div>
     </div>
+
+
+
   </form>
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-result">
+      <h1>Kết quả dự đoán doanh thu</h1>
+      <h2>Movie name: <span id="movie_name_h2"></span></h2>
+      <h3 class="h-result">Kết quả: <span id="result"></span></h3>
+      <h3 class="h-result">Lợi nhuận: <span id="loinhuan"></span></h3>
+
+      <div class="div-chart" id="chart4-container">
+        <canvas id="bar4-chart"></canvas>
+      </div>
+
+      <button id="cancel-popup">OK</button>
+    </div>
+  </div>
+
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 <script src="../static/js/predict.js"></script>
 
 </html>

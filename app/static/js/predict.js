@@ -315,6 +315,7 @@ document.getElementById('add-country-btn').addEventListener('click', function ()
 });
 
 // Submit
+let currentChart4;
 function saveFormData() {
   // Lấy giá trị từ các trường input
   const movieName = document.getElementById('input-movie_name').value.trim();
@@ -328,22 +329,9 @@ function saveFormData() {
   const country = Array.from(countryList.children).map(countryItem => countryItem.textContent.trim().slice(0, -1)).join(', ');
   const budget = document.getElementById('input-budget').value.trim();
   const screens = document.getElementById('input-screens').value.trim();
+  const criticVote = document.getElementById('input-critic-vote').value.trim();
   const metaScore = document.getElementById('input-meta_score').value.trim();
-  const ratings = document.getElementById('input-ratings').value.trim();
   const sequel = document.querySelector('input[name="input-sequel"]:checked').value;
-
-  console.log("Movie Name:", movieName);
-  console.log("Month:", month);
-  console.log("Year:", year);
-  console.log("MPAA:", mpaa);
-  console.log("Runtime:", runtime);
-  console.log("Genres:", genres);
-  console.log("Country:", country);
-  console.log("Budget:", budget);
-  console.log("Screens:", screens);
-  console.log("Meta Score:", metaScore);
-  console.log("Ratings:", ratings);
-  console.log("Sequel:", sequel);
 
   let data = {
     movieName: movieName,
@@ -355,17 +343,20 @@ function saveFormData() {
     country: country,
     budget: budget,
     screens: screens,
+    criticVote: criticVote,
     metaScore: metaScore,
-    ratings: ratings,
     sequel: sequel
   };
-  
+
   if (openingWeekDiv.style.display == "block") {
+    const userVote = document.getElementById('input-user-vote').value.trim();
+    const ratings = document.getElementById('input-ratings').value.trim();
     const openingWeek = document.getElementById('input-opening_week').value.trim();
-    console.log("Opening Week:", openingWeek);
+    data.userVote = userVote;
+    data.ratings = ratings;
     data.openingWeek = openingWeek;
   }
-  
+
   fetch('/predict', {
     method: 'POST',
     headers: {
@@ -374,14 +365,163 @@ function saveFormData() {
     body: JSON.stringify(data)
   })
     .then(response => response.json())
-    .then(data => {
-      // Xử lý kết quả từ Flask
-      console.log(data);
+    .then(predict => {
+      document.getElementById('movie_name_h2').innerHTML = data.movieName;
+      document.getElementById('result').innerHTML = parseInt(predict['prediction']) + "$";
+      document.getElementById('loinhuan').innerHTML = parseFloat(((parseInt(predict['prediction']) - parseInt(data.budget))/parseInt(data.budget)) * 100).toFixed(2) + "%";
+      fetch('../static/final_merged.csv')
+        .then(response => response.text())
+        .then(csvData => {
+          processData4(csvData, "blue", data, predict['prediction'])
+        })
+        .catch(error => console.error('Failed to load data.csv', error));
     })
     .catch(error => {
       console.error('Error:', error);
     });
-  
+
+
+}
+
+// mpaa,budget,runtime,screens,opening_week,ratings,user_vote,country,genres,critic_vote,meta_score,sequel,month,year
+function processData4(csvData, backgroundColor, data_inp, predict) {
+  Papa.parse(csvData, {
+    header: true,
+    dynamicTyping: true,
+    complete: function (results) {
+      const data = results.data;
+
+      console.log("Data: " + data_inp['mpaa']);
+      console.log("Data Country: " + data_inp['country']);
+
+      let list_country = data_inp['country'].split(', ');
+
+      let revenue_mpaa = 0;
+      let revenue_month = 0;
+      let revenue_year = 0;
+      let revenue_country = 0;
+      let revenue_genres = 0;
+
+      let index_mpaa = 0;
+      let index_month = 0;
+      let index_year = 0;
+      let index_country = 0;
+      let index_genres = 0;
+
+      data.forEach(row => {
+        if (row.mpaa == data_inp['mpaa']) {
+          revenue_mpaa = revenue_mpaa + row.domestic_box_office;
+          index_mpaa += 1;
+        }
+        if (parseInt(row.month) == parseInt(data_inp['month'])) {
+          revenue_month = revenue_month + row.domestic_box_office;
+          index_month += 1;
+        }
+        if (parseInt(row.year) == parseInt(data_inp['year'])) {
+          revenue_year = revenue_year + row.domestic_box_office;
+          index_year += 1;
+        }
+        if (row.country && checkAllWords(row.country, data_inp['country'])) {
+          revenue_country = revenue_country + row.domestic_box_office;
+          index_country += 1;
+        }
+        if (row.genres && checkAllWords(row.genres, data_inp['genres'])) {
+          revenue_genres = revenue_genres + row.domestic_box_office;
+          index_genres += 1;
+        }
+      });
+
+      revenue_mpaa = revenue_mpaa / index_mpaa;
+      revenue_month = revenue_month / index_month;
+      revenue_year = revenue_year / index_year;
+      revenue_country = revenue_country / index_country;
+      revenue_genres = revenue_genres / index_genres;
+
+      const currentMovie = {
+        mpaa: predict,
+        month: predict,
+        year: predict,
+        country: predict,
+        genres: predict
+      };
+
+      console.log("Current Movie: " + currentMovie);
+
+      const averageData = {
+        mpaa: revenue_mpaa,
+        month: revenue_month,
+        year: revenue_year,
+        country: revenue_country,
+        genres: revenue_genres
+      };
+
+      const labels = ['mpaa', 'month', 'year', 'country', 'genres'];
+
+      const currentMovieData = Object.values(currentMovie);
+      const averageDataValues = Object.values(averageData);
+
+      drawChart4(currentMovieData, labels, averageDataValues, backgroundColor);
+
+    }
+  });
+}
+
+function drawChart4(currentMovieData, labels, averageDataValues, backgroundColor) {
+  if (currentChart4) {
+    currentChart4.destroy();
+  }
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: 'Current Movie',
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1,
+        data: currentMovieData
+      },
+      {
+        label: 'Average Data',
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
+        data: averageDataValues
+      }
+    ]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Comparison of Movie Attributes with Averages'
+        }
+      }
+    },
+  };
+  const ctx = document.getElementById('bar4-chart').getContext('2d');
+  currentChart4 = new Chart(ctx, config);
+  document.getElementById('popup-overlay').style.display = 'flex';
+}
+
+function checkAllWords(str1, str2) {
+  // Tách các từ trong str2 thành một danh sách
+  const words = str2.split(", ");
+
+  for (const word of words) {
+    if (!str1.includes(word)) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -398,11 +538,21 @@ document.addEventListener('DOMContentLoaded', function () {
 const openingWeekRadioNo = document.getElementById('opening_week_0');
 const openingWeekRadioYes = document.getElementById('opening_week_1');
 const openingWeekDiv = document.getElementById('div-inp-opn-week');
+const divInpUserVote = document.getElementById('div-inp-user-vote');
+const divInpRatings = document.getElementById('div-inp-ratings');
 
 openingWeekRadioNo.addEventListener('click', function () {
   openingWeekDiv.style.display = 'none';
+  divInpUserVote.style.display = 'none';
+  divInpRatings.style.display = 'none';
 });
 
 openingWeekRadioYes.addEventListener('click', function () {
   openingWeekDiv.style.display = 'block';
+  divInpUserVote.style.display = 'block';
+  divInpRatings.style.display = 'block';
+});
+
+document.getElementById('cancel-popup').addEventListener('click', function () {
+  document.getElementById('popup-overlay').style.display = 'none';
 });
