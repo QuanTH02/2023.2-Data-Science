@@ -8,62 +8,34 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
 
-label_encoder = LabelEncoder()
-
-
-movie = {
-    "month": 5.0,
-    "year": 2017.0,
-    "mpaa": "PG-13",
-    "budget": 5300000.0,
-    "runtime": 89.0,
-    "screens": 2270.0,
-    "opening_week": 11205562.0,
-    "country": "United States",
-    "user_vote": 5.6,
-    "ratings": 61000.0,
-    "critic_vote": 103.0,
-    "meta_score": 5.0,
-}
-# Chuyển đổi thuộc tính mpaa và country sang dạng số
-movie["mpaa"] = label_encoder.fit_transform([movie["mpaa"]])[0]
-movie["country"] = label_encoder.fit_transform([movie["country"]])[0]
-
-# Tạo một DataFrame từ dictionary movie
-movie_df = pd.DataFrame([movie])
-
-# Tiền xử lý dữ liệu của phim cần dự đoán
-numeric_features = [
-    "month",
-    "year",
-    "budget",
-    "runtime",
-    "screens",
-    "opening_week",
-    "user_vote",
-    "critic_vote",
-    "meta_score",
-    "ratings",
-]
-numeric_transformer = StandardScaler()
-
-preprocessor = ColumnTransformer(
-    transformers=[
-        ("num", numeric_transformer, numeric_features),
-    ]
-)
-pipeline = Pipeline(
-    steps=[
-        ("preprocessor", preprocessor),
-        ("regressor", RandomForestRegressor(n_estimators=150, random_state=42)),
-    ]
-)
+import pickle
+import pandas as pd
 
 with open("model/model.pkl", "rb") as file:
-    pipeline = pickle.load(file)
+    loaded_model = pickle.load(file)
 
-# Dự đoán doanh thu của phim
-revenue_predict = pipeline.predict(movie_df)
+# tt1179933,rl1329956353,10 Cloverfield Lane,PG-13,15000000.0,103.0,3427.0,24727437.0,72082999.0,7.2,355000.0,United States,Drama Horror Mystery Sci-Fi Thriller,358.0,88.32,0,3.0,2016.0
 
-print("Predicted revenue:", revenue_predict)
-# Đánh giá mô hình
+new_data = pd.DataFrame(
+    {
+        "month": [3],
+        "year": [2016],
+        "mpaa": ["PG-13"],
+        "budget": [15000000],
+        "runtime": [103],
+        "screens": [3427],
+        "opening_week": [24727437],
+        "user_vote": [72082999],
+        "ratings": [7.2],
+        "critic_vote": [355000],
+        "meta_score": [88.32],
+        "country": ["United States"],
+    }
+)
+
+label_encoder = LabelEncoder()
+new_data["mpaa"] = label_encoder.fit_transform(new_data["mpaa"])
+new_data["country"] = label_encoder.fit_transform(new_data["country"])
+
+predicted_box_office = loaded_model.predict(new_data)
+print(f"Predicted Domestic Box Office: {predicted_box_office[0]}")
