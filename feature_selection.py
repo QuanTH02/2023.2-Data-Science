@@ -74,7 +74,6 @@ y = df["domestic_box_office"]
 y_log = np.log(y)
 
 
-# Feature selection based on correlation with target
 correlation_threshold = 0.2
 selected_features = [
     column
@@ -82,15 +81,12 @@ selected_features = [
     if abs(pearsonr(X[column], y_log)[0]) > correlation_threshold
 ]
 
-# Keep only selected features
 X = X[selected_features]
 
-# Split data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y_log, test_size=0.2, random_state=42
 )
 
-# Preprocessing pipeline for numerical features
 numeric_features = selected_features
 numeric_transformer = StandardScaler()
 
@@ -196,7 +192,6 @@ print(f"Cross-validated RMSE scores: {rmse_scores}")
 print(f"Mean RMSE: {rmse_scores.mean()}")
 print(f"Standard deviation of RMSE: {rmse_scores.std()}")
 
-# Save the model and preprocessors
 with open("model_efa/best_model.pkl", "wb") as f:
     pickle.dump(best_model, f)
 with open("model_efa/mpaa_label_encoder.pkl", "wb") as f:

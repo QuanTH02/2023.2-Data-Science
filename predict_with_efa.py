@@ -80,7 +80,7 @@ def predict_with_feature_selection(movie):
     movie_df = pd.DataFrame([movie])
     movie_df = movie_df[selected_features]
     prediction_log = model.predict(movie_df)
-    prediction = np.expm1(prediction_log)  # Inverse the log transformation
+    prediction = np.expm1(prediction_log)  
     return prediction[0]
 
 new_movie = {
