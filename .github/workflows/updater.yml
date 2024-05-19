@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: movies_data.csv
-          path: /mojo/movies_data.csv
+          path: movies_data.csv
