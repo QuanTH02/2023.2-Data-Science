@@ -192,5 +192,5 @@ def fix_genres(genres_str):
 # Áp dụng hàm sửa đổi cho cột "genres"
 merged_df["genres"] = merged_df["genres"].apply(fix_genres)
 
-
+merged_df.drop(["tt_id","rl_id"],axis=1,inplace = True)
 merged_df.to_csv("final_merged.csv", index=False)
