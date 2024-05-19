@@ -28,9 +28,10 @@ selected_columns = [
 data = data[selected_columns]
 data.dropna(inplace=True)
 
-label_encoder = LabelEncoder()
-data["mpaa"] = label_encoder.fit_transform(data["mpaa"])
-data["country"] = label_encoder.fit_transform(data["country"])
+mpaa_label_encoder = LabelEncoder()
+country_label_encoder = LabelEncoder()
+data["mpaa"] = mpaa_label_encoder.fit_transform(data["mpaa"])
+data["country"] = country_label_encoder.fit_transform(data["country"])
 
 X = data.drop("domestic_box_office", axis=1)
 y = data["domestic_box_office"]
@@ -104,3 +105,7 @@ print(f"Standard deviation of RMSE: {rmse_scores.std()}")
 
 with open("model/best_model.pkl", "wb") as file:
     pickle.dump(best_model, file)
+with open("model/mpaa_label_encoder.pkl", "wb") as file:
+    pickle.dump(mpaa_label_encoder, file)
+with open("model/country_label_encoder.pkl", "wb") as file:
+    pickle.dump(country_label_encoder, file)
