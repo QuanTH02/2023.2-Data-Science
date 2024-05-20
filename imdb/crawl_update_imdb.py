@@ -45,6 +45,7 @@ def crawl_imdb_request(soup):
     user_vote_and_rating_element = soup.find("div", {"data-testid": "hero-rating-bar__aggregate-rating"})
 
     if user_vote_and_rating_element:
+
         # ratings
         rate = user_vote_and_rating_element.find("div", {"class": "sc-bde20123-2 cdQqzc"}).text.split("/")[0].strip()
 
@@ -179,78 +180,89 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 if __name__ == "__main__":
-    df = pd.read_csv("../mojo/movies_data1.csv")
+    path_file = '../data_update/movies_data.csv'
+    df = pd.read_csv(path_file)
     url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
     year_list = df["year"].tolist()
 
     genres_list = df["genres"].tolist()
+
+    user_vote_list = df["user_vote"].tolist()
+    ratings_list = df["ratings"].tolist()
     country_list = df["country"].tolist()
 
     # print(movie_name_list)
     # print(url_title_list)
 
-    with open("data/movies_data1.csv", 'w', newline='', encoding='utf-8') as csvfile:
-        fields = ['movie_name', 'month', 'year', 'ratings', 'user_vote', 'genres', 'country']
-        writer = csv.DictWriter(csvfile, fieldnames=fields)
-        writer.writeheader()
+    
 
-        for movie_name in movie_name_list:
-            data = {}
-            print(str(movie_name_list.index(movie_name)) + ". Movie: " + movie_name_list[movie_name_list.index(movie_name)])
+    for movie_name in movie_name_list:
+        data = {}
+        print(str(movie_name_list.index(movie_name)) + ". Movie: " + movie_name_list[movie_name_list.index(movie_name)])
 
-           
-            if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-                check_search_imdb_slenium = True
-            elif pd.isnull(country_list[movie_name_list.index(movie_name)]):
-                check_search_imdb_requests = True
-            elif pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-                check_search_imdb_slenium = True
+        
+        if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+            check_search_imdb_slenium = True
+        elif pd.isnull(country_list[movie_name_list.index(movie_name)]):
+            check_search_imdb_requests = True
+        elif pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+            check_search_imdb_slenium = True
 
-            if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
-                search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
+        if pd.isnull(url_title_list[movie_name_list.index(movie_name)]):
+            search_imdb(movie_name_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
+        else:
+            url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
+            response = requests.get(url, headers=headers)
+
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'html.parser')
+                crawl_imdb_request(soup)
             else:
-                url = "https://www.imdb.com/title/" + url_title_list[movie_name_list.index(movie_name)] + "/"
-                response = requests.get(url, headers=headers)
+                print("Failed to fetch data:", response.status_code)
 
-                if response.status_code == 200:
-                    soup = BeautifulSoup(response.content, 'html.parser')
-                    crawl_imdb_request(soup)
-                else:
-                    print("Failed to fetch data:", response.status_code)
+        check_search_imdb_slenium = False
+        check_search_imdb_requests = False
 
-            check_search_imdb_slenium = False
-            check_search_imdb_requests = False
+        data['movie_name'] = movie_name
+        data['month'] = month_list[movie_name_list.index(movie_name)]
+        data['year'] = year_list[movie_name_list.index(movie_name)]
 
-            data['movie_name'] = movie_name
-            data['month'] = month_list[movie_name_list.index(movie_name)]
-            data['year'] = year_list[movie_name_list.index(movie_name)]
-
-            if not pd.isnull(country_list[movie_name_list.index(movie_name)]):
-                country = []
-
-            if not pd.isnull(genres_list[movie_name_list.index(movie_name)]):
-                genres = []
-
-            if len(ratings) > 0:
-                print("Rating: " + ratings[0])
-                data['ratings'] = ratings[0]
-            if len(user_vote) > 0:
-                print("User vote: " + user_vote[0])
-                data['user_vote'] = user_vote[0]
-            if len(genres) > 0:
-                print("Genres: " + ' '.join(genres))
-                data['genres'] = ' '.join(genres)
-            if len(country) > 0:
-                print("Country: " + ' '.join(country))
-                data['country'] = ' '.join(country)
-
-            ratings = []
-            user_vote = []
-            genres = []
+        if not pd.isnull(country_list[movie_name_list.index(movie_name)]):
             country = []
 
-            writer.writerow(data)
+        if not pd.isnull(genres_list[movie_name_list.index(movie_name)]):
+            genres = []
 
-            print("-----------------------------------------------")
+        if len(ratings) > 0:
+            print("Rating: " + ratings[0])
+            data['ratings'] = float(ratings[0])
+            df.at[movie_name_list.index(movie_name), 'ratings'] = data['ratings']
+        if len(user_vote) > 0:
+            print("User vote: " + user_vote[0])
+            data['user_vote'] = float(user_vote[0])
+            df.at[movie_name_list.index(movie_name), 'user_vote'] = data['user_vote']
+        if len(genres) > 0:
+            print("Genres: " + ' '.join(genres))
+            data['genres'] = ' '.join(genres)
+        if len(country) > 0:
+            print("Country: " + ' '.join(country))
+            data['country'] = ' '.join(country)
+            df.at[movie_name_list.index(movie_name), 'country'] = data['country']
+            
+        ratings = []
+        user_vote = []
+        genres = []
+        country = []
+
+        print("-----------------------------------------------")
+
+    if 'critic_vote' not in df.columns:
+        df['critic_vote'] = pd.NA
+    if 'meta_score' not in df.columns:
+        df['meta_score'] = pd.NA
+
+    df = df.dropna(subset=['user_vote', 'ratings', 'country'])
+
+    df.to_csv(path_file, index=False)
