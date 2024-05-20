@@ -37,6 +37,7 @@ selected_columns = [
     "critic_vote",
     "meta_score",
     "country",
+    "sequel",
 ] + list(unique_genres)
 df = df[selected_columns]
 
@@ -91,6 +92,7 @@ numeric_features = [
     "ratings",
     "critic_vote",
     "meta_score",
+    "sequel",
 ] + [f"Factor{i+1}" for i in range(n_factors)]
 numeric_transformer = StandardScaler()
 
