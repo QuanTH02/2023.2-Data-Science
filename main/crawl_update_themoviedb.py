@@ -111,7 +111,7 @@ def crawl(soup):
     return sequel
 
 def main_themoviedb():
-    path_file = '../data_update/movies_data.csv'
+    path_file = 'movies_data.csv'
     df = pd.read_csv(path_file)
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()

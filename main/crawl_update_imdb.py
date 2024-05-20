@@ -180,7 +180,7 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 def main_imdb():
-    path_file = '../data_update/movies_data.csv'
+    path_file = 'movies_data.csv'
     df = pd.read_csv(path_file)
     url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
