@@ -112,6 +112,7 @@ new_movie = {
     "ratings": 5.6,
     "critic_vote": 103.0,
     "meta_score": 50.0,
+    "sequel" : 0.0,
     "genres": "Horror Mystery Thriller",
 }
 

@@ -38,6 +38,7 @@ selected_columns = [
     "critic_vote",
     "meta_score",
     "country",
+    "sequel",
 ] + list(unique_genres)
 df = df[selected_columns]
 
