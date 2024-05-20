@@ -16,6 +16,8 @@ def score(critic_vote_metacritic, meta_score_metacritic, critic_vote_rotten, met
     return critic_vote_sum, "{:.2f}".format((metacritic_sum+rotten_sum)/critic_vote_sum)
 
 def main_critic_metascore():
+    print('====================================================================================')
+    print("Crawling critic and metascore...")
     path_file = 'movies_data.csv'
     df = pd.read_csv(path_file)
     movie_name_list = df["movie_name"].tolist()

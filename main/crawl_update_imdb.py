@@ -21,13 +21,7 @@ headers = {"User-Agent": user_agent, "Accept-Language": "en-US,en;q=0.5"}
 # country
 # genres
 
-check_search_imdb_slenium = False
-check_search_imdb_requests = False
 
-genres = []
-country = []
-ratings = []
-user_vote = []
 
 def loop():
     driver_check = webdriver.Chrome()
@@ -180,6 +174,22 @@ def search_imdb(movie_name, year_release):
         print("Failed to fetch data:", response.status_code)
 
 def main_imdb():
+    print('====================================================================================')
+    print("Crawl IMDB...")
+    global ratings
+    global user_vote
+    global genres
+    global country
+    ratings = []
+    user_vote = []
+    genres = []
+    country = []
+
+    global check_search_imdb_slenium
+    check_search_imdb_slenium = False
+    global check_search_imdb_requests
+    check_search_imdb_requests = False
+    
     path_file = 'movies_data.csv'
     df = pd.read_csv(path_file)
     url_title_list = df["tt_id"].tolist()
@@ -200,7 +210,7 @@ def main_imdb():
 
     for movie_name in movie_name_list:
         data = {}
-        print(str(movie_name_list.index(movie_name)) + ". Movie: " + movie_name_list[movie_name_list.index(movie_name)])
+        print(str(movie_name_list.index(movie_name) + 1) + ". Movie: " + movie_name_list[movie_name_list.index(movie_name)])
 
         
         if pd.isnull(country_list[movie_name_list.index(movie_name)]) and pd.isnull(genres_list[movie_name_list.index(movie_name)]):

@@ -106,6 +106,8 @@ def crawl(soup):
     return sequel
 
 def main_themoviedb():
+    print('====================================================================================')
+    print('Crawl The Movie DB...')
     path_file = 'movies_data.csv'
     df = pd.read_csv(path_file)
     movie_name_list = df["movie_name"].tolist()
@@ -129,7 +131,7 @@ def main_themoviedb():
 
 
     for movie_name in movie_name_list:
-        print(str(movie_name_list.index(movie_name)) + ". Movie Name: ", movie_name)
+        print(str(movie_name_list.index(movie_name) + 1) + ". Movie Name: ", movie_name)
         url = "https://www.themoviedb.org/search/movie?query=" + movie_name
         # print(url)
         response = requests.get(url, headers=headers)

@@ -16,7 +16,7 @@ def crawl_budget(tt_id):
 
     if len(detail['movie_results']) > 0:
         url_budget = 'https://api.themoviedb.org/3/movie/' + str(detail['movie_results'][0]['id'])
-        headers = {
+        headers_budget = {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YmJiNjQ1NTZiMjg0ZDA1Njc2OGVjMzdmZmU0ZWM3NyIsInN1YiI6IjY2MDU3MGE3OTU2NjU4MDE0ODdkZTljOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mXbYtQYdYFHQSQxEUTiHIvUsRhtq7R-zXZH2oPqu38o',
             'accept': 'application/json'
         }
@@ -24,7 +24,7 @@ def crawl_budget(tt_id):
             'language': 'en-US'
         }
 
-        response = requests.get(url_budget, headers=headers, params=params)
+        response = requests.get(url_budget, headers=headers_budget, params=params)
         data = response.json()
 
         if data['budget']:
@@ -35,6 +35,8 @@ def crawl_budget(tt_id):
         return None
 
 def main_tmdb():
+    print('====================================================================================')
+    print('Crawl TMDb...')
     path_file = 'movies_data.csv'
     df = pd.read_csv(path_file)
     url_title_list = df["tt_id"].tolist()
