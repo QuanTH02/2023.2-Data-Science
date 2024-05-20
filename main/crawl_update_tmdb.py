@@ -56,7 +56,7 @@ def main_tmdb():
     if 'country' not in df.columns:
         df['country'] = pd.NA
 
-    df = df.dropna(subset=['tt_id', 'movie_name', 'domestic_box_office', 'budget', 'month', 'year', 'opening_week', 'screens', 'genres', 'runtime'])
+    df = df.dropna(subset=['tt_id', 'movie_name', 'domestic_box_office', 'budget', 'month', 'year', 'opening_week', 'screens', 'genres', 'runtime', 'mpaa'])
     
     df.to_csv(path_file, index=False)
     
