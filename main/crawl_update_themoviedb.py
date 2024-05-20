@@ -102,11 +102,6 @@ def crawl(soup):
     for li_keyword in li_keyword_elements:
         if li_keyword.text == "sequel":
             sequel = 1
-        
-    if sequel == 0:
-        print("No Sequel")
-    else:
-        print("Sequel")
 
     return sequel
 
@@ -144,8 +139,6 @@ def main_themoviedb():
             sequel = page_search(soup, movie_name, month_list[movie_name_list.index(movie_name)], year_list[movie_name_list.index(movie_name)])
         else:
             print("Failed to fetch data:", response.status_code)
-
-        print("-----------------------------------------------")
 
         data = {}
 

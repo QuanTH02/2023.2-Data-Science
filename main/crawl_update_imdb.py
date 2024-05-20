@@ -236,18 +236,18 @@ def main_imdb():
             genres = []
 
         if len(ratings) > 0:
-            print("Rating: " + ratings[0])
+            # print("Rating: " + ratings[0])
             data['ratings'] = float(ratings[0])
             df.at[movie_name_list.index(movie_name), 'ratings'] = data['ratings']
         if len(user_vote) > 0:
-            print("User vote: " + user_vote[0])
+            # print("User vote: " + user_vote[0])
             data['user_vote'] = float(user_vote[0])
             df.at[movie_name_list.index(movie_name), 'user_vote'] = data['user_vote']
         if len(genres) > 0:
-            print("Genres: " + ' '.join(genres))
+            # print("Genres: " + ' '.join(genres))
             data['genres'] = ' '.join(genres)
         if len(country) > 0:
-            print("Country: " + ' '.join(country))
+            # print("Country: " + ' '.join(country))
             data['country'] = ' '.join(country)
             df.at[movie_name_list.index(movie_name), 'country'] = data['country']
             
@@ -256,7 +256,7 @@ def main_imdb():
         genres = []
         country = []
 
-        print("-----------------------------------------------")
+        # print("-----------------------------------------------")
 
     if 'critic_vote' not in df.columns:
         df['critic_vote'] = pd.NA

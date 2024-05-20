@@ -52,8 +52,8 @@ def main_critic_metascore():
                 critic_vote_metacritic = string_to_num(critic_vote_metacritic)
                 meta_score_metacritic = string_to_num(meta_score_metacritic)
 
-                print("Critic vote metacritic:", critic_vote_metacritic)
-                print("Meta score metacritic:", meta_score_metacritic)
+                # print("Critic vote metacritic:", critic_vote_metacritic)
+                # print("Meta score metacritic:", meta_score_metacritic)
             else:
                 print("Failed to fetch data:", response.status_code)
                 continue
@@ -67,12 +67,12 @@ def main_critic_metascore():
                 critic_vote_rotten, meta_score_rotten = page_search_rottentomatoes(soup, movie_name, year_list[movie_name_list.index(movie_name)])
                 critic_vote_rotten = string_to_num(critic_vote_rotten)
                 meta_score_rotten = string_to_num(meta_score_rotten)
-                print("Critic vote rotten:", critic_vote_rotten)
-                print("Meta score rotten:", meta_score_rotten)
+                # print("Critic vote rotten:", critic_vote_rotten)
+                # print("Meta score rotten:", meta_score_rotten)
             else:
                 print("Failed to fetch data:", response.status_code)
 
-            print("--------------------------------------------")
+            # print("--------------------------------------------")
 
             if critic_vote_metacritic and critic_vote_rotten:
                 critic_vote, meta_score = score(int(critic_vote_metacritic), int(meta_score_metacritic), int(critic_vote_rotten), int(meta_score_rotten))
