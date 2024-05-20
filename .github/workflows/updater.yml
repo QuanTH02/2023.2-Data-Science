@@ -24,7 +24,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run update
-        run: python ./mojo/update.py
+        run: python ./main/main_update.py
 
       - name: Upload output
         uses: actions/upload-artifact@v4
