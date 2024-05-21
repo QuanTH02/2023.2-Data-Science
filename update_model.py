@@ -10,18 +10,19 @@ from factor_analyzer import FactorAnalyzer
 from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 from catboost import CatBoostRegressor
+from scipy.stats import pearsonr
 
-with open("best_model.pkl", "rb") as f:
+with open("model_efa/best_model.pkl", "rb") as f:
     model = pickle.load(f)
-with open("mpaa_label_encoder.pkl", "rb") as f:
+with open("model_efa/mpaa_label_encoder.pkl", "rb") as f:
     mpaa_label_encoder = pickle.load(f)
-with open("country_label_encoder.pkl", "rb") as f:
+with open("model_efa/country_label_encoder.pkl", "rb") as f:
     country_label_encoder = pickle.load(f)
-with open("scaler.pkl", "rb") as f:
+with open("model_efa/scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
-with open("factor_analyzer.pkl", "rb") as f:
+with open("model_efa/factor_analyzer.pkl", "rb") as f:
     fa = pickle.load(f)
-with open("unique_genres.pkl", "rb") as f:
+with open("model_efa/unique_genres.pkl", "rb") as f:
     unique_genres = pickle.load(f)
 
 new_data = pd.read_csv("path_to_new_data.csv")
@@ -43,6 +44,7 @@ selected_columns = [
     "ratings",
     "critic_vote",
     "meta_score",
+    "sequel",
     "country",
 ] + list(unique_genres)
 new_data = new_data[selected_columns]
@@ -74,10 +76,28 @@ y_log = np.log(y)
 X = pd.concat([X, X_new], axis=0)
 y_log = pd.concat([pd.Series(y_log), pd.Series(y_new_log)], axis=0)
 
+
 update_data = pd.concat([X, y_log], axis=1)
 update_data.to_csv("merged_data/preprocess_data.csv", index=False)
+# ------------------------------------------
+correlation_threshold = 0.2
+selected_features = [
+    column
+    for column in X.columns
+    if abs(pearsonr(X[column], y_log)[0]) > correlation_threshold
+]
 
-numeric_features = [
+X = X[selected_features]
+# ------------------------------------------
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y_log, test_size=0.2, random_state=42
+)
+
+numeric_features = selected_features
+numeric_transformer = StandardScaler()
+
+
+'''numeric_features = [
     "month",
     "year",
     "budget",
@@ -88,22 +108,15 @@ numeric_features = [
     "ratings",
     "critic_vote",
     "meta_score",
+    "sequel",
 ] + [f"Factor{i+1}" for i in range(new_factor_scores.shape[1])]
 numeric_transformer = StandardScaler()
-
+'''
 preprocessor = ColumnTransformer(
     transformers=[
         ("num", numeric_transformer, numeric_features),
     ]
 )
-
-pipeline = Pipeline(
-    steps=[
-        ("preprocessor", preprocessor),
-        ("regressor", model.named_steps["regressor"]),
-    ]
-)
-
 
 def randomized_search(model, param_distributions):
     pipeline = Pipeline(
@@ -179,3 +192,5 @@ with open("factor_analyzer.pkl", "wb") as f:
     pickle.dump(fa, f)
 with open("unique_genres.pkl", "wb") as f:
     pickle.dump(unique_genres, f)
+with open("selected_features.pkl", "wb") as f:
+    pickle.dump(selected_features, f)
