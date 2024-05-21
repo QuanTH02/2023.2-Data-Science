@@ -25,7 +25,7 @@ with open("model_efa/factor_analyzer.pkl", "rb") as f:
 with open("model_efa/unique_genres.pkl", "rb") as f:
     unique_genres = pickle.load(f)
 
-new_data = pd.read_csv("path_to_new_data.csv")
+new_data = pd.read_csv("merged_data/update_data.csv")
 
 for genre in unique_genres:
     new_data[genre] = new_data["genres"].apply(lambda x: 1 if genre in x.split() else 0)
