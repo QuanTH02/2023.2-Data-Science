@@ -7,34 +7,34 @@ on:
 
 
 jobs:
-  crawl:
-    runs-on: ubuntu-latest
+  # crawl:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.6
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4.1.6
 
-      - name: Setup Python
-        uses: actions/setup-python@v5.1.0
-        with:
-          python-version: 3.11
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip 
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+  #     - name: Setup Python
+  #       uses: actions/setup-python@v5.1.0
+  #       with:
+  #         python-version: 3.11
+  #     - name: Install Dependencies
+  #       run: |
+  #         python -m pip install --upgrade pip 
+  #         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run update
-        run: python ./main/main_update.py
+  #     - name: Run update
+  #       run: python ./main/main_update.py
 
-      - name: Upload output
-        uses: actions/upload-artifact@v4
-        with:
-          name: movies_data.csv
-          path: movies_data.csv
+  #     - name: Upload output
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: movies_data.csv
+  #         path: movies_data.csv
 
   update_modal:
     runs-on: tuannq-macos-arm64
-    needs: crawl
+    # needs: crawl
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.6
