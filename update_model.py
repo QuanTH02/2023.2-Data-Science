@@ -11,9 +11,9 @@ from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 from catboost import CatBoostRegressor
 from scipy.stats import pearsonr
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 
-with open("model_efa/best_model.pkl", "rb") as f:
-    model = pickle.load(f)
+
 with open("model_efa/mpaa_label_encoder.pkl", "rb") as f:
     mpaa_label_encoder = pickle.load(f)
 with open("model_efa/country_label_encoder.pkl", "rb") as f:
@@ -44,8 +44,8 @@ selected_columns = [
     "ratings",
     "critic_vote",
     "meta_score",
-    "sequel",
     "country",
+    "sequel",
 ] + list(unique_genres)
 new_data = new_data[selected_columns]
 
@@ -96,29 +96,13 @@ X_train, X_test, y_train, y_test = train_test_split(
 numeric_features = selected_features
 numeric_transformer = StandardScaler()
 
-
-'''numeric_features = [
-    "month",
-    "year",
-    "budget",
-    "runtime",
-    "screens",
-    "opening_week",
-    "user_vote",
-    "ratings",
-    "critic_vote",
-    "meta_score",
-    "sequel",
-] + [f"Factor{i+1}" for i in range(new_factor_scores.shape[1])]
-numeric_transformer = StandardScaler()
-'''
 preprocessor = ColumnTransformer(
     transformers=[
         ("num", numeric_transformer, numeric_features),
     ]
 )
 
-def randomized_search(model, param_distributions):
+def randomized_search(model, param_distributions, file_name):
     pipeline = Pipeline(
         steps=[
             ("preprocessor", preprocessor),
@@ -134,9 +118,23 @@ def randomized_search(model, param_distributions):
         scoring="neg_mean_squared_error",
         random_state=42,
     )
-    search.fit(X, y_log)
+    search.fit(X_train, y_train)
+    with open(file_name, "wb") as f:
+        pickle.dump(search, f)
+
     return search
 
+param_grid_rf = {
+    "regressor__n_estimators": [50, 100, 150],
+    "regressor__max_depth": [None, 10, 20, 30],
+    "regressor__min_samples_split": [2, 5, 10],
+}
+
+param_grid_gb = {
+    "regressor__n_estimators": [50, 100, 150],
+    "regressor__max_depth": [3, 5, 7],
+    "regressor__learning_rate": [0.01, 0.1, 0.2],
+}
 
 param_grid_xgb = {
     "regressor__n_estimators": [50, 100, 150],
@@ -160,6 +158,8 @@ param_grid_cb = {
 }
 
 models = [
+    (RandomForestRegressor(random_state=42), param_grid_rf),
+    (GradientBoostingRegressor(random_state=42), param_grid_gb),
     (XGBRegressor(random_state=42), param_grid_xgb),
     (LGBMRegressor(random_state=42), param_grid_lgbm),
     (CatBoostRegressor(random_state=42, verbose=0), param_grid_cb),
@@ -169,16 +169,20 @@ best_score = float("inf")
 best_model = None
 best_params = None
 
+list_file_name = ["model_efa/model_rf.pkl", "model_efa/model_gb.pkl", "model_efa/model_xgb.pkl", "model_efa/model_lgbm.pkl", "model_efa/model_cb.pkl"]
+
+index_file_name = 0
 for model, param_grid in models:
-    search = randomized_search(model, param_grid)
+    search = randomized_search(model, param_grid, list_file_name[index_file_name])
     if -search.best_score_ < best_score:
         best_score = -search.best_score_
         best_model = search.best_estimator_
         best_params = search.best_params_
+    index_file_name += 1
 
-print(f"Best model: {best_model}")
-print(f"Best parameters: {best_params}")
-print(f"Best score: {best_score}")
+    print(f"Best model: {best_model}")
+    print(f"Best parameters: {best_params}")
+    print(f"Best score: {best_score}")
 
 with open("best_model.pkl", "wb") as f:
     pickle.dump(best_model, f)

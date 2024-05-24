@@ -98,7 +98,7 @@ preprocessor = ColumnTransformer(
 )
 
 
-def randomized_search(model, param_distributions):
+def randomized_search(model, param_distributions, file_name):
     pipeline = Pipeline(
         steps=[
             ("preprocessor", preprocessor),
@@ -115,6 +115,9 @@ def randomized_search(model, param_distributions):
         random_state=42,
     )
     search.fit(X_train, y_train)
+    with open(file_name, "wb") as f:
+        pickle.dump(search, f)
+        
     return search
 
 
@@ -163,38 +166,40 @@ best_score = float("inf")
 best_model = None
 best_params = None
 
+list_file_name = ["model_efa/model_rf.pkl", "model_efa/model_gb.pkl", "model_efa/model_xgb.pkl", "model_efa/model_lgbm.pkl", "model_efa/model_cb.pkl"]
+
+index_file_name = 0
 for model, param_grid in models:
-    search = randomized_search(model, param_grid)
+    search = randomized_search(model, param_grid, list_file_name[index_file_name])
     if -search.best_score_ < best_score:
         best_score = -search.best_score_
         best_model = search.best_estimator_
         best_params = search.best_params_
+    index_file_name += 1
 
-print(f"Best model: {best_model}")
-print(f"Best parameters: {best_params}")
-print(f"Best score: {best_score}")
+    print(f"Best model: {best_model}")
+    print(f"Best parameters: {best_params}")
+    print(f"Best score: {best_score}")
 
-y_pred_log = best_model.predict(X_test)
-y_pred = np.expm1(y_pred_log)
-y_test_actual = np.expm1(y_test)
+    y_pred_log = best_model.predict(X_test)
+    y_pred = np.expm1(y_pred_log)
+    y_test_actual = np.expm1(y_test)
 
-mse = mean_squared_error(y_test_actual, y_pred)
-rmse = np.sqrt(mse)
-mae = mean_absolute_error(y_test_actual, y_pred)
-r2 = r2_score(y_test_actual, y_pred)
-print(f"Mean Squared Error (MSE): {mse}")
-print(f"Root Mean Squared Error (RMSE): {rmse}")
-print(f"Mean Absolute Error (MAE): {mae}")
-print(f"R^2 Score: {r2}")
+    mse = mean_squared_error(y_test_actual, y_pred)
+    rmse = np.sqrt(mse)
+    mae = mean_absolute_error(y_test_actual, y_pred)
+    r2 = r2_score(y_test_actual, y_pred)
+    print(f"Mean Squared Error (MSE): {mse}")
+    print(f"Root Mean Squared Error (RMSE): {rmse}")
+    print(f"Mean Absolute Error (MAE): {mae}")
+    print(f"R^2 Score: {r2}")
 
-scores = cross_val_score(best_model, X, y_log, cv=5, scoring="neg_mean_squared_error")
-rmse_scores = np.sqrt(-scores)
-print(f"Cross-validated RMSE scores: {rmse_scores}")
-print(f"Mean RMSE: {rmse_scores.mean()}")
-print(f"Standard deviation of RMSE: {rmse_scores.std()}")
+    scores = cross_val_score(best_model, X, y_log, cv=5, scoring="neg_mean_squared_error")
+    rmse_scores = np.sqrt(-scores)
+    print(f"Cross-validated RMSE scores: {rmse_scores}")
+    print(f"Mean RMSE: {rmse_scores.mean()}")
+    print(f"Standard deviation of RMSE: {rmse_scores.std()}")
 
-with open("model_efa/best_model.pkl", "wb") as f:
-    pickle.dump(best_model, f)
 with open("model_efa/mpaa_label_encoder.pkl", "wb") as f:
     pickle.dump(mpaa_label_encoder, f)
 with open("model_efa/country_label_encoder.pkl", "wb") as f:

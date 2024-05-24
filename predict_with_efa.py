@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import pickle
+import os
 
 # tt1389072,rl628917761,Downsizing,R,68000000.0,135.0,2668.0,4954287.0,24449754.0,5.8,125000.0,United States,Drama Fantasy Sci-Fi,349.0,49.34,0,12.0,2017.0
 # tt0240462,rl1112442369,Dr. Dolittle 2,PG,72000000.0,87.0,3053.0,25037039.0,112952899.0,4.7,47000.0,United States,Comedy Family Fantasy,135.0,42.66,0,6.0,2001.0
@@ -19,47 +20,8 @@ import pickle
 # tt0817538,rl2924381697,Drillbit Taylor,PG-13,40000000.0,110.0,3061.0,10309986.0,32862104.0,5.7,62000.0,United States,Action Comedy Crime,178.0,29.44,0,3.0,2008.0
 # tt0780504,rl2706277889,Drive,R,15000000.0,100.0,2904.0,11340461.0,35061555.0,7.8,706000.0,United States,Action Drama,320.0,91.12,0,9.0,2011.0
 
-def predict_revenue(movie):
-    with open("model_efa/best_model.pkl", "rb") as f:
-        model = pickle.load(f)
-    with open("model_efa/mpaa_label_encoder.pkl", "rb") as f:
-        mpaa_label_encoder = pickle.load(f)
-    with open("model_efa/country_label_encoder.pkl", "rb") as f:
-        country_label_encoder = pickle.load(f)
-    with open("model_efa/scaler.pkl", "rb") as f:
-        scaler = pickle.load(f)
-    with open("model_efa/factor_analyzer.pkl", "rb") as f:
-        fa = pickle.load(f)
-    with open("model_efa/unique_genres.pkl", "rb") as f:
-        unique_genres = pickle.load(f)
-
-    movie["mpaa"] = mpaa_label_encoder.transform([movie["mpaa"]])[0]
-    movie["country"] = country_label_encoder.transform([movie["country"]])[0]
-
-    new_movie_genres = np.array(
-        [
-            1 if genre in movie.get("genres", "").split() else 0
-            for genre in unique_genres
-        ]
-    ).reshape(1, -1)
-    new_movie_genres_scaled = scaler.transform(new_movie_genres)
-    new_movie_factors = fa.transform(new_movie_genres_scaled)
-
-    movie.update(
-        {
-            f"Factor{i+1}": new_movie_factors[0, i]
-            for i in range(new_movie_factors.shape[1])
-        }
-    )
-
-    movie_df = pd.DataFrame([movie])
-
-    predicted_revenue_log = model.predict(movie_df)
-    predicted_revenue = np.expm1(predicted_revenue_log)
-    return predicted_revenue
-
-def predict_with_feature_selection(movie):
-    with open("model_efa/best_model.pkl", "rb") as f:
+def predict_with_feature_selection(movie, model_file_name):
+    with open(model_file_name, "rb") as f:
         model = pickle.load(f)
     with open("model_efa/mpaa_label_encoder.pkl", "rb") as f:
         mpaa_label_encoder = pickle.load(f)
@@ -116,6 +78,5 @@ new_movie = {
     "genres": "Horror Mystery Thriller",
 }
 
-predicted_revenue = predict_revenue(new_movie)
-#predicted_revenue = predict_with_feature_selection(new_movie)
+predicted_revenue = predict_with_feature_selection(new_movie, "model_efa/model_rf.pkl")
 print("Predicted revenue:", predicted_revenue)
