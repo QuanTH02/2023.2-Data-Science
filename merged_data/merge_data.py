@@ -186,6 +186,7 @@ def fix_genres(genres_str):
         genres.remove("Music")
     else:
         genres = [genre.replace("Music", "Musical") for genre in genres]
+        genres = [genre.replace("Musicalal", "Musical") for genre in genres]
     return " ".join(genres)
 
 
