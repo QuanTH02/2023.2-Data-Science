@@ -3,7 +3,7 @@ name: test
 on:
   push:
     branches:
-      - master
+      - master_1
 
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: movies_data.csv
-          path: merged_data/
+          path: merge_data/
 
       - run: python3 update_model.py
         
