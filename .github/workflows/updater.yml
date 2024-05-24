@@ -31,3 +31,18 @@ jobs:
         with:
           name: movies_data.csv
           path: movies_data.csv
+
+  update_modal:
+    runs-on: tuannq-macos-arm64
+    needs: crawl
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.6
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.1.0
+        with:
+          python-version: 3.11
+      - name: Check python version
+        run: python --version
+      
