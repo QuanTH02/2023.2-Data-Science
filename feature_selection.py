@@ -68,7 +68,7 @@ def train(df):
     country_label_encoder = LabelEncoder()
     df["mpaa"] = mpaa_label_encoder.fit_transform(df["mpaa"])
     df["country"] = country_label_encoder.fit_transform(df["country"])
-    df.to_csv("merged_data/preprocess_data.csv", index=False)
+    df.to_csv("merge_data/preprocess_data.csv", index=False)
     X = df.drop("domestic_box_office", axis=1)
     y = df["domestic_box_office"]
     y_log = np.log(y)
