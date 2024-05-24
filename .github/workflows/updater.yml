@@ -42,17 +42,8 @@ jobs:
       - name: Setup Python
         run: python3 --version
 
-      - name: Setup venv
-        run: python3 -m venv .venv
-
-      - name: Activate venv
-        run: source .venv/bin/activate
-
-      - name: Check python in venv
-        run: python --version
-
       - name: Download dependencies
         run: |
-          python -m pip install --upgrade pip 
+          python3 -m pip install --upgrade pip 
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
