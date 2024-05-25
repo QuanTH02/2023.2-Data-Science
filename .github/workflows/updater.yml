@@ -39,27 +39,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.6
 
-      - name: Setup Python
-        uses: actions/setup-python@v5.1.0
+      - name: Download artifact
+        uses: actions/download-artifact@v4
         with:
-          python-version: 3.11
+          name: movies_data.csv
+          path: merge_data/
 
-      - name: Test python
-        run: python --version
-      
-      # - name: Setup Python
-      #   run: python3 --version
-
-      # - name: Download dependencies
-      #   run: |
-      #     python3 -m pip install --upgrade pip 
-      #     if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
-
-      # - name: Download artifact
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: movies_data.csv
-      #     path: merge_data/
-
-      # - run: python3 update_model.py
-        
+      - run: py update_model.py
