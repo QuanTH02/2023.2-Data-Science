@@ -1,9 +1,9 @@
-name: test
+name: Update data and Update model
 
 on:
   push:
     branches:
-      - master_1
+      - master
 
 
 jobs:
