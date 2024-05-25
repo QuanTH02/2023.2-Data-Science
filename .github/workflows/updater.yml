@@ -3,7 +3,7 @@ name: Update data and Update model
 on:
   push:
     branches:
-      - master
+      - master_disable
 
 
 jobs:
