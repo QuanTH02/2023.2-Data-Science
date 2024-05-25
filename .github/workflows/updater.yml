@@ -33,7 +33,7 @@ jobs:
   #         path: movies_data.csv
 
   update_modal:
-    runs-on: tuannq-macos-arm64
+    runs-on: quan_win
     # needs: crawl
     steps:
       - name: Checkout
