@@ -2,7 +2,7 @@ name: Update data and Update model
 
 on:
   schedule:
-    - cron: '50 3 * * *' # This cron expression runs the job daily
+    - cron: '55 3 * * *' # This cron expression runs the job daily
 
 jobs:
   crawl:
@@ -63,6 +63,5 @@ jobs:
           git add merge_data/*.pkl
           git commit -m 'Update .pkl files in merge_data directory'
           git push
-        
-      - env: 
+        env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
