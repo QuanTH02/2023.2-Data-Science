@@ -2,9 +2,7 @@ name: Update data and Update model
 
 on:
   schedule:
-    - cron: '0 0 * * *' # This cron expression runs the job daily at midnight
-  workflow_dispatch: # Allows manual triggering of the workflow
-
+    - cron: '50 3 * * *' # This cron expression runs the job daily
 
 jobs:
   crawl:
