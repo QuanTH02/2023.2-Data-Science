@@ -18,7 +18,7 @@ def score(critic_vote_metacritic, meta_score_metacritic, critic_vote_rotten, met
 def main_critic_metascore():
     print('====================================================================================')
     print("Crawling critic and metascore...")
-    path_file = '../merge_data/movies_data.csv'
+    path_file = './merge_data/movies_data.csv'
     df = pd.read_csv(path_file)
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()
