@@ -2,7 +2,7 @@ name: Update data and Update model
 
 on:
   schedule:
-    - cron: '45 14 * * *' # This cron expression runs the job daily
+    - cron: '36 14 * * *' # This cron expression runs the job daily
   workflow_dispatch:
 
 jobs:
