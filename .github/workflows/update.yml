@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: movies_data.csv
-          path: movies_data.csv
+          path: merge_data/movies_data.csv
 
   update_modal:
     runs-on: ubuntu-latest
