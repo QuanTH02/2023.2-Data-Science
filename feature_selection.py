@@ -140,7 +140,7 @@ def train(df):
         "regressor__max_depth": [-1, 10, 20],
         "regressor__learning_rate": [0.01, 0.1, 0.2],
         "regressor__num_leaves": [31, 50, 100],
-        'verbose': -1
+        'verbose': [-1],
     }
 
     param_grid_cb = {
