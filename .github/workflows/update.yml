@@ -63,8 +63,8 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add merge_data/*.pkl
-          git commit -m 'Update .pkl files in merge_data directory'
-          git push origin master
+          git add model_efa/*.pkl
+          git commit -m 'Update .pkl files in model_efa directory'
+          git push origin main
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
