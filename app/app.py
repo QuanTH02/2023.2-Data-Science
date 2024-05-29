@@ -14,7 +14,6 @@ def render_predict():
 @app.route('/predict', methods=['POST'])
 def process_prediction():
     data = request.json
-    print(data['screens'])
 
     if data.get('openingWeek'):
         prediction_result = predict_opening_week(data['month'], data['year'], data['mpaa'], data['budget'], data['runtime'], data['screens'], data['openingWeek'], data['userVote'], data['ratings'], data['criticVote'], data['metaScore'], data['country'])

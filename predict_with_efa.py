@@ -62,6 +62,47 @@ def predict_with_feature_selection(movie, model_file_name):
     prediction = np.expm1(prediction_log)  
     return prediction[0]
 
+def predict_with_feature_selection_without_opening_week(movie, model_file_name):
+    with open(model_file_name, "rb") as f:
+        model = pickle.load(f)
+    with open("model_efa/mpaa_label_encoder.pkl", "rb") as f:
+        mpaa_label_encoder = pickle.load(f)
+    with open("model_efa/country_label_encoder.pkl", "rb") as f:
+        country_label_encoder = pickle.load(f)
+    with open("model_efa/scaler.pkl", "rb") as f:
+        scaler = pickle.load(f)
+    with open("model_efa/factor_analyzer.pkl", "rb") as f:
+        fa = pickle.load(f)
+    with open("model_efa/unique_genres.pkl", "rb") as f:
+        unique_genres = pickle.load(f)
+    with open("model_efa/selected_features_without_opening_week.pkl", "rb") as f:
+        selected_features = pickle.load(f)
+
+    movie["mpaa"] = mpaa_label_encoder.transform([movie["mpaa"]])[0]
+    movie["country"] = country_label_encoder.transform([movie["country"]])[0]
+
+    new_movie_genres = np.array(
+        [
+            1 if genre in movie.get("genres", "").split() else 0
+            for genre in unique_genres
+        ]
+    ).reshape(1, -1)
+    new_movie_genres_scaled = scaler.transform(new_movie_genres)
+    new_movie_factors = fa.transform(new_movie_genres_scaled)
+
+    movie.update(
+        {
+            f"Factor{i+1}": new_movie_factors[0, i]
+            for i in range(new_movie_factors.shape[1])
+        }
+    )
+
+    movie_df = pd.DataFrame([movie])
+    movie_df = movie_df[selected_features]
+    prediction_log = model.predict(movie_df)
+    prediction = np.expm1(prediction_log)  
+    return prediction[0]
+
 def ret_movie(movie_str):
     movie_arr = movie_str.split(',')
 
@@ -84,14 +125,44 @@ def ret_movie(movie_str):
 
     return movie
 
+def ret_movie_without_opening_week(movie_str):
+    movie_arr = movie_str.split(',')
+
+    movie = {}
+
+    movie["month"] = float(movie_arr[14])
+    movie["year"] = float(movie_arr[15])
+    movie["mpaa"] = movie_arr[1]
+    movie["budget"] = float(movie_arr[2])
+    movie["runtime"] = float(movie_arr[3])
+    movie["screens"] = float(movie_arr[4])
+    movie["critic_vote"] = float(movie_arr[11])
+    movie["meta_score"] = float(movie_arr[12])
+    movie["sequel"] = float(movie_arr[13])
+    movie["genres"] = movie_arr[10]
+    movie["country"] = movie_arr[9]
+
+    return movie
+
 movie_str = "Dora and the Lost City of Gold,PG,49000000.0,102.0,3735.0,17431588.0,60477943.0,6.1,35000.0,Australia United States,Action Adventure Comedy Family Fantasy Mystery,179.0,82.17,0,8.0,2019.0"
 movie = ret_movie(movie_str)
+movie_without_opening_week = ret_movie_without_opening_week(movie_str)
 
 list_file_name = ["model_efa/model_rf.pkl", "model_efa/model_gb.pkl", "model_efa/model_xgb.pkl", "model_efa/model_lgbm.pkl", "model_efa/model_cb.pkl"]
+list_file_name_without_opening_week = ["model_efa/model_rf_without_opening_week.pkl", "model_efa/model_gb_without_opening_week.pkl", "model_efa/model_xgb_without_opening_week.pkl", "model_efa/model_lgbm_without_opening_week.pkl", "model_efa/model_cb_without_opening_week.pkl"]
+
 
 for file_name in list_file_name:
     movie_cpy = movie.copy()
-    predicted_revenue = predict_with_feature_selection(movie_cpy, file_name)
+    predicted_revenue = predict_with_feature_selection(movie_cpy, file_name)    
+    print("------------------------------------------------------------------")
+    print(file_name)
+    print("Predicted revenue:", predicted_revenue)
+    print("Chênh lệch: ", str(predicted_revenue - float(movie_str.split(",")[6])))
+
+for file_name in list_file_name_without_opening_week:
+    movie_cpy = movie_without_opening_week.copy()
+    predicted_revenue = predict_with_feature_selection_without_opening_week(movie_cpy, file_name)    
     print("------------------------------------------------------------------")
     print(file_name)
     print("Predicted revenue:", predicted_revenue)

@@ -151,4 +151,5 @@ def main_themoviedb():
 
         df.at[movie_name_list.index(movie_name), 'sequel'] = float(data['sequel'])
 
+    df.drop(["tt_id"],axis=1,inplace = True)
     df.to_csv(path_file, index=False)
