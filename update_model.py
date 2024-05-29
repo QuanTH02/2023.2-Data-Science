@@ -3,8 +3,6 @@ from feature_selection import *
 df_old = pd.read_csv("merge_data/final_merged.csv")
 df_new = pd.read_csv("merge_data/movies_data.csv")
 
-df_new.drop(["tt_id"], axis=1, inplace=True)
-
 df = pd.concat([df_old, df_new], ignore_index=True)
 df.drop_duplicates(inplace=True)
 
