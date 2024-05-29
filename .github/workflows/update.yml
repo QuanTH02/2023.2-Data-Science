@@ -65,6 +65,4 @@ jobs:
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add model_efa/*.pkl
           git commit -m 'Update .pkl files in model_efa directory'
-          git push origin main
-        env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/QuanTH02/2023.2-Data-Science.git main
