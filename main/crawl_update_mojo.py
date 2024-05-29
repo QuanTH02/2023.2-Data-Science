@@ -103,7 +103,7 @@ def clean_genres_string(genres_str):
     return genres_str.split(' ')
 
 
-def write_to_csv(movie_data_list, filename='movies_data.csv'):
+def write_to_csv(movie_data_list, filename='../merge_data/movies_data.csv'):
     # Define the fieldnames for the CSV file
     fieldnames = ['tt_id', 'movie_name', 'domestic_box_office', 'budget', 'month', 'year', 'opening_week', 'screens', 'genres', 'mpaa', 'runtime']
     

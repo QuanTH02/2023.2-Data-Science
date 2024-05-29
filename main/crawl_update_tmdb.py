@@ -37,7 +37,7 @@ def crawl_budget(tt_id):
 def main_tmdb():
     print('====================================================================================')
     print('Crawl TMDb...')
-    path_file = 'movies_data.csv'
+    path_file = '../merge_data/movies_data.csv'
     df = pd.read_csv(path_file)
     url_title_list = df["tt_id"].tolist()
     budget_list = df["budget"].tolist()

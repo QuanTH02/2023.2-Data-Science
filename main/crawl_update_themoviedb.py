@@ -108,7 +108,7 @@ def crawl(soup):
 def main_themoviedb():
     print('====================================================================================')
     print('Crawl The Movie DB...')
-    path_file = 'movies_data.csv'
+    path_file = '../merge_data/movies_data.csv'
     df = pd.read_csv(path_file)
     movie_name_list = df["movie_name"].tolist()
     month_list = df["month"].tolist()

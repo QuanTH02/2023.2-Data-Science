@@ -190,7 +190,7 @@ def main_imdb():
     global check_search_imdb_requests
     check_search_imdb_requests = False
     
-    path_file = 'movies_data.csv'
+    path_file = '../merge_data/movies_data.csv'
     df = pd.read_csv(path_file)
     url_title_list = df["tt_id"].tolist()
     movie_name_list = df["movie_name"].tolist()
