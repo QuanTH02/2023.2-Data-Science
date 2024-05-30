@@ -377,12 +377,6 @@ def train_without_opening_week(df):
         print(f"Mean Absolute Error (MAE): {mae}")
         print(f"R^2 Score: {r2}")
 
-        scores = cross_val_score(best_model, X, y_log, cv=5, scoring="neg_mean_squared_error")
-        rmse_scores = np.sqrt(-scores)
-        print(f"Cross-validated RMSE scores: {rmse_scores}")
-        print(f"Mean RMSE: {rmse_scores.mean()}")
-        print(f"Standard deviation of RMSE: {rmse_scores.std()}")
-
     with open("model_efa/mpaa_label_encoder.pkl", "wb") as f:
         pickle.dump(mpaa_label_encoder, f)
     with open("model_efa/country_label_encoder.pkl", "wb") as f:
