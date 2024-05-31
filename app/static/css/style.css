@@ -1,148 +1,149 @@
+::-webkit-scrollbar {
+    width: 0; /* Ẩn thanh cuộn ngang */
+    height: 0; /* Ẩn thanh cuộn dọc */
+}
+
+body {
+    overflow: scroll; /* Đảm bảo nội dung có thể cuộn */
+}
+
 button:hover {
-    opacity: 0.8;
+    cursor: pointer;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
+.ul-nav {
+    text-align: center;
+    padding-left: 0px;
+}
+
+.li-nav{
+    display:inline-block;
+    padding: 20px 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 30px;   
+    transition: transform 0.3s ease;
+}
+
+.li-nav:hover {
+    transform: translateY(-5px);
+}
+
+.a-nav {
+    text-decoration: none;
     color: black;
+    background-color: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
 }
 
-.con-1,
-.con-2 {
-    display: flex;
+.a-nav:hover {
+    color: rgb(53, 53, 53);
 }
 
-.div-chart {
-    width: 44%;
+.nav-bar {
+    background-color: aliceblue;
+}
+
+.body-content {
+    width: 75% !important;
+    height: 75% !important;
     margin: auto;
 }
 
-.list-genres {
+/* .draw {
+    display: flex !important;
+}
+
+.canvas-chart-all {
+    width: 700px !important;
+    height: 350px !important;
+} */
+
+#plot ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 50px;
+}
+
+.li-nav {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -110px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 300px;
+}
+
+.dropdown li {
+    display: block;
+    text-align: center;
+}
+
+.dropdown li button {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    background-color: #f9f9f9;
+    font-size: 20px;
+    border: none;
+    text-align: center !important;
+}
+
+.dropdown li button:hover {
+    background-color: #ddd;
+}
+
+.li-nav:hover .dropdown {
+    display: block;
+}
+
+#div-chart-img {
+    text-align: center;
+}
+
+img {
+    width: 60%;
+}
+
+.body-data table {
+    margin: 40px 40px;
+}
+
+.body-data th,.body-data td {
+    text-align: center;
+}
+
+.body-data table,.body-data th,.body-data tr,.body-data td {
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#table-predict-div table {
+    margin: 40px 40px;
+}
+
+#table-predict-div th,#table-predict-div td {
+    text-align: center;
+}
+
+#table-predict-div table, #table-predict-div th, #table-predict-div tr, #table-predict-div td {
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.th_genres {
     width: 600px;
 }
 
-.btn-genre,
-.btn-clear-genre {
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.btn-clear-genre {
-    background-color: #ff1100;
-}
-
-#btn-genre-action {
-    background-color: #228fdd;
-}
-
-#btn-genre-drama {
-    background-color: #de6f0e;
-}
-
-#btn-genre-comedy {
-    background-color: #27e527;
-}
-
-#btn-genre-documentary {
-    background-color: #f76a6a;
-}
-
-#btn-genre-adult {
-    background-color: #bd77fe;
-}
-
-#btn-genre-thriller {
-    background-color: #bd867c;
-}
-
-#btn-genre-romance {
-    background-color: #f389d3;
-}
-
-#btn-genre-animation {
-    background-color: #a09f9f;
-}
-
-#btn-genre-family {
-    background-color: #e4e46c;
-}
-
-#btn-genre-horror {
-    background-color: #00e5ff;
-}
-
-#btn-genre-crime {
-    background-color: #1f77b4;
-}
-
-#btn-genre-adventure {
-    background-color: #ff7f0e;
-}
-
-#btn-genre-fantasy {
-    background-color: #2ca02c;
-}
-
-#btn-genre-sci_Fi {
-    background-color: #d62728;
-}
-
-#btn-genre-mystery {
-    background-color: #9467bd;
-}
-
-#btn-genre-biography {
-    background-color: #8c564b;
-}
-
-#btn-genre-history {
-    background-color: #e377c2;
-}
-
-#btn-genre-sport {
-    background-color: #7f7f7f;
-}
-
-#btn-genre-musical {
-    background-color: #bcbd22;
-}
-
-#btn-genre-war {
-    background-color: #17becf;
-}
-
-#btn-genre-western {
-    background-color: #1f77b4;
-}
-
-#btn-genre-film_noir {
-    background-color: #ff7f0e;
-}
-
-#btn-predict {
-    margin-top: 10px;
-    background-color: rgb(212, 212, 212);
-    border: none;
-    border-radius: 3px;
-    font-size: 14px;
-    padding: 5px 10px;
-    font-weight: 550;
-    margin-right: 32px;
-    text-decoration: none;
-}
-
-#btn-predict:hover {
-    background-color: rgb(192, 192, 192);
-    cursor: pointer;
-    text-decoration: none;
-}

@@ -170,15 +170,30 @@ function saveFormData() {
   })
     .then(response => response.json())
     .then(predict => {
+      console.log(predict);
       document.getElementById('movie_name_h2').innerHTML = data.movieName;
-      document.getElementById('result').innerHTML = parseInt(predict['prediction']) + "$";
-      document.getElementById('loinhuan').innerHTML = parseFloat(((parseInt(predict['prediction']) - parseInt(data.budget))/parseInt(data.budget)) * 100).toFixed(2) + "%";
-      fetch('../static/final_merged.csv')
-        .then(response => response.text())
-        .then(csvData => {
-          processData4(csvData, "blue", data, predict['prediction'])
-        })
-        .catch(error => console.error('Failed to load data.csv', error));
+      document.getElementById('result_rf').innerHTML = parseInt(predict['prediction_rf']) + "$";
+      document.getElementById('loinhuan_rf').innerHTML = parseFloat(((parseInt(predict['prediction_rf']) - parseInt(data.budget))/parseInt(data.budget)) * 100).toFixed(2) + "%";
+      
+      document.getElementById('result_gb').innerHTML = parseInt(predict['prediction_gb']) + "$";
+      document.getElementById('loinhuan_gb').innerHTML = parseFloat(((parseInt(predict['prediction_gb']) - parseInt(data.budget))/parseInt(data.budget)) * 100).toFixed(2) + "%";
+
+      document.getElementById('result_xgb').innerHTML = parseInt(predict['prediction_xgb']) + "$";
+      document.getElementById('loinhuan_xgb').innerHTML = parseFloat(((parseInt(predict['prediction_xgb']) - parseInt(data.budget))/parseInt(data.budget)) * 100).toFixed(2) + "%";
+
+      document.getElementById('result_lgbm').innerHTML = parseInt(predict['prediction_lgbm']) + "$";
+      document.getElementById('loinhuan_lgbm').innerHTML = parseFloat(((parseInt(predict['prediction_lgbm']) - parseInt(data.budget))/parseInt(data.budget)) * 100).toFixed(2) + "%";
+
+      document.getElementById('result_cb').innerHTML = parseInt(predict['prediction_cb']) + "$";
+      document.getElementById('loinhuan_cb').innerHTML = parseFloat(((parseInt(predict['prediction_cb']) - parseInt(data.budget))/parseInt(data.budget)) * 100).toFixed(2) + "%";
+      
+      document.getElementById('popup-overlay').style.display = 'flex';
+      // fetch('../static/final_merged.csv')
+      //   .then(response => response.text())
+      //   .then(csvData => {
+      //     processData4(csvData, "blue", data, predict['prediction_rf'])
+      //   })
+      //   .catch(error => console.error('Failed to load data.csv', error));
     })
     .catch(error => {
       console.error('Error:', error);
@@ -312,7 +327,7 @@ function drawChart4(currentMovieData, labels, averageDataValues, backgroundColor
   };
   const ctx = document.getElementById('bar4-chart').getContext('2d');
   currentChart4 = new Chart(ctx, config);
-  document.getElementById('popup-overlay').style.display = 'flex';
+  
 }
 
 function checkAllWords(str1, str2) {
