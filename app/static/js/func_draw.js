@@ -45,7 +45,7 @@ function drawChartCount(xAxiss, movieCounts, backgroundColor) {
     const movieData = {
         labels: sortedxAxis,
         datasets: [{
-            label: 'Number of Movies Released',
+            label: 'Number of Movies',
             backgroundColor: backgroundColor,
             data: sortedMovieCounts
         }]
@@ -109,7 +109,7 @@ function drawChartLevel(bins, backgroundColor) {
         data: {
             labels: Object.keys(bins),
             datasets: [{
-                label: 'Number of Movies',
+                label: 'Revenue statistics by level',
                 data: Object.values(bins),
                 backgroundColor: backgroundColor,
                 borderColor: 'rgba(75, 192, 192, 1)',
@@ -182,7 +182,7 @@ function drawChartAll(bins_genres, bins_country, backgroundColorGenres, backgrou
         data: {
             labels: Object.keys(bins_genres),
             datasets: [{
-                label: 'Number of Movies',
+                label: 'Number of Movies by Genre',
                 data: Object.values(bins_genres),
                 backgroundColor: backgroundColorGenres,
                 borderColor: 'rgba(75, 192, 192, 1)',
@@ -203,7 +203,7 @@ function drawChartAll(bins_genres, bins_country, backgroundColorGenres, backgrou
         data: {
             labels: Object.keys(bins_country),
             datasets: [{
-                label: 'Number of Movies',
+                label: 'Number of Movies by Country',
                 data: Object.values(bins_country),
                 backgroundColor: backgroundColorCountry,
                 borderColor: 'rgba(75, 192, 192, 1)',
@@ -253,11 +253,24 @@ function drawChartCorrelationRevenue(budgets, revenues, backgroundColor) {
         currentChartCorrelationRevenue.destroy();
     }
 
+    // Tính toán các giá trị cần thiết cho regression line
+    const regressionLine = linearRegression(budgets, revenues);
+    const regressionLineData = [
+        { x: Math.min(...budgets), y: regressionLine.intercept + regressionLine.slope * Math.min(...budgets) },
+        { x: Math.max(...budgets), y: regressionLine.intercept + regressionLine.slope * Math.max(...budgets) }
+    ];
+
     const data = {
         datasets: [{
-            label: 'Revenue',
+            label: 'Correlation chart between revenue and budget',
             data: budgets.map((budget, index) => ({ x: budget, y: revenues[index] })),
             backgroundColor: backgroundColor, // Màu nền của điểm
+        }, {
+            label: 'Regression Line',
+            data: regressionLineData,
+            borderColor: 'red', // Màu của đường thẳng
+            fill: false,
+            type: 'line'
         }]
     };
 
@@ -290,6 +303,30 @@ function drawChartCorrelationRevenue(budgets, revenues, backgroundColor) {
     });
 }
 
+// Hàm tính toán regression line
+function linearRegression(x, y) {
+    const n = x.length;
+    let sumX = 0;
+    let sumY = 0;
+    let sumXY = 0;
+    let sumXX = 0;
+    let sumYY = 0;
+
+    for (let i = 0; i < n; i++) {
+        sumX += x[i];
+        sumY += y[i];
+        sumXY += x[i] * y[i];
+        sumXX += x[i] * x[i];
+        sumYY += y[i] * y[i];
+    }
+
+    const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+    const intercept = (sumY - slope * sumX) / n;
+
+    return { slope, intercept };
+}
+
+
 
 // Biểu đồ tương quan giữa đánh giá của người dùng và đánh giá của chuyên gia (trục ngang là rating, trục dọc là metascore) 
 function processDataCorrelationRatingMetaScore(csvData, backgroundColor, choose, value) {
@@ -321,11 +358,24 @@ function drawChartCorrelationRatingMetaScore(ratings, metascores, backgroundColo
         currentChartCorrelationRatingsMetascore.destroy();
     }
 
+    // Tính toán các giá trị cần thiết cho regression line
+    const regressionLine = linearRegression(ratings, metascores);
+    const regressionLineData = [
+        { x: Math.min(...ratings), y: regressionLine.intercept + regressionLine.slope * Math.min(...ratings) },
+        { x: Math.max(...ratings), y: regressionLine.intercept + regressionLine.slope * Math.max(...ratings) }
+    ];
+
     const data = {
         datasets: [{
-            label: 'Revenue',
+            label: 'Correlation chart between user vote and critic vote',
             data: ratings.map((rating, index) => ({ x: rating, y: metascores[index] })),
             backgroundColor: backgroundColor, // Màu nền của điểm
+        }, {
+            label: 'Regression Line',
+            data: regressionLineData,
+            borderColor: 'red', // Màu của đường thẳng
+            fill: false,
+            type: 'line'
         }]
     };
 
@@ -357,5 +407,6 @@ function drawChartCorrelationRatingMetaScore(ratings, metascores, backgroundColo
         options: options
     });
 }
+
 
 export { processDataCount, processDataLevel, processDataAll, processDataCorrelationRevenue, processDataCorrelationRatingMetaScore }
