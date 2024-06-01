@@ -65,7 +65,7 @@ Lúc này hệ thống đã chạy và sẽ cập nhật dữ liệu liên tục
 ## Phân tích tác dụng của từng folder/file
 
 - **plot.ipynb**: Vẽ biểu đồ phân tích dữ liệu
-- **EFA.ipynb**: Phân tích yếu tố tiềm ẩn để giảm chiều dữ liệu, kết quả là chuyển 20 genres thành 7 genres
+- **EFA.ipynb**: Phân tích yếu tố tiềm ẩn để giảm chiều dữ liệu
 - **feature_selection.py**: Train các model và dump vào các file pkl
 - **predict_with_efa.py**: Dự đoán
 - **update_model.py**: Chạy tự động mỗi tháng để cập nhật model

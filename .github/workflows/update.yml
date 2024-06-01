@@ -1,9 +1,9 @@
 name: Update data and Update model
 
-on: push
-  # schedule:
-  #   - cron: '54 19 * * *' # This cron expression runs the job daily
-  # workflow_dispatch:
+on:
+  schedule:
+    - cron: '0 0 5 * *' # This cron expression runs the job daily
+  workflow_dispatch:
 
 jobs:
   crawl:
