@@ -73,7 +73,6 @@ def train(df):
     y = df["domestic_box_office"]
     y_log = np.log(y)
 
-
     correlation_threshold = 0.2
     selected_features = [
         column
@@ -96,7 +95,7 @@ def train(df):
         ]
     )
 
-    def grid_search(model, param_grid, file_name):
+    def grid_search(model, param_grid):
         pipeline = Pipeline(
             steps=[
                 ("preprocessor", preprocessor),
@@ -111,9 +110,6 @@ def train(df):
             scoring="neg_mean_squared_error"
         )
         search.fit(X_train, y_train)
-        with open(file_name, "wb") as f:
-            pickle.dump(search, f)
-            
         return search
 
     param_grid_rf = {
@@ -165,11 +161,12 @@ def train(df):
 
     index_file_name = 0
     for model, param_grid in models:
-        search = grid_search(model, param_grid, list_file_name[index_file_name])
-        if -search.best_score_ < best_score:
-            best_score = -search.best_score_
-            best_model = search.best_estimator_
-            best_params = search.best_params_
+        search = grid_search(model, param_grid)
+        best_score = -search.best_score_
+        best_model = search.best_estimator_
+        best_params = search.best_params_
+        with open(list_file_name[index_file_name], "wb") as f:
+            pickle.dump(best_model, f)
         index_file_name += 1
 
         print(f"Best model: {best_model}")
@@ -194,6 +191,19 @@ def train(df):
         print(f"Cross-validated RMSE scores: {rmse_scores}")
         print(f"Mean RMSE: {rmse_scores.mean()}")
         print(f"Standard deviation of RMSE: {rmse_scores.std()}")
+
+        with open("gridsearch_result/result_with_opening.txt", "a") as f:
+            print(f"Best model: {best_model}", file=f)
+            print(f"Best parameters: {best_params}", file=f)
+            print(f"Best score: {best_score}", file=f)
+            print(f"Mean Squared Error (MSE): {mse}", file=f)
+            print(f"Root Mean Squared Error (RMSE): {rmse}", file=f)
+            print(f"Mean Absolute Error (MAE): {mae}", file=f)
+            print(f"R^2 Score: {r2}", file=f)
+            print(f"Cross-validated RMSE scores: {rmse_scores}", file=f)
+            print(f"Mean RMSE: {rmse_scores.mean()}", file=f)
+            print(f"Standard deviation of RMSE: {rmse_scores.std()}", file=f)
+            print("----------------------------------------------------------------\n\n",file=f)
 
     with open("model_efa/mpaa_label_encoder.pkl", "wb") as f:
         pickle.dump(mpaa_label_encoder, f)
@@ -261,7 +271,6 @@ def train_without_opening_week(df):
     y = df["domestic_box_office"]
     y_log = np.log(y)
 
-
     correlation_threshold = 0.2
     selected_features = [
         column
@@ -284,7 +293,7 @@ def train_without_opening_week(df):
         ]
     )
 
-    def grid_search(model, param_grid, file_name):
+    def grid_search(model, param_grid):
         pipeline = Pipeline(
             steps=[
                 ("preprocessor", preprocessor),
@@ -299,9 +308,6 @@ def train_without_opening_week(df):
             scoring="neg_mean_squared_error"
         )
         search.fit(X_train, y_train)
-        with open(file_name, "wb") as f:
-            pickle.dump(search, f)
-            
         return search
 
     param_grid_rf = {
@@ -353,11 +359,12 @@ def train_without_opening_week(df):
 
     index_file_name = 0
     for model, param_grid in models:
-        search = grid_search(model, param_grid, list_file_name[index_file_name])
-        if -search.best_score_ < best_score:
-            best_score = -search.best_score_
-            best_model = search.best_estimator_
-            best_params = search.best_params_
+        search = grid_search(model, param_grid)
+        best_score = -search.best_score_
+        best_model = search.best_estimator_
+        best_params = search.best_params_
+        with open(list_file_name[index_file_name], "wb") as f:
+            pickle.dump(best_model, f)
         index_file_name += 1
 
         print(f"Best model: {best_model}")
@@ -377,6 +384,28 @@ def train_without_opening_week(df):
         print(f"Mean Absolute Error (MAE): {mae}")
         print(f"R^2 Score: {r2}")
 
+        scores = cross_val_score(
+            best_model, X, y_log, cv=5, scoring="neg_mean_squared_error"
+        )
+        rmse_scores = np.sqrt(-scores)
+        print(f"Cross-validated RMSE scores: {rmse_scores}")
+        print(f"Mean RMSE: {rmse_scores.mean()}")
+        print(f"Standard deviation of RMSE: {rmse_scores.std()}")
+        with open("gridsearch_result/result_without_opening.txt", "a") as f:
+            print(f"Best model: {best_model}", file=f)
+            print(f"Best parameters: {best_params}", file=f)
+            print(f"Best score: {best_score}", file=f)
+            print(f"Mean Squared Error (MSE): {mse}", file=f)
+            print(f"Root Mean Squared Error (RMSE): {rmse}", file=f)
+            print(f"Mean Absolute Error (MAE): {mae}", file=f)
+            print(f"R^2 Score: {r2}", file=f)
+            print(f"Cross-validated RMSE scores: {rmse_scores}", file=f)
+            print(f"Mean RMSE: {rmse_scores.mean()}", file=f)
+            print(f"Standard deviation of RMSE: {rmse_scores.std()}", file=f)
+            print(
+                "----------------------------------------------------------------\n\n",file=f
+            )
+
     with open("model_efa/mpaa_label_encoder.pkl", "wb") as f:
         pickle.dump(mpaa_label_encoder, f)
     with open("model_efa/country_label_encoder.pkl", "wb") as f:
@@ -392,5 +421,9 @@ def train_without_opening_week(df):
 
 if __name__ == "__main__":
     df = pd.read_csv("merge_data/final_merged.csv")
+    with open("gridsearch_result/result_with_opening.txt","w") as f:
+        pass
+    with open("gridsearch_result/result_without_opening.txt","w") as f:
+        pass
     train(df.copy())
     train_without_opening_week(df.copy())
