@@ -1,9 +1,9 @@
 name: Update data and Update model
 
-on:
-  schedule:
-    - cron: '54 19 * * *' # This cron expression runs the job daily
-  workflow_dispatch:
+on: push
+  # schedule:
+  #   - cron: '54 19 * * *' # This cron expression runs the job daily
+  # workflow_dispatch:
 
 jobs:
   crawl:
@@ -69,7 +69,9 @@ jobs:
           path: merge_data/
 
       - name: Update model
-        run: python update_model.py
+        run: |
+          python update_model.py
+          cp ./merge_data/final_merged.csv ./app/static/
       
       - name: Commit and push the .pkl file
         env: 
