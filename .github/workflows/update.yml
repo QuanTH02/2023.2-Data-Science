@@ -42,6 +42,7 @@ jobs:
           git add merge_data/movies_data.csv
           git commit -m 'Update movies_data.csv files in merge_data directory'
           git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/QuanTH02/2023.2-Data-Science.git main
+        continue-on-error: true
       
   update_model:
     runs-on: ubuntu-latest
@@ -83,6 +84,7 @@ jobs:
           git add merge_data/final_merged.csv
           git commit -m 'Update .pkl files in model_efa directory'
           git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/QuanTH02/2023.2-Data-Science.git main
+        continue-on-error: true
   
   pull_main:
     runs-on: [self-hosted, quan_win]
