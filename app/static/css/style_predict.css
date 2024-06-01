@@ -215,6 +215,15 @@ input[type="text"]:focus {
   text-align: center;
 }
 
+#cancel-popup {
+  background-color: rgb(212, 212, 212);
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 8px 20px;
+  font-weight: 550;
+}
+
 #cancel-popup:hover {
   background-color: rgb(192, 192, 192);
   cursor: pointer;
