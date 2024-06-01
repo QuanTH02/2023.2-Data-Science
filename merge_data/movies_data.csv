@@ -1,18 +1,4 @@
 movie_name,domestic_box_office,budget,month,year,opening_week,screens,genres,mpaa,runtime,user_vote,ratings,country,critic_vote,meta_score,sequel
-Wonka,218402312,125000000.0,12,2023,39005800.0,4203.0,Adventure Comedy Family Fantasy Musical,PG,116,146000.0,7.0,United States United Kingdom Canada,386.0,79.35,0.0
-Migration,127306285,72000000.0,12,2023,12453275.0,3761.0,Adventure Animation Comedy Family,PG,83,27000.0,6.7,United States,126.0,68.83,0.0
-Aquaman and the Lost Kingdom,124481226,205000000.0,12,2023,27686211.0,3706.0,Action Adventure Fantasy Sci-Fi,PG-13,124,86000.0,5.6,United States United Kingdom Canada Australia Iceland,252.0,35.37,1.0
-Anyone But You,88319668,25000000.0,12,2023,6000344.0,3055.0,Comedy Romance,R,103,87000.0,6.1,United States Australia,137.0,52.81,0.0
-The Color Purple,60619191,95000000.0,12,2023,11737072.0,3203.0,Drama Musical,PG-13,141,16000.0,6.8,United States,301.0,79.53,0.0
-Godzilla Minus One,56418793,15000000.0,12,2023,11419975.0,2308.0,Action Adventure Drama Horror Sci-Fi,PG-13,124,79000.0,7.9,Japan,215.0,95.31,0.0
-The Boys in the Boat,52641306,40000000.0,12,2023,8400548.0,2557.0,Biography Drama Sport,PG-13,123,17000.0,6.9,United States,193.0,56.46,0.0
-The Boy and the Heron,46832867,50000000.0,12,2023,13011722.0,2205.0,Adventure Animation Drama Family Fantasy,PG-13,124,52000.0,7.6,Japan,310.0,95.94,0.0
-The Iron Claw,35070296,15900000.0,12,2023,4868370.0,2774.0,Biography Drama Sport,R,132,68000.0,7.6,United Kingdom United States,324.0,86.28,0.0
-Poor Things,34553225,35000000.0,12,2023,661230.0,9.0,Comedy Drama Romance Sci-Fi,R,141,268000.0,7.9,Ireland United Kingdom United States Hungary,435.0,91.43,0.0
-American Fiction,21098470,16000000.0,12,2023,224469.0,7.0,Comedy Drama,R,117,84000.0,7.5,United States,338.0,91.08,0.0
-Ferrari,18550028,95000000.0,12,2023,3921773.0,2386.0,Biography Drama History Sport,R,130,46000.0,6.4,United States United Kingdom Italy Saudi Arabia,309.0,72.18,0.0
-The Shift,12118219,6500000.0,12,2023,4300165.0,2450.0,Action Romance Sci-Fi Thriller,PG-13,115,48000.0,5.6,United States,43.0,31.42,0.0
-Origin,4689830,38000000.0,12,2023,117063.0,2.0,Drama History,PG-13,141,46000.0,7.2,United States,235.0,80.66,0.0
-Eileen,1435007,16000000.0,12,2023,93290.0,6.0,Drama Mystery Thriller,R,97,12000.0,6.0,United States United Kingdom South Korea,241.0,80.17,0.0
-Freud's Last Session,906283,10000000.0,12,2023,45590.0,5.0,Drama,PG-13,108,3000.0,6.1,Ireland United Kingdom United States,111.0,46.41,0.0
-Love Actually,525266,40000000.0,12,2023,283956.0,927.0,Comedy Drama Romance,R,135,532000.0,7.6,United Kingdom France United States,6.0,62.0,0.0
+Mean Girls,72404248,36000000.0,1,2024,28635307.0,3791.0,Comedy Musical,PG-13,112,28000.0,5.7,United States,290.0,67.22,0.0
+The Beekeeper,66220535,35000000.0,1,2024,16576007.0,3303.0,Action Thriller,R,105,98000.0,6.4,United States United Kingdom,213.0,67.96,0.0
+Night Swim,32494740,15000000.0,1,2024,11797155.0,3250.0,Horror Thriller,PG-13,98,19000.0,4.7,United States United Kingdom Australia,202.0,24.49,0.0
