@@ -86,13 +86,13 @@ jobs:
           git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/QuanTH02/2023.2-Data-Science.git main
         continue-on-error: true
   
-  pull_main:
-    runs-on: [self-hosted, quan_win]
-    needs: [crawl, update_model]
+  # pull_main:
+  #   runs-on: [self-hosted, quan_win]
+  #   needs: [crawl, update_model]
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
 
-      - name: Pull latest changes
-        run: git pull origin main
+  #     - name: Pull latest changes
+  #       run: git pull origin main
